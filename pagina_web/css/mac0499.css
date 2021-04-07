@@ -3,13 +3,13 @@
 }
 body {
     height: 100%;
-    padding: 30px 30px 30px 30px;
+    padding: 2% 2% 2% 2%;
     background-color: rgb(255, 45, 45);
 }
 
 .main {
     height: 100%;
-    padding: 30px 30px 30px 30px;
+    padding: 3% 3% 3% 3%;
     background-color: white;
     border-width: 2px;
     border-color: black;
@@ -20,35 +20,35 @@ body {
 .content {
     padding: 2em 8em 2em 8em;
     letter-spacing: 0.07em;
-    font-size: 18px;
+    font-size: 1.1em;
     text-align: justify;
 }
 
 .modal-content {
     padding: 1em 1em 1em 1em;
     letter-spacing: 0.07em;
-    font-size: 16px;
+    font-size: 0.96em;
     text-align: justify;
 }
 
 .modal-text {
-    font-size: 14px;
+    font-size: 0.9em;
 }
 
 .content-home {
-    padding-top: 40px;
+    padding-top: 5%;
     letter-spacing: 0.05em;
-    font-size: 20px;
+    font-size: 0.9em;
     text-align: justify;
 }
 
 .content-home p {
-    text-indent: 30px;
+    text-indent: 2%;
 }
 
 .title, .title:hover {
     letter-spacing: 0.1em;
-    font-size: 40px;
+    font-size: 2em;
     font-weight: bold;
     color: black;
     text-decoration: none;
@@ -56,14 +56,14 @@ body {
 
 h3.subtitle {
     letter-spacing: 0.05em;
-    font-size: 20px;
+    font-size: 1.15em;
     font-weight: 400;
     color: black;
     text-decoration: dashed;
 }
 
 .links {
-    padding-bottom: 50px;
+    padding-bottom: 4%;
     text-align: right;
 }
 
@@ -79,8 +79,8 @@ a:hover {
 }
 
 .links a, .links a:visited {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
 }
 
 .col {
@@ -88,23 +88,23 @@ a:hover {
 }
 
 .text {
-    padding-left: 20px;
+    padding-left: 2%;
     text-align: justify;
-    font-size: 18px;
+    font-size: 1.1em;
     letter-spacing: 0.09em;
 }
 
 .text-home {
-    padding-left: 10px;
+    padding-left: 1%;
     text-align: justify;
-    font-size: 18px;
+    font-size: 1.2em;
     letter-spacing: 0.09em;
 }
 
 .artigos {
-    padding-left: 20px;
-    padding-top: 20px;
-    font-size: 16px;
+    padding-left: 1.5%;
+    padding-top: 1.5%;
+    font-size: 0.9em;
 }
 
 .artigos .detalhes {
@@ -124,50 +124,6 @@ a:hover {
 .artigos a:hover {
     color: rgb(255, 45, 45);
     text-decoration: none;
-}
-
-.btn {
-    margin-top: 5px;
-    padding: 10px 30px 10px 30px;
-    text-align: center;
-    font-weight: 600;
-    letter-spacing: 0.07em;
-    background-color: rgb(255, 45, 45);
-    color: black;
-    width: 300px;
-    border-width: 2px;
-    border-color: black;
-}
-.btn:active {
-    background-color: rgb(35, 213, 35);
-}
-
-.mid-canvas {
-    text-align: left;
-}
-
-.mid-canvas-desc {
-    text-align: center;
-}
-
-.col-title {
-    margin-bottom: 25px;
-    font-weight: bold;
-}
-
-.form-element {
-    margin-bottom: 20px;
-}
-
-.slider {
-    -webkit-appearance: none;
-    width: 30%;
-    height: 8px;
-    border-radius: 5px;
-    background: rgb(136, 238, 136);
-    outline: none;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
 }
 
 .slider::-moz-range-thumb {

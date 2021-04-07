@@ -69,10 +69,6 @@
                             <br />
                             <span class="autor">Maria Malatesta, 2014.</span>
                         </li>
-                    </div>
-                    <hr />
-                    🚲  &nbsp; Em Andamento &nbsp; 🚲
-                    <div class="artigos">
                         <li>
                             <a href="" data-bs-toggle="modal" data-bs-target="#modal_kon_bss">
                                 Abstracting mobility flows from bike-sharing systems.
@@ -82,7 +78,7 @@
                         </li>
                     </div>
                     <hr />
-                    🚧 &nbsp; Não Iniciadas &nbsp; 🚧
+                    🚲  &nbsp; Em Andamento &nbsp; 🚲
                     <div class="artigos">
                         <li>
                             <a href="" data-bs-toggle="modal" data-bs-target="">
@@ -91,6 +87,10 @@
                             <br />
                             <span class="autor">Xinwei Ma, et. al., 2020.</span>
                         </li>
+                    </div>
+                    <hr />
+                    🚧 &nbsp; Não Iniciadas &nbsp; 🚧
+                    <div class="artigos">
                         <li>
                             <a href="" data-bs-toggle="modal" data-bs-target="">
                                 Impacts on air pollution and health by changing commuting from car
@@ -135,7 +135,7 @@
 
                         <div class="autor">Éderson Cássio Lacerda Ferreira, 2019.
                             <br /><br />
-                            <a href="../../bibliografia/Predição de Fluxos de Ciclistas Usuários de Sistemas de Compartilhamento de Bicicletas (TCC Ederson).pdf"
+                            <a href="bibliografia/Predição de Fluxos de Ciclistas Usuários de Sistemas de Compartilhamento de Bicicletas (TCC Ederson).pdf"
                                 target="_blank" download>
                                 <i class="fa fa-file-pdf-o" style="font-size: 18px;color:red"></i> &nbsp; pdf</a>
                             &nbsp; | &nbsp;
@@ -186,7 +186,7 @@
 
                         <div class="autor">Companhia de Engenharia de Tráfego (CET), 2009.
                             <br /><br />
-                            <a href="../../bibliografia/Viagens de Biblicleta no Município de São Paulo (OD 2007).pdf"
+                            <a href="bibliografia/Viagens de Biblicleta no Município de São Paulo (OD 2007).pdf"
                                 target="_blank" download>
                                 <i class="fa fa-file-pdf-o" style="font-size: 18px;color:red"></i> &nbsp; pdf</a>
                         </div>
@@ -229,7 +229,7 @@
 
                         <div class="autor">Maria Ermelina Brosch Malatesta (FAU - USP), 2014.
                             <br /><br />
-                            <a href="../../bibliografia/A BICICLETA NAS VIAGENS COTIDIANAS DO MUNICÍPIO DE SÃO PAULO.pdf"
+                            <a href="bibliografia/A BICICLETA NAS VIAGENS COTIDIANAS DO MUNICÍPIO DE SÃO PAULO.pdf"
                                 target="_blank" download>
                                 <i class="fa fa-file-pdf-o" style="font-size: 18px;color:red"></i> &nbsp; pdf</a>
                         </div>
@@ -293,24 +293,44 @@
                         <div class="autor">Fabio Kon, Éderson Cássio Ferreira, Higor Amario de Souza,
                             Fábio Duarte, Paolo Santi, Carlo Ratti, 2020.
                             <br /><br />
-                            <a href="../../bibliografia/Abstracting mobility flows from bike-sharing systems.pdf"
+                            <a href="bibliografia/Abstracting mobility flows from bike-sharing systems.pdf"
                                 target="_blank" download>
                                 <i class="fa fa-file-pdf-o" style="font-size: 18px;color:red"></i> &nbsp; pdf</a>
-                            &nbsp; | &nbsp;
+                            &nbsp; | &nbsp; 
                             <a href="https://link.springer.com/article/10.1007/s12469-020-00259-5" target="_blank">
-                                link springer</a>
+                                link springer</a> &nbsp; | &nbsp; 
+                            <a href="https://gitlab.com/interscity/bike-science" target="_blank">bikeScience</a>
                         </div>
                     </div>
                 </div>
                 <div class="modal-body modal-text">
-                    <p><b>Resumo:</b> Ressaltando os benefícios do uso da bicicleta (saúde, meio ambiente, trânsito), são introduzidos um método e uma 
-                    ferramenta open-source, bikeScience, para produzir métricas e visualizações de fluxos de sistemas de compartilhamento de bicletas (BSS - bike-sharing systems). 
-                    Trazendo o caso de estudo dos BSS de Boston.
+                    <p><b>Resumo:</b> Introduzem um novo método e ferramenta open-source, bikeScience, 
+                    para produzir métricas e visualizações de fluxos de sistemas de compartilhamento de bicletas (BSS - bike-sharing systems). 
+                    A ferramenta possibilita autoridades e empresas e entenderem os padrões de mobilidade ciclistica.
+                    Traz o caso de estudo dos BSS de Boston.
                     </p>
                     <hr />
                     <p><b>Ideias e Dados Interessantes:</b> .
                     <ul>
-                        <li></li>
+                        <li>Traz várias referências para os benefícios gerais do uso da bicicleta (para a saúde, poluição sonora, trânsito, uso do espaço);</li>
+                        <li>Retrospectiva dos BSS, culminando no crescimento exponencial na última década (100 bicicletas em 2002, 600 mil em 2013, 18 milhões em 2018);</li>
+                        <li>Na pandemia, bicicleta servindo para distanciamento social;</li>
+                        <li>BSS é uma alternativa para o problema do first and last mile (integrando com o transporte público);</li>
+                        <li>No artigo tem uma coleção bem rica de artigos sobre as dinâmicas dos BSS, embora a maioria analisa 
+                            estações individuais e não fluxos;
+                        </li>
+                        <li>Algumas das referências que analisam fluxos tem alguns problemas como visualização e complexidade computacional, os especialistas 
+                            afirmam que existe um gap para ferramentas com esse intuio;
+                        </li>
+                        <li>No bikeScience, os algoritmos para gerar as análises tem complexidade linear na quantidade de fluxos;</li>
+                        <li>Breve explicação da GraphHopper API e das métricas usadas para traçar os caminhos;</li>
+                        <li>Nível de granularidade do Grid (quadrados grandes: capta fluxos entre os municípios; quadrados menores: fluxos nos bairros), 
+                            recomenda-se testar vários tamanhos para contornar o MAUP - Modifiable Areal Unit Problem</li>
+                        <li>Viagens longas (> 4km) ocorrem nos horários de pico da manhã e tarde, viagens mais curtas no almoço</li>
+                        <li>De manhã tem poucos fluxos, mas intensos (casa-trabalho); de tarde tem mais fluxos (trabalho-casa/academia/bares)</li>
+                        <li>Considerações interessantes sobre os ciclistas rápidos (speeders);</li>
+                        <li>Mostra como análises podem ser feitas na ferramenta, por rexemplo, relacionando os fluxos com a estrutura cicloviária</li>
+                        <li>Identificam correlação entre os fluxos e pontos de interesse, citando que algoritmos de ML podem prever fluxos intensos.</li> 
                     </ul>
                     </p>
                 </div>

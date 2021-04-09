@@ -74,19 +74,19 @@
                                 Abstracting mobility flows from bike-sharing systems.
                             </a>
                             <br />
-                            <span class="autor">Fabio Kon, et. al., 2020.</span>
+                            <span class="autor">Fabio Kon, et. al., 2021.</span>
                         </li>
-                    </div>
-                    <hr />
-                    🚲  &nbsp; Em Andamento &nbsp; 🚲
-                    <div class="artigos">
                         <li>
-                            <a href="" data-bs-toggle="modal" data-bs-target="">
+                            <a href="" data-bs-toggle="modal" data-bs-target="#modal_delft">
                                 Bike-sharing systems’ impact on modal shift: A case study in Delft, the Netherlands.
                             </a>
                             <br />
                             <span class="autor">Xinwei Ma, et. al., 2020.</span>
                         </li>
+                    </div>
+                    <hr />
+                    🚲 &nbsp; Em Andamento &nbsp; 🚲
+                    <div class="artigos">
                     </div>
                     <hr />
                     🚧 &nbsp; Não Iniciadas &nbsp; 🚧
@@ -274,7 +274,8 @@
                         <li>Traz uma retrospectiva histórica bem interesante das políticas cicloviárias na cidade;</li>
                         <li>Apenas 0,7% dos 17000km de vias paulistanas contam com infraestrutura ciclística;</li>
                         <li>Parque da Integração Zilda Arns, na adultora Rio Claro, é um mal exemplo;</li>
-                        <li>São necessárias mais pesquisas sobre o uso de bicicleta, a OD não é específica para isso.</li>
+                        <li>São necessárias mais pesquisas sobre o uso de bicicleta, a OD não é específica para isso.
+                        </li>
                     </ul>
                     </p>
                 </div>
@@ -291,47 +292,123 @@
                         <b>Abstracting mobility flows from bike-sharing systems.</b>
 
                         <div class="autor">Fabio Kon, Éderson Cássio Ferreira, Higor Amario de Souza,
-                            Fábio Duarte, Paolo Santi, Carlo Ratti, 2020.
+                            Fábio Duarte, Paolo Santi, Carlo Ratti, 2021.
                             <br /><br />
                             <a href="bibliografia/Abstracting mobility flows from bike-sharing systems.pdf"
                                 target="_blank" download>
                                 <i class="fa fa-file-pdf-o" style="font-size: 18px;color:red"></i> &nbsp; pdf</a>
-                            &nbsp; | &nbsp; 
+                            &nbsp; | &nbsp;
                             <a href="https://link.springer.com/article/10.1007/s12469-020-00259-5" target="_blank">
-                                link springer</a> &nbsp; | &nbsp; 
+                                link springer</a> &nbsp; | &nbsp;
                             <a href="https://gitlab.com/interscity/bike-science" target="_blank">bikeScience</a>
                         </div>
                     </div>
                 </div>
                 <div class="modal-body modal-text">
-                    <p><b>Resumo:</b> Introduzem um novo método e ferramenta open-source, bikeScience, 
-                    para produzir métricas e visualizações de fluxos de sistemas de compartilhamento de bicletas (BSS - bike-sharing systems). 
-                    A ferramenta possibilita autoridades e empresas e entenderem os padrões de mobilidade ciclistica.
-                    Traz o caso de estudo dos BSS de Boston.
+                    <p><b>Resumo:</b> Introduzem um novo método e ferramenta open-source, bikeScience,
+                        para produzir métricas e visualizações de fluxos de sistemas de compartilhamento de bicletas
+                        (BSS - bike-sharing systems).
+                        A ferramenta possibilita autoridades e empresas e entenderem os padrões de mobilidade
+                        ciclistica.
+                        Traz o caso de estudo dos BSS de Boston.
                     </p>
                     <hr />
                     <p><b>Ideias e Dados Interessantes:</b> .
                     <ul>
-                        <li>Traz várias referências para os benefícios gerais do uso da bicicleta (para a saúde, poluição sonora, trânsito, uso do espaço);</li>
-                        <li>Retrospectiva dos BSS, culminando no crescimento exponencial na última década (100 bicicletas em 2002, 600 mil em 2013, 18 milhões em 2018);</li>
+                        <li>Traz várias referências para os benefícios gerais do uso da bicicleta (para a saúde,
+                            poluição sonora, trânsito, uso do espaço);</li>
+                        <li>Retrospectiva dos BSS, culminando no crescimento exponencial na última década (100
+                            bicicletas em 2002, 600 mil em 2013, 18 milhões em 2018);</li>
                         <li>Na pandemia, bicicleta servindo para distanciamento social;</li>
-                        <li>BSS é uma alternativa para o problema do first and last mile (integrando com o transporte público);</li>
-                        <li>No artigo tem uma coleção bem rica de artigos sobre as dinâmicas dos BSS, embora a maioria analisa 
+                        <li>BSS é uma alternativa para o problema do first and last mile (integrando com o transporte
+                            público);</li>
+                        <li>No artigo tem uma coleção bem rica de artigos sobre as dinâmicas dos BSS, embora a maioria
+                            analisa
                             estações individuais e não fluxos;
                         </li>
-                        <li>Algumas das referências que analisam fluxos tem alguns problemas como visualização e complexidade computacional, os especialistas 
+                        <li>Algumas das referências que analisam fluxos tem alguns problemas como visualização e
+                            complexidade computacional, os especialistas
                             afirmam que existe um gap para ferramentas com esse intuio;
                         </li>
-                        <li>No bikeScience, os algoritmos para gerar as análises tem complexidade linear na quantidade de fluxos;</li>
+                        <li>No bikeScience, os algoritmos para gerar as análises tem complexidade linear na quantidade
+                            de fluxos;</li>
                         <li>Breve explicação da GraphHopper API e das métricas usadas para traçar os caminhos;</li>
-                        <li>Nível de granularidade do Grid (quadrados grandes: capta fluxos entre os municípios; quadrados menores: fluxos nos bairros), 
-                            recomenda-se testar vários tamanhos para contornar o MAUP - Modifiable Areal Unit Problem</li>
-                        <li>Viagens longas (> 4km) ocorrem nos horários de pico da manhã e tarde, viagens mais curtas no almoço</li>
-                        <li>De manhã tem poucos fluxos, mas intensos (casa-trabalho); de tarde tem mais fluxos (trabalho-casa/academia/bares)</li>
+                        <li>Nível de granularidade do Grid (quadrados grandes: capta fluxos entre os municípios;
+                            quadrados menores: fluxos nos bairros),
+                            recomenda-se testar vários tamanhos para contornar o MAUP - Modifiable Areal Unit Problem
+                        </li>
+                        <li>Viagens longas (> 4km) ocorrem nos horários de pico da manhã e tarde, viagens mais curtas no
+                            almoço</li>
+                        <li>De manhã tem poucos fluxos, mas intensos (casa-trabalho); de tarde tem mais fluxos
+                            (trabalho-casa/academia/bares)</li>
                         <li>Considerações interessantes sobre os ciclistas rápidos (speeders);</li>
-                        <li>Mostra como análises podem ser feitas na ferramenta, por rexemplo, relacionando os fluxos com a estrutura cicloviária</li>
-                        <li>Identificam correlação entre os fluxos e pontos de interesse, citando que algoritmos de ML podem prever fluxos intensos.</li> 
+                        <li>Mostra como análises podem ser feitas na ferramenta, por rexemplo, relacionando os fluxos
+                            com a estrutura cicloviária</li>
+                        <li>Identificam correlação entre os fluxos e pontos de interesse, citando que algoritmos de ML
+                            podem prever fluxos intensos.</li>
                     </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Artigo sobre Delft e os 3 tipos de sistemas na internet -->
+    <div class="modal fade" id="modal_delft" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <div class="modal-text">
+                        <b>Bike-sharing systems’ impact on modal shift: A case study in Delft, the Netherlands.</b>
+
+                        <div class="autor">Xinwei Ma, Yufei Yuan, Niels Van Oort, Serge Hoogendoorn, 2020.
+                            <br /><br />
+                            <a href="bibliografia/Bike-sharing systems’ impact on modal shift - A case study in Delft, the Netherlands.pdf"
+                                target="_blank" download>
+                                <i class="fa fa-file-pdf-o" style="font-size: 18px;color:red"></i> &nbsp; pdf</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body modal-text">
+                    <p><b>Resumo:</b> Analisa os impactos de tipos diferentes de BSS (sistemas de compartilhamento de
+                        bicicletas) na migração de
+                        modal de transporte. Estuda Delft, na Holanda, que dispõe de 3 sistemas, com e sem estações
+                        (docked e dockless) e de aluguel de bicicletas. Conclui que os 3 tipos de sistemas atraem grupos
+                        de usuários
+                        distintos com padrões de migração de modal diferentes.
+                    </p>
+                    <hr />
+                    <p><b>Ideias e Dados Interessantes:</b> .
+                    <ul>
+                        <li>Cita várias referências sobre os benefícios dos BSS e das bicicletas;</li>
+                        <li>Cita várias referências sobre a história dos BSS e dos padrões de migração de
+                            modal (modal shift) para bicicletas;
+                        </li>
+                        <li>As migrações dos 'modos ativos' ocorrem buscando diminuir o cansaço e tempo de viagem (a pé)
+                            e
+                            reduzir a incoveniência de carregar a bicicleta e risco de roubos (bicicleta particular);
+                        </li>
+                        <li>Migração do transporte público ocorre de modo substitutivo em cidades grandes (densas) e
+                            'integrativo' em
+                            cidades médias; Buscam reduzir tempo de espera e desconforto de lotações;
+                        </li>
+                        <li>Migração dos carros para BSS ocorrem em viagens curtas e em áreas centrais; </li>
+                        <li>A intensidade da migração de carro para BSS varia muito (2% a 5% na China, Canada,
+                            Washington, Londres, mas 20% em Minnesota,
+                            Brisbane, Melbourne);</li>
+                        <li>Explica o contexto de Delft: 100 mil habitantes; grande cultura ciclística (30% das
+                            viagens); estrutura cicloviária consolidada;
+                            cidade polo universitário;
+                        </li>
+                        <li>Os sistemas dockless atraem mais o público masculino e de renda menor;</li>
+                        <li>O sistema docked atrai mais o público que usa o trem e que busca bicicletas de qualidade;
+                        </li>
+                    </ul>
+                    <span style="color: rgb(75, 75, 75);">(Fazem análises bem específicas sobre os dados dessa cidade, e analisam
+                        históricos e políticas específicas empregadas por cada uma dessas empresas de BSS, eu acredito
+                        que essas conclusões
+                        sejam difíceis de generalizar para outros contextos)</li>
                     </p>
                 </div>
             </div>

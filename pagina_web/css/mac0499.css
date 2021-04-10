@@ -11,8 +11,6 @@ body {
     height: 100%;
     padding: 3% 3% 3% 3%;
     background-color: white;
-    border-width: 2px;
-    border-color: black;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: black;
 }
@@ -101,29 +99,38 @@ a:hover {
     letter-spacing: 0.09em;
 }
 
-.artigos {
+.topicos {
     padding-left: 1.5%;
     padding-top: 1.5%;
     font-size: 0.9em;
 }
 
-.artigos .detalhes {
-    padding-left: 50px;
-    font-size: 13px;
+.topicos .detalhes {
+    padding-left: 5%;
+    padding-top: 01em;
+    font-size: 0.85em;
 }
 
-.artigos li {
-    padding-left: 20px;
-    padding-bottom: 15px;
+.topicos li {
+    padding-left: 3%;
+    padding-bottom: 0.85em;
 }
 
 .autor {
-    font-size: 12px;
+    font-size: 0.8em;
 }
 
-.artigos a:hover {
+.topicos a:hover {
     color: rgb(255, 45, 45);
     text-decoration: none;
+}
+
+
+.tabela .titulo {
+    font-weight: bold;
+    margin-bottom: 1%;
+    padding-bottom: 1%;
+    border-bottom: 0.2em double black;
 }
 
 .slider::-moz-range-thumb {

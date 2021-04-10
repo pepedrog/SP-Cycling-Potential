@@ -125,12 +125,53 @@ a:hover {
     text-decoration: none;
 }
 
+.collapse {
+    border-bottom: 0.1em solid #212529;
+    border-right: 0.1em dotted #212529;
+}
+
+.tarefa {
+    font-size: 0.85em;
+}
+
+.card-body {
+    padding-top: 0.5%
+}
 
 .tabela .titulo {
-    font-weight: bold;
-    margin-bottom: 1%;
+    text-align: center;
+    
+}
+
+.tabela .atividade {
+    width: 50%;
+    padding-top: 1%;
     padding-bottom: 1%;
-    border-bottom: 0.2em double black;
+    border-bottom: 0.1em solid #212529;
+    border-right: 0.1em dotted #212529;
+}
+
+.tabela .titulo .mes {
+    padding-top: 2%;
+    font-size: 0.7em;
+}
+
+.tabela .mes {
+    text-align: center;
+    border-right: 0.1em dotted #212529;
+    border-bottom: 0.1em solid #212529;
+    width: 5%;
+}
+
+.tabela .linha {
+    padding-left: 2%;
+}
+
+.tabela .mes .celula-completa {
+    margin-top: 30%;
+    margin-bottom: 30%;
+    height: 40%;
+    background-color: rgb(107, 211, 58);
 }
 
 .slider::-moz-range-thumb {

@@ -34,7 +34,7 @@ body {
 }
 
 .content-home {
-    padding-top: 5%;
+    padding-top: 3%;
     letter-spacing: 0.05em;
     font-size: 0.9em;
     text-align: justify;
@@ -52,9 +52,14 @@ body {
     text-decoration: none;
 }
 
+h2.subtitle {
+    letter-spacing: 0.03em;
+    margin-bottom: 0.3em;
+}
+
 h3.subtitle {
+    font-size: 1.2em;
     letter-spacing: 0.05em;
-    font-size: 1.15em;
     font-weight: 400;
     color: black;
     text-decoration: dashed;
@@ -93,7 +98,7 @@ a:hover {
 }
 
 .text-home {
-    padding-left: 1%;
+    padding-left: 5%;
     text-align: justify;
     font-size: 1.2em;
     letter-spacing: 0.09em;
@@ -176,4 +181,9 @@ a:hover {
     border-radius: 50%;
     background: rgb(218, 32, 32);
     cursor: pointer;
+}
+
+.language {
+    margin-right: 1%;
+    font-size: 1.5em;
 }

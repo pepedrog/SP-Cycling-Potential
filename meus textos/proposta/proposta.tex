@@ -1,0 +1,116 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\usepackage[english,portuguese]{babel}
+
+\addto\captionsportuguese{\renewcommand{\figurename}{Fig.}}
+\addto\captionsportuguese{\renewcommand{\refname}{Referências}}
+%opening
+
+
+\title{Potencial de migração de viagens para o modo bicicleta
+\\ \large Estudo de caso da cidade de São Paulo, Brasil}
+\author{Pedro Gigeck Freire \\
+Orientadores: Fabio Kon, Higor Amario de Souza}
+\date{23 de Maio de 2021}
+
+%\setlength{\parindent}{0.5em}
+%\setlength{\parskip}{0.1em}
+\begin{document}
+
+\maketitle
+
+\section*{Motivação}
+
+Nas últimas décadas, as consequências negativas do uso do automóvel nas grandes cidades, como as altas taxas de emissão de CO\textsubscript{2}, poluição sonora, prejuízos para a saúde pública e congestionamentos nas vias, foram amplamente reconhecidas e estudadas \cite{bikeconsequences}. Nesse contexto, as grandes cidades têm promovido alternativas ao uso dos carros particulares \cite{worldbank} \cite{mayors}.
+
+A cidade de São Paulo tradicionalmente priorizou os investimentos em infraestrutura viária para veículos motorizados  \cite{malatesta}. Porém, nos últimos anos a cidade vem investindo na expansão da infraestrutura cicloviária, que hoje conta com 680km \cite{cet}. A adoção da bicicleta como modal de transporte é uma das possíveis alternativas ao transporte motorizado. Segundo a pesquisa Origem e Destino 2017 realizada pelo metrô \cite{OD}, as viagens de bicicleta representam pouco menos de 1\% do total de viagens diárias em São Paulo. Desta forma, há espaço para um crescimento no número de viagens de bicicleta na cidade.
+
+Desse modo, este trabalho se insere em uma integração entre a Companhia de Engenharia de Tráfego de São Paulo (CET) e o BikeScience (ferramenta de análise de mobilidade ciclística desenvolvida no projeto InterSCity \cite{BikeScience}), que visa estudar o potencial de migração de viagens de outro modais para a bicicleta.
+Buscamos descobrir quais são e onde estão as viagens que poderiam ser migradas para bicicleta, discutir ações para que essa migração aconteça e estimar os impactos que tal mudança de modal proporcionaria. 
+
+A relevância deste tema se dá pelos amplos benefícios da adoção da bicicleta e, sobretudo, pela possibilidade de que as políticas de mobilidade urbana sejam, cada vez mais, embasadas pelos dados.
+
+\section*{Objetivos}
+
+Neste trabalho, temos como objetivo principal a criação de um índice de potencial ciclável, isto é, um modelo que identifique quais viagens podem migrar de outros modais para a bicicleta. 
+
+Com foco em reduzir o trânsito congestionado das ruas e avenidas de São Paulo, priorizaremos as viagens feitas por veículos privados. Em geral, enquadram-se nessa categoria viagens de curta distância e duração, que percorrem rotas com pouca declividade. Também incluiremos em nosso estudo as viagens feitas a pé, de longa duração, que também poderiam migrar para a bicicleta, visando uma melhor qualidade de vida do cidadão e do ambiente da cidade.
+
+A migração de viagens para o modal bicicleta gera impactos que poderemos simular e analisar, por exemplo, o aumento da velocidade média das vias com a diminuição dos veículos, além do volume de gases poluentes que deixaria de ser emitido.
+
+Na literatura, existem índices com o mesmo propósito \cite{londonindex} \cite{steer}, que tendem a priorizar perfis já predominantes nas viagens de bicicleta. Então, visamos criar um modelo abrangente, que leva em consideração um amplo conjunto de variáveis como dados socioeconômicos das regiões, infraestrutura cicloviária existente, dados das viagens (declividade das rotas, localização, duração, distância), características dos indivíduos (gênero, idade, renda), entre outros.
+
+Para analisar tais atributos, buscamos também gerar mapas da distribuição das viagens na cidade, mostrando a concentração delas nas regiões e principais fluxos, contando com filtros dinâmicos, com auxílio do BikeScience.  
+
+\section*{Metodologia}
+
+Para atingir os objetivos citados acima, contaremos com o auxílio da ferramenta BikeScience, que é desenvolvida no formato de `jupyter notebooks`, junto de módulos python independentes. Assim, será no contexto dessa ferramenta que serão implementados o tratamento dos dados, a geração de mapas, diagramas e tabelas e a análise dos resultados.  
+
+Os dados utilizados vêm da pesquisa Origem e Destino realizada pelo metrô de São Paulo, que conta com dados de cerca de 42 milhões de viagens diárias, além de informações sobre relevo, malha viária, dados demográficos, socioeconômicos que podem ser extraídos de ferramentas oficiais como o Geosampa \cite{geosampa}. Além disso, poderemos utilizar outros conjuntos de dados sobre a cidade que ajudem a identificar e formular o índice de migração de viagens.
+
+As atividades planejadas para a realização de tais objetivos estão enumeradas na tabela abaixo, junto de um cronograma estimado para a conclusão das mesmas.
+
+\begin{center}
+\begin{tabular}{ |m{17em} |c|c|c|c|c|c|c|c|c|c| }
+\hline
+ \centering $\bf{Atividade}$ $\backslash$ mês& 03 & 04 & 05 & 06 & 07 & 08 & 09 & 10 & 11 & 12 \\ 
+ \hline
+ Leitura da bibliografia & x & x & x & x & x &  &  &  &  & \\ 
+ \hline
+ Entendimento das Ferramentas & & x & & & & & & & & \\ 
+ \hline
+ Tratamento dos dados e geração dos mapas de infraestrutura cicloviária & & x & x & & & & & & & \\ 
+ \hline
+ Estudo e elaboração do índice de potencial ciclável & & & x & x & x & & & & & \\ 
+ \hline
+ Obtenção e tratamento dos dados necessários (relevo, demografia, etc) & & & & x & x & x & & & & \\ 
+ \hline
+ Aplicação do índice criado nas viagens da OD (geração de mapas) & & & & & x & x & x & & & \\ 
+ \hline
+ Simulação dos impactos da migração & & & & & & & x & x & & \\ 
+ \hline
+ Escrita da monografia & & & & & & & x & x & x & x \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{9}
+\bibitem{bikeconsequences} 
+de Nazelle, A., Nieuwenhuijsen, M.J., Antó, et al, 2011. \textit{Improving health through policies that promote active travel: a review of evidence to support integrated health impact assessment.} Environ. Int. 37, 766–777
+
+\bibitem{worldbank} 
+The World Bank, 2013. \href{https://documents.worldbank.org/en/publication/documents-reports/documentdetail/390491468338496549/the-low-carbon-city-development-program-lccdp-guidebook-a-systems-approach-to-low-carbon-development-in-cities}{\textit{The Low Carbon City Development Program (LCCDP) Guidebook: A Systems Approach to Low Carbon Development in Cities.}}. Acessado em 24/05/2021.
+
+\bibitem{mayors} 
+Compact of Mayors, 2015. Disponível em \href{https://www.globalcovenantofmayors.org/}{https://www.globalcovenantofmayors.org/}. Acessado em 24/05/2021
+
+\bibitem{malatesta}
+Malatesta, M.E.B., 2014. \textit{A Bicicleta nas viagens cotidianas do município de São Paulo.} – Faculdade de Arquitetura e Urbanismo da Universidade de São Paulo.
+
+\bibitem{cet}
+Companhia de Engenharia de Tráfego - CET. \textit{Mapa de Infraestrutura Cicloviária}. Disponível em \href{http://www.cetsp.com.br/consultas/bicicleta/mapa-de-infraestrutura-cicloviaria.aspx}{http://www.cetsp.com.br/consultas/bicicleta/mapa-de-infraestrutura-cicloviaria.aspx}. Acessado em 25/05/2021.
+
+\bibitem{OD}
+Companhia do Metropolitano de São Paulo - Metrô, 2019. \href{https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino/resource/b3d93105-f91e-43c6-b4c0-8d9c617a27fc}{\textit{Pesquisa Origem e Destino 2017, A Mobilidade Urbana da Região Metropolitana de São Paulo em Detalhes.}}
+
+\bibitem{BikeScience}
+Kon, Fabio., et al, 2021. \href{https://link.springer.com/article/10.1007/s12469-020-00259-5}{\textit{Abstracting mobility flows from bike-sharing systems.}} 
+
+\bibitem{londonindex}
+Transport for London, 2010. \href{https://www.london.gov.uk/sites/default/files/cycling-revolution-london.pdf}{\textit{Cycling Revolution London.}}
+
+\bibitem{steer}
+Steer Group, 2015. \href{https://www.steergroup.com/insights/news/cycling-potential-index}{\textit{Cycling Potential Index.}} Disponível em https://www.steergroup.com/insights/news/cycling-potential-index. Acessado em 24/05/2021. 
+
+\bibitem{geosampa}
+Prefeitura de São Paulo. \textit{Geosampa - Mapa Digital da Cidade de São Paulo} \href{http://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx}{http://geosampa.prefeitura.sp.gov.br/PaginasPublicas/\_SBC.aspx}
+
+\end{thebibliography}
+
+\end{document}
+\end{document} 

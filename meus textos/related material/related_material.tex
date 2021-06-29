@@ -1,0 +1,105 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\usepackage[english,portuguese]{babel}
+
+\addto\captionsportuguese{\renewcommand{\figurename}{Fig.}}
+\addto\captionsportuguese{\renewcommand{\refname}{Referências}}
+%opening
+
+
+\title{Modal shift potential of trips to bicycle modal
+\\ \large Case study of São Paulo, Brazil}
+\author{Pedro Gigeck Freire \\
+Supervisors: Fabio Kon, Higor Amario de Souza}
+\date{June, 2021}
+
+%\setlength{\parindent}{0.5em}
+%\setlength{\parskip}{0.1em}
+\begin{document}
+
+\maketitle
+
+\section*{Related Work}
+
+Research on modal shift to cycling has grown considerably in the past decade. Much of this work focus on the effects of bike-sharing systems (BSS) implementation (Fishman, 2014; Shaheen 2013; Ma 2020). These systems have significant impact on changing the modal share of the region they are implemented at, arriving at 20\% of trips that were made by car migrating to bicycle (Fishman et al., 2014).
+
+Another stream of research, pointed by Larsen et al. (2011), aimed to better understand what are the policies with better response on cycling increase, such as segregated lanes for bycicles (bike-lanes), marketing campaings, cyclist education and driver training. Besides, the great relevance of cycling infrastructure to modal shift influenced the development of literature focusing on thecnical aspects of these structures, for example, what are the best material, signaling, lanes width etc (guia alemão lá)
+
+While literature stablished homogeneous conclusion on \textit{what} are the policies necessary to modal shift and \textit{how} to implement them, there is limited research on \textit{where} the build them. (Larsen et al. (2011); Cecilia et al. (2018). Recently, some methods have been proposed to indicate which regions in a city (districts, neighborhoods) have greater \textit{cycling potential}, i.e, which are the places where these policies have better efficiency, and what are the attributes influencing in this potential.
+
+The studied methods for calculating cycling potential, also called cycling potential indexes, were developed by both academical papers and governamental organizations, and vary according to the available data of the studied region. Lovelace et al. (2017) categorize the measures considered on each index into three general classes: 
+individual-based measures (demographic data), area-based measures (environmental data, such as infrasctrucutre) and route-based measures (trips data, obtained from origin-destination surveys). In this section, we list some of these methodologies, presenting what kind of information is considered and how this data is aggregated in each one.
+
+\paragraph{1. Prioritization Index (Larsen et al., 2011) }
+The first approach to estimate where the investments on cycling infrastructure should be prioritized was proposed by Larsen et al (2011). This method consists of a grid-cell model on the studied region, the grid-cells size of 300 meters was chosen after empirical tests.
+
+For each cell, a value from 0 to 1, called the prioritization index, is calculated.  The higher the prioritization index, the higher the priority a grid cell is ascribed in terms of the addition of cycling infrastructure. The authors applied that method in the Montreal Island, Canada, as a study case. 
+
+Five attributes are considered in this index: the number of observed cycling trips; the number of potential cycling trips; the number of collision with cars; the connectivity of cycling infrastructure; and the opinion of cyclits about where the investments should be prioritized.
+
+The observed cycling trips are those that already occur in the city, while the \textit{potential} cycling trips are those currently made by car with distance smaller than 75\% of the observed cycling trips, which corresponded to trips shorter than 2km in the Montreal study case. The authors cite that this criteria for the potential trips could be improved to consider other parameters besides de distance, such as sociodemographic variables. The connectivity of the cycling infrastructure is calculated by counting the "dangling nodes", i.e., the places where the bycicle lanes ends abruptally.
+In the studied region, the last attribute was obtained from an online survey with 3000 cyclists, where they were asked to tell which were the roads that should receive cycling infrastructure.
+
+The methodology to aggregate these data for each grid cell $i$ consists in summing the quantity of the attributes percentage in that cell. For example, if a cell contains 5\% of the observed cycling trips and 8\% of the collisions (and 0 in all other attributes) then it would receive a value of $x_i = 0.05 + 0.08 = 0.13$. Finally this value is divided by the sum of values of all cells $\sum_{j}{x_j}$, getting a "priority percentage" of this cell in relation to the whole region.
+
+\paragraph{2. Willingness Index (Zhang et al., 2014) }
+
+Zhang et al. (2014) proposed another method to define where the investments in cycling infrastructure should be prioritized. The method consists in identifying the regions of the studied city where people are most willing to use bicycle. The studied case was the city of Belo Horizonte (BH), Brazil, in the context of cycling infrastructure expansion between 2010 and 2014.
+
+The considered variables were obtained from a survey with 2008 full answers from citizens of BH. The interviwees were asked what were their willingness to use bicycle if there were appropriate bicycle paths in their daily trips routes. In addition, the survey collected the following "influential factors": educational level; commuting time; monthly income; if the respondent lives in a house or not (in an apartment for example); house ownership; car ownership; current mode of transport; if there are kids in household; and cycling network density in the respondent's daily trips.
+
+After collecting the data, an ordered outcome discrete model was applied to quantify the effects of each influential factor on the interest variable (willingness to cycle). With this model, a coeficient was calculated for each influential attribute, the higher this coeficient is, the most relevant this attribute is to influence people to use bicycle. Inversely, the smaller this coeficient, the stronger this attribute in in influencing people to not use bicycle.
+
+The most strong correlations were found in the attributes of commuting time (higher commuting time has negative influence), monthly income (the group with medium household income has great willingness to cycle), and current mode (walk mode has the strong positive influence). These conclusions, although, represent this city specific context. It is known that the relations between bicycle use and sociodemographics factors are country-specific and unlikely causal (Parkin et al. 2008). So it is necessary to collect local data in order to apply this method in other city  (conducting a similar survey).
+
+The coefficients obtained from the model were then used to calculate the willingness index on each administrative region, multiplying the value of each attribute in the region by the respective coefficient, using census and OD survey data.
+
+\paragraph{3. Steer Cycling Potential Index (Steer, 2015) }
+
+Steer is a consultancy that develops tools for urban complex problems. The Cycling Potential Index (Steer 2015a) was developed to rank regions in England and Wales in terms of cycling investments effectiveness.
+
+This index considers three dimensions: Hilliness, Sociodemographics and Trip-length. The hilliness is calculated as the standard deviation of the heights in the region, using a regular grid of 90m resolution. The sociodemographic dimension is conceived classifying the predominant life style of the region, in this case the MOSAIC classification (MOSAIC, 20xx) was used, considering 23 sociodemographic attributes. Each life style class has a precalculated cycling potential value. Finally, the trip length dimension aims to consider trips that could be migrated to cycling mode. The data was obtained from local OD surveys and the limit length stablished was 8km, although the volume of actual bicycle trips longer than 5km was small.
+
+For each dimension, the regions are ranked, and the overall rank is the average of the three ranks, though with the trip-length dimension having half of the weight of the other two, because the considered trips were trips for work (commutation) but the index aimed to reach other purpose journeys, that could have greater length. 
+
+\paragraph{4. Analysis of Cycling Potential (Transport for London, 2016) }
+
+
+
+%\begin{center}
+%\begin{tabular}{ |m{17em} |c|c|c|c|c|c|c|c|c|c| }
+%\hline
+% \centering $\bf{Atividade}$ $\backslash$ mês& 03 & 04 & 05 & 06 & 07 & 08 & 09 & 10 & 11 & 12 \\ 
+% \hline
+% Leitura da bibliografia & x & x & x & x & x &  &  &  &  & \\ 
+% \hline
+% Entendimento das Ferramentas & & x & & & & & & & & \\ 
+% \hline
+% Tratamento dos dados e geração dos mapas de infraestrutura cicloviária & & x & x & & & & & & & \\ 
+% \hline
+% Estudo e elaboração do índice de potencial ciclável & & & x & x & x & & & & & \\ 
+% \hline
+% Obtenção e tratamento dos dados necessários (relevo, demografia, etc) & & & & x & x & x & & & & \\ 
+% \hline
+% Aplicação do índice criado nas viagens da OD (geração de mapas) & & & & & x & x & x & & & \\ 
+% \hline
+% Simulação dos impactos da migração & & & & & & & x & x & & \\ 
+% \hline
+% Escrita da monografia & & & & & & & x & x & x & x \\ 
+% /\hline
+ 
+%\end{tabular}
+%\end{center}
+ 
+ \bibliography{references.bib}
+\end{document}
+\end{document} 

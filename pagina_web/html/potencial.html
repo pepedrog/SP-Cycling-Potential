@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="mac0499.css" runat="server" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Potencial Ciclável</title>
+</head>
+
+<body>
+    <div class='language float-right'>
+        <a target="blank" href="plano.html">🇧🇷</a>
+        <a target="blank" href="en/plan.html">🇬🇧</a>
+    </div>
+    <div class="main">
+        <header class="row justify-content-center">
+            <nav class="navbar navbar-expand-lg text links">
+                🚴
+                <a target="blank" class="nav-link" href="index.html">Início</a>
+                🚴
+                <a target="blank" class="nav-link" href="proposta.html">Proposta</a>
+                🚴
+                <a target="blank" class="nav-link" href="plano.html">Plano de Trabalho</a>
+                🚴
+                <a target="blank" class="nav-link" href="material.html">Material</a>
+                🚴
+            </nav>
+        </header>
+        <div>
+            <main role="main" class="content">
+                <hr />
+                <br />
+                <h2 class="subtitle text-center">Potencial Ciclável</h2>
+                <h3 class="subtitle text-center">Ideias e Referências</h3>
+                <div>
+
+                    <br />
+                    <h4>Tipos de métodos 🧮</h4>
+                    <hr />
+                    <p> Existem três abordagens principais para identificar o potencial de adesão à bicicleta de uma
+                        determinada região:
+                    <ul>
+                        <li><b>Potenciais ciclistas:</b> Calcular a quantidade de indivíduos que poderiam aderir à
+                            bicicleta, com base em seus dados sociodemográficos.
+                        </li>
+                        <li><b>Viagens conversíveis:</b> Calcular a quantidade de viagens que poderiam ser convertidas
+                            para o modo bicicleta, com base em dados sobre a viagem (geralmente retirados de pesquisas
+                            OD).
+                        </li>
+                        <li><b>Dados sobre a região:</b> Atribuir um valor de potencial ciclável à uma região com base
+                            em atributos do ambiente.</li>
+                    </ul>
+                    </p>
+                    <p> Para clareza, separaremos os atributos nessas 3 categorias, mas essas abordagens
+                        podem ser combinadas. Por exemplo, uma viagem pode ser considerada conversível se
+                        o índividuo que a faz é um ciclista em potencial; ou podemos considerar a densidade de
+                        viagens conversíveis de uma região como um dado de ambiente, etc.
+                    </p>
+                    <br />
+                    <h4>Os Métodos 📚</h4>
+                    <hr />
+                    <div class="topicos">
+                        <ol>
+                            <li>
+                                <a target="blank" href="" data-bs-toggle="modal" data-bs-target="#modal_prioritization">
+                                    Prioritization Index
+                                </a>
+                                <br />
+                                <span class="autor">Larsen et al., 2011.</span>
+                            </li>
+                            <li>
+                                <a target="blank" data-bs-toggle="modal" data-bs-target="#modal_ "
+                                    href="">
+                                    Prioritizing bicycle paths in Belo Horizonte City, Brazil: Analysis based on user
+                                    preferences and willingness consideringindividual heterogeneity
+                                </a>
+                                <br />
+                                <span class="autor">Zhang et al., 2014.</span>
+                            </li>
+                            <li>
+                                <a target="blank" href="" data-bs-target="">
+                                    Cycling Potential Index
+                                </a>
+                                <br />
+                                <span class="autor">The World Bank, 2021.</span>
+                            </li>
+                            <li>
+                                <a target="blank"
+                                    href="http://content.tfl.gov.uk/analysis-of-cycling-potential-2016.pdf"
+                                    data-bs-target="">
+                                    Analysis of Cycling Potential
+                                </a>
+                                <br />
+                                <span class="autor">Transport For London, 2016.</span>
+                            </li>
+                            <li>
+                                <a target="blank"
+                                    href="https://www.yumpu.com/en/document/read/41572043/1-cycling-potential-index-steer-davies-gleave"
+                                    data-bs-target="">
+                                    Steer CPI
+                                </a>
+                                <br />
+                                <span class="autor">Steer (organização de consultoria), 2015.</span>
+                            </li>
+                            <li>
+                                <a target="blank"
+                                    href="https://www.tcat.ca/wp-content/uploads/2019/09/Increasing-Cycling-in-Canada-A-Guide-to-What-Works-2019-09-25.pdf"
+                                    data-bs-target="">
+                                    Increasing Cycling in Canada
+                                </a>
+                                <br />
+                                <span class="autor">University of Toronto, 2019.</span>
+                            </li>
+                            <li>
+                                <a target="blank"
+                                    href="https://www.sciencedirect.com/science/article/pii/S2352146519305307"
+                                    data-bs-target="">
+                                    Revealing the Cycling Potential of Starter Cycling Cities
+                                </a>
+                                <br />
+                                <span class="autor">Cecília Silva et al, University of Porto, 2018.</span>
+                            </li>
+                            <li>
+                                <a target="blank" href="https://www.pct.bike/" data-bs-target="">
+                                    Propensity to Cycle Tool (PCT)
+                                </a>
+                                <br />
+                                <span class="autor">James Woodcock et al, University of Cambridge, 2017.</span>
+                            </li>
+                            <li>
+                                <a target="blank"
+                                    href="https://www.sciencedirect.com/science/article/pii/S0966692320310206"
+                                    data-bs-target="">
+                                    A nodal approach for estimating potential cycling demand
+                                </a>
+                                <br />
+                                <span class="autor">Gerhard Hitge et al, University of Petroria, 2021.</span>
+                            </li>
+                            <li>
+                                <a target="blank"
+                                    href="https://www.sciencedirect.com/science/article/pii/S096585641400175X"
+                                    data-bs-target="">
+                                    Prioritizing bicycle paths in Belo Horizonte City, Brazil: Analysis based on user
+                                    preferences and willingness consideringindividual heterogeneity
+                                </a>
+                                <br />
+                                <span class="autor">Dapeng Zhang et al, Rensselaer Polytechnic Institute + UFMG,
+                                    2014.</span>
+                            </li>
+                            <li>
+                                <a target="blank"
+                                    href="https://www.sciencedirect.com/science/article/pii/S0968090X19306436"
+                                    data-bs-target="">
+                                    A data science framework for planning the growth of bicycle infrastructures
+                                </a>
+                                <br />
+                                <span class="autor">Luis Olmo et al, University of California, 2020.</span>
+                            </li>
+                            <li>
+                                <a target="blank" href="https://copenhagenizeindex.eu/" data-bs-target="">
+                                    Copenhagenize Index
+                                </a>
+                                <br />
+                                <span class="autor">Copenhagenize, 2017.</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <br />
+                    <div style="width: max-content; background-color: white; padding-right: 2%;">
+                        <h5>Relação dos métodos e dados 📊</h5>
+                        <table class="table table-sm table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th style="background-color: rgb(253, 196, 196);" class="text-center" colspan="10"
+                                        scope="col">
+                                        Indivíduos
+                                    </th>
+                                    <th style="background-color: rgb(254, 255, 167);" class="text-center" colspan="6"
+                                        scope="col" scope="col">
+                                        Viagens
+                                    </th>
+                                    <th style="background-color: rgb(186, 255, 180);" class="text-center" colspan="6"
+                                        scope="col" scope="col">
+                                        Regiões
+                                    </th>
+                                </tr>
+                            </thead>
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th class="text-center" scope="col">estudo de caso</th>
+                                    <th style="background-color: rgba(253, 196, 196, 0.25);"
+                                        class="text-center align-middle" scope="col">idade</th>
+                                    <th style="background-color: rgba(253, 196, 196, 0.25);"
+                                        class="text-center align-middle" scope="col">renda</th>
+                                    <th style="background-color: rgba(253, 196, 196, 0.25);"
+                                        class="text-center align-middle" scope="col">gênero</th>
+                                    <th style="background-color: rgba(253, 196, 196, 0.25);"
+                                        class="text-center align-middle" scope="col">posse de carro</th>
+                                    <th style="background-color: rgba(253, 196, 196, 0.25);"
+                                        class="text-center align-middle" scope="col">nível educacional</th>
+                                    <th style="background-color: rgba(253, 196, 196, 0.25);"
+                                        class="text-center align-middle" scope="col">incapacidade</th>
+                                    <th style="background-color: rgba(253, 196, 196, 0.25);"
+                                        class="text-center align-middle" scope="col">tipo de moradia</th>
+                                    <th style="background-color: rgba(253, 196, 196, 0.25);"
+                                        class="text-center align-middle" scope="col">pessoas na família</th>
+                                    <th style="background-color: rgba(253, 196, 196, 0.25);"
+                                        class="text-center align-middle" scope="col">viagens realizadas</th>
+                                    <th style="background-color: rgba(253, 196, 196, 0.25);"
+                                        class="text-center align-middle" scope="col">estilo de vida (agrupamento)</th>
+
+
+                                    <th style="background-color: rgba(252, 253, 196, 0.8);"
+                                        class="text-center align-middle" scope="col">
+                                        distância</th>
+                                    <th style="background-color: rgba(252, 253, 196, 0.8);"
+                                        class="text-center align-middle" scope="col">
+                                        período do dia</th>
+                                    <th style="background-color: rgba(252, 253, 196, 0.8);"
+                                        class="text-center align-middle" scope="col">
+                                        carga</th>
+                                    <th style="background-color: rgba(252, 253, 196, 0.8);"
+                                        class="text-center align-middle" scope="col">
+                                        modal atual</th>
+                                    <th style="background-color: rgba(252, 253, 196, 0.8);"
+                                        class="text-center align-middle" scope="col">
+                                        vel. média da rota</th>
+                                    <th style="background-color: rgba(252, 253, 196, 0.8);"
+                                        class="text-center align-middle" scope="col">
+                                        declividade da rota</th>
+                                    <th style="background-color: rgba(186, 255, 180, 0.35);"
+                                        class="text-center align-middle" scope="col">declividade</th>
+                                    <th style="background-color: rgba(186, 255, 180, 0.35);"
+                                        class="text-center align-middle" scope="col">estrutura cicloviária</th>
+                                    <th style="background-color: rgba(186, 255, 180, 0.35);"
+                                        class="text-center align-middle" scope="col">densidade populacional</th>
+                                    <th style="background-color: rgba(186, 255, 180, 0.35);"
+                                        class="text-center align-middle" scope="col">diversidade ocupacional</th>
+                                    <th style="background-color: rgba(186, 255, 180, 0.35);"
+                                        class="text-center align-middle" scope="col">transporte público</th>
+                                    <th style="background-color: rgba(186, 255, 180, 0.35);"
+                                        class="text-center align-middle" scope="col">pontos de interesse</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center">1</th>
+                                    <td class="text-center">São Paulo</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅ 7.5</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">2</th>
+                                    <td class="text-center">Londres</td>
+                                    <td class="text-center">✅ 80</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅ 10</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">3</th>
+                                    <td class="text-center">Reino Unido</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅ dp alt</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">4</th>
+                                    <td class="text-center">Toronto</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅ </td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅ 8</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">5</th>
+                                    <td class="text-center">Porto</td>
+                                    <td class="text-center">✅ 50</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">6</th>
+                                    <td class="text-center">Reino Unido</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅ grad md</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">7</th>
+                                    <td class="text-center">Cidade do Cabo</td>
+                                    <td class="text-center">✅ 60</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">8</th>
+                                    <td class="text-center">Belo Horizonte</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">✅</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">9</th>
+                                    <td class="text-center">Bogota</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">10</th>
+                                    <td class="text-center">Copenhagen+</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="modais">
+        <div class="modal fade" id="modal_prioritization" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>Build it. But Where? The use of Geographic Information Systems in Identifying locations for new cycling infrastructure</b>
+
+                            <div class="autor">Jacob Larsen, Zachary Patterson e Ahmed M. El Geneidy, 2011.
+                                <br /><br />
+                                <a href="https://www.researchgate.net/publication/263448580_Build_It_But_Where_The_Use_of_Geographic_Information_Systems_in_Identifying_Locations_for_New_Cycling_Infrastructure"
+                                    target="_blank">
+                                    <u>página research gate</u></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b> Faz uma revisão da literatura sobre bicicleta e classifica em 4 grandes fluxos de pesquisa. Aponta que não existe pesquisa sobre 
+                            quais os melhores locais para construir infraestrutura ciclovária. Propõe um <b>índice de priorização</b> para as regiões da cidade de Montreal (Canadá)
+                            que devem receber esse tipo de investimento.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Quantidade atual de viagens de bicicleta (pesquisa OD)</li>
+                            <li>Quantidade viagens curtas de carro (viagens potenciais) (pesquisa OD)</li>
+                            <ul>
+                                <li>Aquelas com distância menor que 75% das viagens de bicicleta (2km)</li>
+                            </ul>
+                            <li>Opinião dos ciclistas sobre quais vias deveriam ser priorizadas (pesquisa online com 3000 ciclistas)</li>
+                            <li>Quantidade de colisões com veículos (dados da seguradora pública)
+                            </li>
+                            <li>Conectividade das ciclovias: onde ficam os "pontos finais"</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Grid quadrado de 300m (comprimento escolhido com testes empíricos)</li>
+                            <li>Para cada grid, soma o percentual de cada atributo que está em uma dada célula do grid</li>
+                            <ul>
+                                <li>% de viagens de bicicleta na célula +</li>
+                                <li>% de viagens potenciais na célula + </li>
+                                <li>% de preferência dos ciclistas na célula + </li>
+                                <li>% de colisões na grid + </li>
+                                <li>% de "pontos finais"</li>
+                            </ul>
+                            <li>Em cada célula do grid, atribui-se esse valor de 0 a 5</li>
+                            <li>Esse valor é dividido pela soma do valor todas as células (o percentual nessa célula), gerando um índice final entre 0 e 1</li>
+                            <li>Os pesos de cada atributo podem ser parametrizados
+                            </li>
+                            <li>As viagens em cada grid são calculadas pelas rotas dessas viagens (calculado com o algoritmo de caminho mais curto, autores citam que esse método pode ser melhorado)</li>
+                            <li>Autores citam que o ideal é considerar muitas outras variáveis, além da distância, para decidir quais são as viagens potenciais</li>
+                        </ul>
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_prioritization" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>Prioritizing bicycle paths in Belo Horizonte City, Brazil: Analysis based on user preferences and willingness considering individual heterogeneity</b>
+                            <div class="autor">Jacob Larsen, Zachary Patterson e Ahmed M. El Geneidy, 2011.
+                                <br /><br />
+                                <a href="https://www.sciencedirect.com/science/article/pii/S096585641400175X"
+                                    target="_blank">
+                                    página science direct</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b> Faz uma revisão da literatura sobre biciclesta e classifica em 4 grandes fluxos de pesquisa. Aponta que não existe pesquisa sobre 
+                            quais os melhores locais para construir infraestrutura ciclovária. Propõe um <b>índice de priorização</b> para as regiões da cidade de Montreal (canadá)
+                            que devem receber esse tipo de investimentos.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Quantidade atual de viagens de bicicleta (pesquisa OD)</li>
+                            <li>Quantidade viagens curtas de carro (viagens em potencial) (pesquisa OD)</li>
+                            <ul>
+                                <li>Menores que 75% das viagens de bicicleta (2km)</li>
+                            </ul>
+                            <li>Opinião dos ciclistas sobre quais vias deveriam ser priorizadas (pesquisa online com 3000 ciclistas)</li>
+                            <li>Quantidade de colisões com veículos (dados da seguradora pública)
+                            </li>
+                            <li>Conectividade das ciclovias: onde ficam os "pontos finais"</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Grid quadrado de 300m (comprimento escolhido com testes empíricos)</li>
+                            <li>Para cada grid, soma o percentual de cada atributo que está em uma dada célula do grid</li>
+                            <ul>
+                                <li>% de viagens de bicicleta na célula +</li>
+                                <li>% de viagens potenciais na célula + </li>
+                                <li>% de preferência dos ciclistas na célula + </li>
+                                <li>% de colisões na grid + </li>
+                                <li>% de "pontos finais"</li>
+                            </ul>
+                            <li>Em cada célula do grid, atribui um número de 0 a 5</li>
+                            <li>Os pesos de cada atributo podem ser parametrizados
+                            </li>
+                            <li>As viagens em cada grid são calculadas pelas rotas dessas viagens (calculado com o algoritmo de caminho mais curto, autores citam que esse método pode ser melhorado)</li>
+                            <li>Autores citam que o ideal é considerar muitas outras variáveis, além da distância, para decidir quais são as viagens potenciais</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/game.js"></script>
+    <script src="../js/document_search.js"></script>
+    </div>
+</body>
+
+</html>

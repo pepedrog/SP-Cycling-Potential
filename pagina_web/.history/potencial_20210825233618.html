@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="mac0499.css" runat="server" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Potencial Ciclável</title>
+</head>
+
+<body>
+    <div class='language float-right'>
+        <a target="blank" href="plano.html">🇧🇷</a>
+        <a target="blank" href="en/plan.html">🇬🇧</a>
+    </div>
+    <div class="main">
+        <header class="row justify-content-center">
+            <nav class="navbar navbar-expand-lg text links">
+                🚴
+                <a class="nav-link" href="index.html">Início</a>
+                🚴
+                <a class="nav-link" href="proposta.html">Proposta</a>
+                🚴
+                <a class="nav-link" href="plano.html">Plano de Trabalho</a>
+                🚴
+                <a class="nav-link" href="material.html">Material</a>
+                🚴
+            </nav>
+        </header>
+        <div>
+            <main role="main" class="content">
+                <hr />
+                <br />
+                <h2 class="subtitle text-center">Potencial Ciclável</h2>
+                <h3 class="subtitle text-center">Ideias e Referências</h3>
+                <div>
+
+                    <br />
+                    <!--
+                    <h4>Tipos de métodos 🧮</h4>
+                    <hr />
+                    <p> Existem três abordagens principais para identificar o potencial de adesão à bicicleta de uma
+                        determinada região:
+                    <ul>
+                        <li><b>Potenciais ciclistas:</b> Calcular a quantidade de indivíduos que poderiam aderir à
+                            bicicleta, com base em seus dados sociodemográficos.
+                        </li>
+                        <li><b>Viagens conversíveis:</b> Calcular a quantidade de viagens que poderiam ser convertidas
+                            para o modo bicicleta, com base em dados sobre a viagem (geralmente retirados de pesquisas
+                            OD).
+                        </li>
+                        <li><b>Dados sobre a região:</b> Atribuir um valor de potencial ciclável à uma região com base
+                            em atributos do ambiente.</li>
+                    </ul>
+                    </p>
+                    <p> Para clareza, separaremos os atributos nessas 3 categorias, mas essas abordagens
+                        podem ser combinadas. Por exemplo, uma viagem pode ser considerada conversível se
+                        o índividuo que a faz é um ciclista em potencial; ou podemos considerar a densidade de
+                        viagens conversíveis de uma região como um dado de ambiente, etc.
+                    </p>
+                    <br />
+                -->
+                    <h4>Métodos 📚</h4>
+                    <hr />
+                    <div class="topicos">
+                        <ol>
+                            <li>
+                                <a data-bs-toggle="modal" data-bs-target="#modal_copenhagenize" href="">
+                                    Copenhagenize Index
+                                </a>
+                                <br />
+                                <span class="autor">Copenhagenize, 2011.</span>
+                            </li>
+                            <li>
+                                <a href="" data-bs-toggle="modal" data-bs-target="#modal_prioritization">
+                                    Build it. But Where? The use of Geographic Information Systems in Identifying
+                                    locations for new cycling infrastructure.
+                                </a>
+                                <br />
+                                <span class="autor">Larsen et al., 2013.</span>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="modal" data-bs-target="#modal_bh" href="">
+                                    Prioritizing bicycle paths in Belo Horizonte City, Brazil: Analysis based on user
+                                    preferences and willingness consideringindividual heterogeneity
+                                </a>
+                                <br />
+                                <span class="autor">Zhang et al., 2014.</span>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="modal" data-bs-target="#modal_steer" href="">
+                                    Steer Cycling Potential Index
+                                </a>
+                                <br />
+                                <span class="autor">Steer (organização de consultoria), 2015.</span>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="modal" href="" data-bs-target="#modal_acp">
+                                    Analysis of Cycling Potential
+                                </a>
+                                <br />
+                                <span class="autor">Transport For London, 2016.</span>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="modal" href="" data-bs-target="#modal_pct">
+                                    Propensity to Cycle Tool (PCT)
+                                </a>
+                                <br />
+                                <span class="autor">Lovelace et al, 2017.</span>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="modal" href="" data-bs-target="#modal_cpt">
+                                    Cycling Potential Tool (CPT)
+                                </a>
+                                <br />
+                                <span class="autor">Cycling Scotland, 2017.</span>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="modal" href="" data-bs-target="#modal_porto">
+                                    Revealing the Cycling Potential of Starter Cycling Cities
+                                </a>
+                                <br />
+                                <span class=" autor">Cecília Silva et al, University of Porto, 2018.</span>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="modal" href="" data-bs-target="#modal_toronto">
+                                    Increasing Cycling in Canada
+                                </a>
+                                <br />
+                                <span class="autor">University of Toronto, 2019.</span>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="modal" href="" data-bs-target="#modal_percolation">
+                                    A data science framework for planning the growth of bicycle infrastructures
+                                </a>
+                                <br />
+                                <span class="autor">Luis Olmo et al, University of California, 2020.</span>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="modal" href="" data-bs-target="#modal_cabo">
+                                    A nodal approach for estimating potential cycling demand
+                                </a>
+                                <br />
+                                <span class="autor">Gerhard Hitge et al, University of Petroria, 2021.</span>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="modal" target="blank" href="" data-bs-target="#modal_bank">
+                                    Cycling Potential Index
+                                </a>
+                                <br />
+                                <span class="autor">The World Bank, 2021.</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <br />
+                    <div style="width: max-content; background-color: white; padding-right: 2%;">
+                        <h5>Relação dos métodos e dados 📊</h5>
+                        <table class="table table-sm table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-center"></th>
+                                    <th scope="col" class="text-center">1</th>
+                                    <th scope="col" class="text-center">2</th>
+                                    <th scope="col" class="text-center">3</th>
+                                    <th scope="col" class="text-center">4</th>
+                                    <th scope="col" class="text-center">5</th>
+                                    <th scope="col" class="text-center">6</th>
+                                    <th scope="col" class="text-center">7</th>
+                                    <th scope="col" class="text-center">8</th>
+                                    <th scope="col" class="text-center">9</th>
+                                    <th scope="col" class="text-center">10</th>
+                                    <th scope="col" class="text-center">11</th>
+                                    <th scope="col" class="text-center">12</th>
+                                    <th scope="col" class="text-center">Método Proposto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(250, 250, 250);">filtro 1️⃣ / peso ♾️ </th>
+                                    <td scope="col">♾️</td> <!-- 1 -->
+                                    <td scope="col">♾️</td> <!-- 2 -->
+                                    <td scope="col">1️⃣</td> <!-- 3 -->
+                                    <td scope="col">1️⃣</td> <!-- 4 -->
+                                    <td scope="col">1️⃣</td> <!-- 5 -->
+                                    <td scope="col">♾️</td> <!-- 6 -->
+                                    <td scope="col">1️⃣</td> <!-- 7 -->
+                                    <td scope="col">1️⃣</td> <!-- 8 -->
+                                    <td scope="col">♾️</td> <!-- 9 -->
+                                    <td scope="col">♾️</td> <!-- 10 -->
+                                    <td scope="col">♾️</td> <!-- 11 -->
+                                    <td scope="col">1️⃣</td> <!-- 12 -->
+                                    <td class="text-center" scope="col">1️♾️</td> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(253, 196, 196, 0.25);">idade</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col">✅</th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col">✅</th> <!-- 11 -->
+                                    <th scope="col">✅</th> <!-- 12 -->
+                                    <th class="text-center" scope="col">✅</th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(253, 196, 196, 0.25);">renda</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col">✅</th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col">✅</th> <!-- 11 -->
+                                    <th scope="col">✅</th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- meu método -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(253, 196, 196, 0.25);">gênero</th>
+                                    <th scope="col">✅</th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col">✅</th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 12 -->
+                                    <th class="text-center" scope="col">❓</th> <!-- meu -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(253, 196, 196, 0.25);">posse de carro
+                                    </th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col">✅</th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col">✅</th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col">✅</th> <!-- 11 -->
+                                    <th scope="col">✅</th> <!-- 12 -->
+                                    <th class="text-center" scope="col">✅</th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(253, 196, 196, 0.25);">nível
+                                        educacional</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col">✅</th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col">✅</th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 12 -->
+                                    <th class="text-center" scope="col">✅❓</th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(253, 196, 196, 0.25);">incapacidade
+                                    </th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 12 -->
+                                    <th class="text-center" scope="col"></th> <!-- meu -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(253, 196, 196, 0.25);">tipo de moradia
+                                    </th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col">✅</th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col">✅</th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 12 -->
+                                    <th class="text-center" scope="col"></th> <!-- 13 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(253, 196, 196, 0.25);">pessoas na
+                                        família</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col">✅</th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col">✅</th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 12 -->
+                                    <th class="text-center" scope="col">⚠️</th> <!-- meu -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(253, 196, 196, 0.25);">viagens
+                                        realizadas</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col">✅</th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 12 -->
+                                    <th class="text-center" scope="col"></th> <!-- meu -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(253, 196, 196, 0.25);">estilo de vida
+                                    </th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col">✅</th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col">✅</th> <!-- 11 -->
+                                    <th class="text-center" scope="col">✅</th> <!-- meu -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(252, 253, 196, 0.8);">distância/tempo
+                                    </th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col">✅</th> <!-- 2 -->
+                                    <th scope="col">✅</th> <!-- 3 -->
+                                    <th scope="col">✅</th> <!-- 4 -->
+                                    <th scope="col">✅</th> <!-- 5 -->
+                                    <th scope="col">✅</th> <!-- 6 -->
+                                    <th scope="col">✅</th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col">✅</th> <!-- 9 -->
+                                    <th scope="col">✅</th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col">✅</th> <!-- 12 -->
+                                    <th class="text-center" scope="col">✅</th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(252, 253, 196, 0.8);">período</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th class="text-center" scope="col">❓</th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(252, 253, 196, 0.8);">carga</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col">✅</th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th class="text-center" scope="col"></th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(252, 253, 196, 0.8);">modal atual</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col">✅</th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col">✅</th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th class="text-center" scope="col"></th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(252, 253, 196, 0.8);">vel. média</th>
+                                    <th scope="col">✅</th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col">✅</th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th class="text-center" scope="col"></th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(252, 253, 196, 0.8);"><a
+                                            href="inclinacao.html">inclinação</a></th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col">✅</th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col">✅</th> <!-- 6 -->
+                                    <th scope="col">✅</th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col">✅</th> <!-- 12 -->
+                                    <th class="text-center" scope="col">✅</th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(252, 253, 196, 0.8);">barreiras
+                                        físicas</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col">✅</th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th class="text-center" scope="col"></th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(186, 255, 180, 0.35);">proporção de
+                                        ciclistas</th>
+                                    <th scope="col">✅</th> <!-- 1 -->
+                                    <th scope="col">✅</th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col">✅</th> <!-- 6 -->
+                                    <th scope="col">✅</th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col">✅</th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(186, 255, 180, 0.35);">infraestrutura
+                                        cicloviária</th>
+                                    <th scope="col">✅</th> <!-- 1 -->
+                                    <th scope="col">✅</th> <!-- 2 -->
+                                    <th scope="col">✅</th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col">✅</th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col">✅</th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th class="text-center" scope="col">❓</th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(186, 255, 180, 0.35);">opinião de
+                                        ciclistas </th>
+                                    <th scope="col">✅</th> <!-- 1 -->
+                                    <th scope="col">✅</th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col"></th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(186, 255, 180, 0.35);">quantidade de
+                                        acidentes </th>
+                                    <th scope="col">✅</th> <!-- 1 -->
+                                    <th scope="col">✅</th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th class="text-center" scope="col">📆</th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(186, 255, 180, 0.35);">densidado pop.
+                                    </th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col">✅</th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th class="text-center" scope="col">📆</th> <!-- 12 -->
+                                    </th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(186, 255, 180, 0.35);">diversidade
+                                        ocupac.</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th class="text-center" scope="col"></th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(186, 255, 180, 0.35);">transporte
+                                        público</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col"></th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th class="text-center" scope="col">📆</th> <!-- 12 -->
+                                </tr>
+                                <tr>
+                                    <th scope="col" style="background-color: rgba(186, 255, 180, 0.35);">pontos de
+                                        interesse</th>
+                                    <th scope="col"></th> <!-- 1 -->
+                                    <th scope="col"></th> <!-- 2 -->
+                                    <th scope="col"></th> <!-- 3 -->
+                                    <th scope="col"></th> <!-- 4 -->
+                                    <th scope="col"></th> <!-- 5 -->
+                                    <th scope="col"></th> <!-- 6 -->
+                                    <th scope="col">✅</th> <!-- 7 -->
+                                    <th scope="col">✅</th> <!-- 8 -->
+                                    <th scope="col"></th> <!-- 9 -->
+                                    <th scope="col"></th> <!-- 10 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th scope="col"></th> <!-- 11 -->
+                                    <th class="text-center" scope="col">📆</th> <!-- 12 -->
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="modais">
+        <div class="modal fade" id="modal_prioritization" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>Build it. But Where? The use of Geographic Information Systems in Identifying locations
+                                for new cycling infrastructure</b>
+
+                            <div class="autor">Jacob Larsen, Zachary Patterson e Ahmed M. El Geneidy, 2013.
+                                <br /><br />
+                                <a href="https://www.researchgate.net/publication/263448580_Build_It_But_Where_The_Use_of_Geographic_Information_Systems_in_Identifying_Locations_for_New_Cycling_Infrastructure"
+                                    target="_blank">
+                                    <u>página research gate</u></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b> Faz uma revisão da literatura sobre bicicleta e classifica em 4 grandes fluxos
+                            de pesquisa. Aponta que não existe pesquisa sobre
+                            quais os melhores locais para construir infraestrutura ciclovária. Propõe um <b>índice de
+                                priorização</b> para as regiões da cidade de Montreal (Canadá)
+                            que devem receber esse tipo de investimento.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Quantidade atual de viagens de bicicleta (pesquisa OD)</li>
+                            <li>Quantidade viagens curtas de carro (viagens potenciais) (pesquisa OD)</li>
+                            <ul>
+                                <li>Aquelas com distância menor que 75% das viagens de bicicleta (2km)</li>
+                            </ul>
+                            <li>Opinião dos ciclistas sobre quais vias deveriam ser priorizadas (pesquisa online com
+                                3000 ciclistas)</li>
+                            <li>Quantidade de colisões com veículos (dados da seguradora pública)
+                            </li>
+                            <li>Conectividade das ciclovias: onde ficam os "pontos finais"</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Grid quadrado de 300m (comprimento escolhido com testes empíricos)</li>
+                            <li>Para cada grid, soma o percentual de cada atributo que está em uma dada célula do grid
+                            </li>
+                            <ul>
+                                <li>% de viagens de bicicleta na célula +</li>
+                                <li>% de viagens potenciais na célula + </li>
+                                <li>% de preferência dos ciclistas na célula + </li>
+                                <li>% de colisões na grid + </li>
+                                <li>% de "pontos finais"</li>
+                            </ul>
+                            <li>Em cada célula do grid, atribui-se esse valor de 0 a 5</li>
+                            <li>Esse valor é dividido pela soma do valor todas as células (o percentual nessa célula),
+                                gerando um índice final entre 0 e 1</li>
+                            <li>Os pesos de cada atributo podem ser parametrizados
+                            </li>
+                            <li>As viagens em cada grid são calculadas pelas rotas dessas viagens (calculado com o
+                                algoritmo de caminho mais curto, autores citam que esse método pode ser melhorado)</li>
+                            <li>Autores citam que o ideal é considerar muitas outras variáveis, além da distância, para
+                                decidir quais são as viagens potenciais</li>
+                        </ul>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_bh" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Prioritizing bicycle paths in Belo Horizonte City, Brazil: Analysis based on user
+                                preferences and willingness considering individual heterogeneity.
+                            </b>
+                            <div class="autor">Dapeng Zhang, David Magalhães e Xiaokun Wang, 2014.
+                                <br /><br />
+                                <a href="https://www.sciencedirect.com/science/article/pii/S096585641400175X"
+                                    target="_blank">
+                                    página science direct</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b> No contexto da expansão cicloviária em Belo Horizonte para a Copa do Mundo de
+                            2014,
+                            propuseram um método para identificar as regiões com maior disposição (willingness) para
+                            usar bicicleta.
+                            Os dados utilizados foram extraídos de uma pesquisa com 3421 habitantes (2008 respostas
+                            completas), em que perguntavam
+                            a disposição do entrevistado para usar a bicicleta caso o trajeto tivesse ciclovias, junto
+                            dos seguintes
+                            "fatores influentes":
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Nível Educacional</li>
+                            <li>Tempo de viagem diária (comutação)</li>
+                            <li>Renda</li>
+                            <li>Moradia (vive em casa ou outro tipo?)</li>
+                            <li>Possui carro?</li>
+                            <li>Modal atual</li>
+                            <li>Possui crianças na casa?</li>
+                            <li>Existe rede cicloviária no trajeto?</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Desenvolvido um modelo de regressão (ordered outcome discrete model) para
+                                quantificar a influência de cada fator na disposição para usar a bicicleta
+                            </li>
+                            <li>Com esse modelo, para cada fator foi gerado um coeficiente - quanto maior o coeficiente,
+                                mais
+                                influente esse fator é para o uso da bicicleta; quanto menor (negativo) maior a
+                                influência para não usar
+                                a bicicleta.
+                            </li>
+                            <li>Para cada zona administrativa da cidade, foi obtida a média ponderada pelos
+                                coeficientes obtidos, usando dados do censo 2010 e da pesquisa OD de BH de 2012.
+                            </li>
+                            <li>Esses coeficientes são específicos para a realidade de cada cidade, se essa metodologia
+                                for
+                                aplicada em outro local, uma pesquisa semelhante teria que ser conduzida para obter os
+                                coeficiente
+                            </li>
+                            <li>Os entrevisgtados foram perguntados quais ruas deveriam receber ciclovias, e o resultado
+                                obtido
+                                por esse método foi semelhante à opinião dos entrevistados (modelo aderente à
+                                realidade).
+                            </li>
+                            <li>Na aplicação do modelo, os fatores com relação mais forte (à disposição para usar
+                                bicicleta) foram:
+                                <ul>
+                                    <li>Tempo da comutação - influência negativa</li>
+                                    <li>Renda - faixa de renda média se relaciona positivamente</li>
+                                    <li>Modal atual - modo "a pé" tem maior influência</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_steer" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Cycling Potential Index.
+                            </b>
+                            <div class="autor">Steer Davies Gleave, 2015.
+                                <br /><br />
+                                <a href="https://www.yumpu.com/en/document/read/41572043/1-cycling-potential-index-steer-davies-gleave"
+                                    target="_blank"> <u>artigo</u>
+                                </a> &nbsp; | &nbsp;
+                                <a href="https://www.steergroup.com/insights/news/cycling-potential-index"
+                                    target="_blank"> <u>página da steer</u>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Steer Davies Gleave é uma empresa de consultoria que desenvolve ferramentas
+                            para
+                            problemas urbanos complexos. O Cycling Potential Index é uma ferramenta para classificar as
+                            regiões administrativas
+                            da Inglaterra e País de Gales com base no potencial ciclável, isto é, em quais regiões os
+                            investimentos
+                            para estimular o uso da bicicleta são mais efetivos.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados</b> ("dimensões")<b>:</b>
+                        <ul>
+                            <li>Inclinação (hilliness)</li>
+                            <li>Dados sociodemográficos</li>
+                            <li>Distância das viagens</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Para cada uma das três dimensões, as regiões foram ordenadas (ranked)
+                            </li>
+                            <li>A inclinação foi calculada como o desvio padrão das altitudes da região,
+                                discretizando em uma grade com células de lado 90m. Quanto maior o desvio padrão,
+                                pior.
+                            </li>
+                            <li>
+                                Os dados sociodemográficos foram usados classificando os estilos de vida
+                                de cada região (classificação MOSAIC). Para cada estilo de vida, um potencial
+                                ciclável foi pré determinado.
+                            </li>
+                            <li>Uma viagem é considerada ciclável se a distância é menor que 8km, que corresponde a 88%
+                                das viagens feitas atualmente de bicicleta.
+                                A classificação foi feita pelo percentual de viagens cicláveis em cada região.
+                            </li>
+                            <li>A classificação final é a média das três classificações, com o tempo das viagens
+                                tendo metade do peso das outras duas (pois usaram apenas dados de viagens a trabalho,
+                                e querem englobar outras viagens, que podem ser mais longas).
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_acp" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Analysis of Cycling Potential (ACP)
+                            </b>
+                            <div class="autor">Transport for London, 2016.
+                                <br /><br />
+                                <a href="http://content.tfl.gov.uk/analysis-of-cycling-potential-2016.pdf"
+                                    target="_blank"> <u>relatório TfL</u>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Análise conduzida pela Transport for London (companhia de transportes da
+                            prefeitura de Londres) para identificar quais são e onde estão as viagens cicláveis em
+                            Londres.
+                            Foi feito um primeiro critério em 2010 com base em pesquisas de demanda de transporte, e
+                            atualizado em 2016.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Sobrecarga</li>
+                            <li>Distância das viagens</li>
+                            <li>Idade do indivíduo</li>
+                            <li>Modal Atual</li>
+                            <li>Encadeamento (viagem faz parte de uma viagem maior?)</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>O potencial ciclável de uma região é medido pela quantidade de viagens cicláveis.
+                            </li>
+                            <li>Uma viagem é considerada ciclável quando satisfaz os seguintes critérios:
+                                <ul>
+                                    <li>
+                                        A pessoa que faz a viagem não carrega nenhuma sobrecarga (encumbrance)
+                                    </li>
+                                    <li>
+                                        A distância da viagem é menor que:
+                                        <ul>
+                                            <li>10km (para comutação) ou 8km (outros propósitos), caso geral</li>
+                                            <li>5km, se a pessoa tem entre 65 e 79 anos (todos os propósitos)</li>
+                                            <li>3km, se a pessoa tem mais que 80 anos (todos os propósitos)</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        O modal atual não é van, "dial-a-ride", barco ou avião
+                                    </li>
+                                    <li>
+                                        A viagem não faz parte de uma viagem maior não-ciclável
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_pct" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Propensity to Cycle Tool (PCT)
+                            </b>
+                            <div class="autor">Robin Lovelace, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali Abbas e
+                                James Woodcock, 2017.
+                                <br /><br />
+                                <a href="https://www.jtlu.org/index.php/jtlu/article/view/862" target="_blank">
+                                    <u>artigo</u></a>
+                                </a> &nbsp; | &nbsp;
+                                <a href="https://www.pct.bike/" target="_blank"> <u>ferramenta pct</u>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Ferramenta (que se encaixa na categoria de PSS - planning support systems)
+                            para analisar a propensão para usar a bicicleta de uma dada região.
+                            Aplicaram a ferramenta em todas as regiões da Inglaterra e País de Gales. Os dados vieram do
+                            censo de 2011, que
+                            faz perguntas sobre as viagens de comutação dos britânicos.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Proporção atual de ciclistas</li>
+                            <li>Distância das rotas</li>
+                            <li>Inclinação das rotas</li>
+                            <li>Densidade populacional (apenas para separar as regiões)</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>As rotas foram calculadas usando a ferramenta <a
+                                    href="https://www.cyclestreets.net/">cyclestreets.net</a></li>
+                            <li>A área total (Inglaterra e País de Gales) foi dividada em zonas MSOAs,
+                                que são regiões desenhadas de modo que cada MSOA tenha cerca de 7500 indivíduos.
+                            </li>
+                            <li>Foi calculado uma rota entre cada par de MSOAs, usando o centro de massa populacional
+                                como ponto de referência (apenas pares com distância euclidiana menor que 30km)</li>
+                            <li>A inclinação de uma rota foi tomada como a inclinação média do percurso</li>
+                            <li>Foi então feito uma regressão logística onde a variável de interesse (dependente)
+                                é a proporsão de ciclistas, e os fatores influentes são a distância e inclinação da
+                                rota.
+                            </li>
+                            <li>Para a distância, foram incluídos três fatores: a distância em si, a raíz quadrada da
+                                distância e a distancia ao quadrado, pois a relação entre a distância e o uso da
+                                bicicleta não é linear</li>
+                            <li>O valor final de cada região é quantidade atual de ciclistas + quantidade de
+                                "comutadores" * propensão calculada pelo modelo</li>
+                            <li>A ferramenta faz simulações com 4 cenários, onde alguns outros parâmetros independentes
+                                são
+                                considerados na regressão</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_cpt" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Cycling Potential Tool (CPT)
+                            </b>
+                            <div class="autor">Luke Phillips, Andrew Range (Cycling Scotland), 2017.
+                                <br /><br />
+                                <a href="https://www.starconference.org.uk/star/2017/Philips.pdf" target="_blank">
+                                    <u>artigo</u></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Ferramenta para identificar áreas da Escócia onde os investimentos no uso da
+                            bicicleta trariam mais benefícios.
+                            Usavam o índice da Steer, mas precisavam agregar características mais locais (escala menor).
+                            Inicialmente, o modelo era manual (planilhas) e depois foi automatizado.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Barreiras físicas (rios, morros, rodovias, trilhos)</li>
+                            <li>Densidade populacional</li>
+                            <li>Inclinação</li>
+                            <li>Infraestrutura cicloviária</li>
+                            <li>Velocidade média das vias</li>
+                            <li>Distância para o trabalho/escola</li>
+                            <li>Proporção de ciclistas</li>
+                            <li>Pontos de interesse</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>A escala é bastante local: dividiu a área de pesquisa em células de 1 metro quadrado (a
+                                área total tem cerca de 4km&sup2;)</li>
+                            <li>Para cada um dos dados acima, as células foram classificadas em níveis 1 a 10, onde 1 é
+                                pouco ciclável e 10 é muito ciclável.</li>
+                            <li>A classificação foi feita dividindo em 10 faixas iguais o intervalo entre o maior valor
+                                e o menor valor de cada variável</li>
+                            <li>Por fim, para cada célula, o potencial ciclável é a média entre a classificação de todas
+                                as variáveis. </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_copenhagenize" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Copenhagenize Index
+                            </b>
+                            <div class="autor">Copenhagenize, 2011.
+                                <br /><br />
+                                <a href="https://copenhagenizeindex.eu/about/the-index" target="_blank">
+                                    <u>página web</u></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: O índice Copenhagenize é gerado por uma organização a fim de classificar as
+                            cidades mais amigáveis para os ciclistas no mundo.
+                            Foi gerado em 2011 e é atualizado anualmente (ou bianualmente). Não avalia o potencial
+                            ciclável em si, mas é bom para determina as facilidades para o uso da bicileta hoje (que
+                            pode ser um indicativo de potencial ciclável).
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Infraestrutura cicloviária (vias e facilidades)</li>
+                            <li>Tranquilidade do tráfego (traffic calming)</li>
+                            <li>Igualdade de gênero no uso da bicicleta</li>
+                            <li>Proporção atual de ciclistas</li>
+                            <li>Crescimento da proporção de ciclistas nos últimos 10 anos</li>
+                            <li>Segurança do ciclista</li>
+                            <li>Imagem da bicicleta pela população</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>A metodologia para agregar todos os dados não é publicamente divulgada (acredito que
+                                deve ser minimamente alterada de acordo com o formato dos dados de cada cidade). A
+                                recomendação
+                                da Copenhagenize é para solicitar avaliaçãodos especialistas da organização para cada
+                                cidade interessada em saber seu índice.</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_porto" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Revealing the Cycling Potential of Starter Cycling Cities
+                            </b>
+                            <div class="autor">Cecília Silva, João Teixeira e Ana Proença, 2019.
+                                <br /><br />
+                                <a href="https://www.sciencedirect.com/science/article/pii/S2352146519305307"
+                                    target="_blank">
+                                    <u>artigo</u></a> &nbsp; | &nbsp;
+                                <a href="https://citta.fe.up.pt/assets/pdf/the-cycling-potential-assessment-method_report.pdf"
+                                    target="_blank">
+                                    <u>relatório completo</u></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Abordagem operacional para visualizar e categorizar o potencial ciclável de
+                            um ponto baseado em 3 dimensões: população alvo, área alvo, eficiencia das políticas locais.
+                            Traz uma vasta lista de refências e evidências empíricas para basear o uso das variáveis no
+                            cálculo do potencial. Para cada ponto da cidade, são consideradas 23 variáveis.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Idade dos habitantes</li>
+                            <li>Densidade populacional</li>
+                            <li>Posse de carros</li>
+                            <li>Proporção de estudantes</li>
+                            <li>Nível educacional</li>
+                            <li>Inclinação das vias</li>
+                            <li>Distância até pontos de interesse</li>
+                            <li>Diversidade ocupacional</li>
+                            <li>Cobertura da estrutura cicloviária</li>
+                            <li>Velocidade média das vias</li>
+                            <li>Existência de políticas de incentivo</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Para cada variável, o ponto estudado é classificado de 1 a 5 (1 = muito ciclável).</li>
+                            <li>Esse valor é calculado (em geral) comparando o valor daquele ponto com a média da região
+                                (+ alguns outros cálculos mais complicados)</li>
+                            <li>No final, os valores dão somados (com pesos diferentes para alguns atributos, por
+                                exemplo, idade tem peso 3, posse de carro tem peso 2, etc).</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_toronto" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Increasing Cycling in Canada. A guide to what works.
+                            </b>
+                            <div class="autor">Yvonne Verlinden et al, 2019.
+                                <br /><br />
+                                <a href="https://www.tcat.ca/wp-content/uploads/2019/09/Increasing-Cycling-in-Canada-A-Guide-to-What-Works-2019-09-25.pdf"
+                                    target="_blank">
+                                    <u>relatório</u></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Um guia amplo sobre políticas de incentivo ao uso da bicicleta em Toronto.
+                            Tem uma breve metodologia para estudar o potencial ciclável de regiões específicas,
+                            observando que as políticas do restante do relatório serão mais efetivas em regiões com
+                            maior potencial.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Proporção de viagens curtas (menores que 8km)</li>
+                            <li>Numero médio de viagens por pessoa</li>
+                            <li>Posse de carros</li>
+                            <li>Proporção viagens de bicicleta de regiões vizinhas</li>
+                            <li>Densidade da estrutura cicloviária</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Para cada atributo acima, são gerados mapas da cidade, analisados separadamente.</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_percolation" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                A data science framework for planning the growth of bicycle infrastructures.
+                            </b>
+                            <div class="autor">Luis E. Olmos et al, 2020.
+                                <br /><br />
+                                <a href="https://www.sciencedirect.com/science/article/pii/S0968090X19306436"
+                                    target="_blank">
+                                    <u>artigo</u></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Usando bases com dados sobre viagens de bicicletas em Bogotá (apps de
+                            ciclismo, geolocalização de celulares, etc), montou-se um modelo para identificar onde estão
+                            a demanda
+                            potencial de viagens de bicicleta.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Distância das viagens</li>
+                            <li>Conectividade da estrutura cicloviária</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Usando dados de um popular app de ciclismo (biko), modelaram a distribuição da distãncia
+                                das viagens de bicicleta</li>
+                            <li>Aplicaram essa distribuição (demanda potencial) para as demais viagens (calculando as
+                                rotas com o OSRM, dando preferência para ciclovias)</li>
+                            <li>A demanda potencial foi usada como peso/limitante em um processo de encontrar vias que
+                                conectassem melhor a infraestrutura cicloviária da cidade (Percolation Theory)</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_cabo" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                A nodal approach for estimating potential cycling demand.
+                            </b>
+                            <div class="autor">Gerhard Hitge e Johan W. Joubert, 2021.
+                                <br /><br />
+                                <a href="https://www.sciencedirect.com/science/article/pii/S0966692320310206"
+                                    target="_blank">
+                                    <u>artigo</u></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Visam encontrar a demanda potencial de uso da bicicleta na Cidade do Cabo com
+                            uma abordagem que utiliza os dados, para ser genérico e reproduzível. A estratégia consiste
+                            em encontrar os indivíduos que são ciclistas em potencial.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Nível Educacional</li>
+                            <li>Renda</li>
+                            <li>Tipo de residência (informal ou não)</li>
+                            <li>Gênero</li>
+                            <li>Idade</li>
+                            <li>Quantidade de membros na família</li>
+                            <li>Acesso a carro</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Aplicam um primeiro filtro na população, uma pessoa é considerada apenas se satisfazer
+                                todas as seguintes condições:</li>
+                            <ul>
+                                <li>É estudante de nível superior ("tertiary") OU se possui renda média (low-middle
+                                    income)
+                                </li>
+                                <li>
+                                    Mora em uma residência formal (melhores condições de armazenamento da bicicleta,
+                                    pontuam que é uma abordagem conservadora para considerar apenas pessoas relamente
+                                    cicláveis
+                                </li>
+                                <li>Não tem acesso a carro</li>
+                                <li>Tem entre 18 e 60 anos</li>
+                            </ul>
+                            <li> Além do primeiro filtro, a pessoa recebe um peso:
+                                <ul>
+                                    <li>1 se for mulher, 0.8 se for homem (argumentam que em condições ideais, as
+                                        mulheres tem mais potencial, a exemplo de Copenhagen)</li>
+                                    <li>1 se tem entre 18 e 25 anos; 0.8 se entre 26 e 35 anos; 0.3 se entre 36 e 60
+                                        anos</li>
+                                    <li>1 se pertence a uma família com 1 ou 2 membros; 0.4 se a família tem 3 membros
+                                        ou mais</li>
+                                </ul>
+                            </li>
+                            <li>Os pesos acima são multiplicados, obtendo um valor entre 0 e 1, interpretado como a
+                                probabilidade que uma pessoa tem de ser ou não um ciclista em potencial</li>
+                            <li>Por fim, para cada indivíduo, é sorteado se ele será considerado um ciclista em
+                                potencial (com base na probabilidade calculada para ele)</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_bank" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Cycling Potential Index.
+                            </b>
+                            <div class="autor">The World Bank, 2021.
+                                <br /><br />
+                                <a href="bibliografia/CPI_TWB.pdf" target="_blank" download>
+                                    <u>pdf</u></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Um método desenvolvido entre a CET e o Banco mundial que utiliza as viagens
+                            da OD 2017 (de São Paulo) para identificar viagens que poderiam ser convertidas para o modo
+                            bicicleta .
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Classificação econômica (LCA Clustering)</li>
+                            <li>Distância das viagens</li>
+                            <li>Inclinação</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>A metodologia consiste em um filtro. Dada uma viagem, ela é considerada ciclável se:
+                            </li>
+                            <ul>
+                                <li>O indivíduo pertence a algum agrupamemto social semelhante à dos ciclistas atuais
+                                    (com base nas viagens atuais de bicicleta, foram selecionados 17 dos 43 agrupamentos
+                                    econômicos como potencialmente cicláveis)</li>
+                                <li>A distância da viagem é maior que 1.25km (para viagens a pé) </li>
+                                <li>A distância da viagem é menor que 7.5km (para viagens motorizadas) (corresponde a
+                                    5/6 das viagens atuais de bicicleta)</li>
+                                <li>a viagem segue o perfil de inclinação identificado pelo <a href="https://usa.streetsblog.org/wp-content/uploads/sites/5/2012/05/AASHTO-Guide-for-the-
+                                    Development-of-Bicycle-Facilities-1999.pdf" target="_blank">relatório da AASHTO</a>
+                                    (pag 39)</li>
+                            </ul>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/game.js"></script>
+    <script src="../js/document_search.js"></script>
+    </div>
+</body>
+
+</html>

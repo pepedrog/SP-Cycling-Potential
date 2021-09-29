@@ -55,7 +55,7 @@ def split_route(route, stretch_size, absolute = False):
         stretchs.append([stretch, calculate_slope(stretch, absolute)])
     return stretchs
 
-def plot_slope (fmap, route, size, absolute = False):
+def plot_slope (fmap, route, size, absolute = False, tooltip=None):
     stretchs_slope = split_route(route, size, absolute)
     for s in stretchs_slope:
         if s[1] > 7:

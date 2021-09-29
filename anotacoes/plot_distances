@@ -1,0 +1,58 @@
+df = routes_pedestrian
+def stats (data, value, weights = 'FE_VIA'):
+    level = sum(data[weights])/10
+    stats = []
+    data = data.sort_values(value)
+    total = 0
+    for _, i in data.iterrows():
+        total += i[weights]
+        if total >= (len(stats) + 1) * level - 1e-5:
+            stats.append(i[value])
+    return stats
+
+s = stats(df, 'length')
+    
+plt.figure(figsize=(15,3))
+ax_distance = plt.axes()
+ax_distance.set_axisbelow(True)
+plt.grid(linestyle='--')
+ax_distance.xaxis.grid(False)
+plt.hist(bins=50, x=df['length'], 
+         weights = df['FE_VIA'],range=(0, 25000))
+plt.title('São Paulo pedestrian trips distance')
+plt.xlabel('distance (m)')
+plt.ylabel('# trips')
+plt.axvline(x=s[4],color='orange')
+plt.axvline(x=s[8],color='red')
+plt.show()    
+
+plt.figure(figsize=(15,3))
+ax_distance = plt.axes()
+ax_distance.set_axisbelow(True)
+plt.grid(linestyle='--')
+ax_distance.xaxis.grid(False)
+plt.hist(bins=50, x=od_routes_sp['length'], 
+         weights = od_routes_sp['FE_VIA'], range=(0, 25000))
+plt.title('São Paulo bike trips distance')
+plt.xlabel('distance (m)')
+plt.ylabel('# trips')
+plt.axvline(x=s[4],color='orange')
+plt.axvline(x=s[8],color='red')
+plt.show() 
+
+df = routes_car
+s = stats(df, 'length')
+        
+plt.figure(figsize=(15,3))
+ax_distance = plt.axes()
+ax_distance.set_axisbelow(True)
+plt.grid(linestyle='--')
+ax_distance.xaxis.grid(False)
+plt.hist(bins=50, x=df['length'], 
+         weights = df['FE_VIA'],range=(0, 25000))
+plt.title('São Paulo car trips distance')
+plt.xlabel('distance (m)')
+plt.ylabel('# trips')
+plt.axvline(x=s[4],color='orange')
+plt.axvline(x=s[8],color='red')
+plt.show()    

@@ -1,7 +1,7 @@
 var routes = [
     {
         "id": " 74750 ",
-        "distance": " 4037 ",
+        "distance": " 4037 " ,  "distance_0" : " 3160 ",  "distance_1" : " 870 ",  "distance_2" : " 0 ",  "distance_3" : " 10 ",  "distance_4" : " 0 ", 
         "route":
         [
     
@@ -617,7 +617,7 @@ var routes = [
  ] },
     {
         "id": " 63850 ",
-        "distance": " 7404 ",
+        "distance": " 7404 " ,  "distance_0" : " 5230 ",  "distance_1" : " 2180 ",  "distance_2" : " 0 ",  "distance_3" : " 0 ",  "distance_4" : " 0 ", 
         "route":
         [
     
@@ -1772,7 +1772,7 @@ var routes = [
  ] },
     {
         "id": " 41500 ",
-        "distance": " 3693 ",
+        "distance": " 3693 " ,  "distance_0" : " 2810 ",  "distance_1" : " 660 ",  "distance_2" : " 230 ",  "distance_3" : " 0 ",  "distance_4" : " 0 ", 
         "route":
         [
     
@@ -2329,7 +2329,7 @@ var routes = [
  ] },
     {
         "id": " 102550 ",
-        "distance": " 3925 ",
+        "distance": " 3925 " ,  "distance_0" : " 3380 ",  "distance_1" : " 510 ",  "distance_2" : " 40 ",  "distance_3" : " 0 ",  "distance_4" : " 0 ", 
         "route":
         [
     
@@ -2928,7 +2928,7 @@ var routes = [
  ] },
     {
         "id": " 43650 ",
-        "distance": " 3080 ",
+        "distance": " 3080 " ,  "distance_0" : " 990 ",  "distance_1" : " 1070 ",  "distance_2" : " 560 ",  "distance_3" : " 200 ",  "distance_4" : " 260 ", 
         "route":
         [
     
@@ -3423,7 +3423,7 @@ var routes = [
  ] },
     {
         "id": " 123450 ",
-        "distance": " 2766 ",
+        "distance": " 2766 " ,  "distance_0" : " 560 ",  "distance_1" : " 1720 ",  "distance_2" : " 170 ",  "distance_3" : " 80 ",  "distance_4" : " 240 ", 
         "route":
         [
     
@@ -3858,7 +3858,7 @@ var routes = [
  ] },
     {
         "id": " 76450 ",
-        "distance": " 2148 ",
+        "distance": " 2148 " ,  "distance_0" : " 1030 ",  "distance_1" : " 370 ",  "distance_2" : " 490 ",  "distance_3" : " 130 ",  "distance_4" : " 130 ", 
         "route":
         [
     
@@ -4213,7 +4213,7 @@ var routes = [
  ] },
     {
         "id": " 24500 ",
-        "distance": " 2495 ",
+        "distance": " 2495 " ,  "distance_0" : " 1060 ",  "distance_1" : " 680 ",  "distance_2" : " 370 ",  "distance_3" : " 200 ",  "distance_4" : " 190 ", 
         "route":
         [
     

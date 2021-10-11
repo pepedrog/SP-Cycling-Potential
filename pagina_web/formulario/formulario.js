@@ -85,6 +85,7 @@ function change_page(direction = 1) {
             document.getElementById('btn_avancar').style.display = "none"
             mymap.invalidateSize()
 
+            load_sao_paulo()
             for (let r of selected_regions)
                 for (let i of routes_per_region[r]) routes.push(i)
             load_routes(routes)

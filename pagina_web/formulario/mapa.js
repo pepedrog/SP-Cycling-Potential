@@ -1,4 +1,4 @@
-var mymap = L.map('mapa').setView([-23.57, -46.59], 11);
+var mymap = L.map('mapa').setView([-23.63, -46.59], 10);
 var routes = []
 var current_route = null
 
@@ -190,6 +190,38 @@ function on_each_feature(trip) {
         layer.on({
             click: when_clicked(trip)
         });
+    }
+}
+
+function load_sao_paulo() {
+    zones:
+    for (zone of sp_limits['features']) {
+        for (highlight_zone of selected_regions)
+            if (zone['properties']['NOME'] == highlight_zone)
+                continue zones
+
+        let myStyle = {
+            "color": 'gray',
+            "weight": 1,
+            "opacity": 0.8,
+            "fillOpacity": 0
+        };
+        L.geoJSON(zone, { style: myStyle }).addTo(mymap);
+    }
+
+    for (zone of sp_limits['features']) {
+        for (highlight_zone of selected_regions)
+            if (zone['properties']['NOME'] == highlight_zone) {
+
+
+                let myStyle = {
+                    "color": 'black',
+                    "weight": 1.2,
+                    "opacity": 0.9,
+                    "fillOpacity": 0
+                };
+                L.geoJSON(zone, { style: myStyle }).addTo(mymap);
+            }
     }
 }
 

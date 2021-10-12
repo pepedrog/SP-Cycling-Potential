@@ -154,7 +154,7 @@ function hide_route_details() {
     table_dist.style.display = 'none'
     mymap.removeLayer(start_flag)
     mymap.removeLayer(finish_flag)
-    mymap.flyTo([-23.57, -46.59], 11, {
+    mymap.flyTo([-23.63, -46.59], 10, {
         animate: true,
         duration: 1 // in seconds
     })

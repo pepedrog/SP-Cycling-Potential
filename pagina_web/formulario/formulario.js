@@ -14,7 +14,7 @@ const dist_8 = document.getElementById('dist_8')
 const dist_up = document.getElementById('dist_subidas')
 
 var page = 1
-
+var already_loaded = false
 var selected_regions = []
 var selected_reasons = []
 var routes_evaluation = []
@@ -79,25 +79,30 @@ function change_page(direction = 1) {
         if (page == 1) {
             document.getElementById('btn_voltar').style.display = "none"
             document.getElementById('btn_avancar').style.display = "block"
+            hide_route_details()
         }
         else {
             document.getElementById('btn_voltar').style.display = "block"
             document.getElementById('btn_avancar').style.display = "none"
             mymap.invalidateSize()
 
-            load_sao_paulo()
-            for (let r of selected_regions)
-                for (let i of routes_per_region[r]) routes.push(i)
-            load_routes(routes)
+            if (!already_loaded) {
+                load_sao_paulo()
+                for (let r of selected_regions)
+                    for (let i of routes_per_region[r]) routes.push(i)
+                load_routes(routes)
 
-            document.getElementById("avaliadas").innerText = routes_evaluation.length + " / " + routes.length
-            disable_regions_checkbox() // desabilita porque se trocar as regiões depois não vai refletir no mapa
+                document.getElementById("avaliadas").innerText = routes_evaluation.length + " / " + routes.length
+                disable_regions_checkbox() // desabilita porque se trocar as regiões depois não vai refletir no mapa
+                already_loaded = true
+            }
+
         }
     }, 300);
 }
 
 function disable_regions_checkbox() {
-    const check = document.getElementsByName(name);
+    const check = document.getElementsByName("regiao");
     for (const el of check) el.disabled = true
 }
 
@@ -202,7 +207,7 @@ function redirect_final() {
     window.location.href = endereco.substr(0, index) + "mac0499/formulario/formulario_fim.html"
 }
 
-function submit_form(){
+function submit_form() {
     const options = {
         method: 'POST',
         headers: {
@@ -247,6 +252,7 @@ function send_email() {
 function get_form() {
     form =
     {
+        'email': document.getElementById("txt_email").value,
         'idade': document.getElementById("txt_idade").value,
         'genero': document.getElementById('select_genero').value,
         'frequencia': document.getElementById('select_frequencia').value,

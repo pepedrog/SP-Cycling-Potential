@@ -123,7 +123,7 @@ function validate_regions() {
         document.getElementById('validacao_regiao_0').style.display = 'block'
         return false
     }
-    if (selected_regions.length > 2) {
+    if (selected_regions.length > 10) {
         document.getElementById('validacao_regiao_2').style.display = 'block'
         return false
     }

@@ -53,27 +53,32 @@
                         <div class="row">
                             <div class="col-12">
                                 <h3 class="subtitle"><b>Sobre</b></h3>
-                                <p>Essa pesquisa visa auxiliar o planejamento de políticas públicas para investimentos
-                                    em infraestrutura cicloviária. Visamos estudar quais são os locais da cidade que
-                                    mais se
-                                    beneficiariam da construção de ciclovias ou ciclofaixas, por terem características
-                                    físicas
-                                    (distância, topografia) apropriadas para o uso de bicicleta.
-                                </p>
-                                <p>
-                                    Você avaliará 5 ou 10 rotas localizadas em regiões de sua preferência.
-                                    As respostas auxiliarão na calibração de um modelo automático de avaliação de rotas.
-                                </p>
-                                <p>
-                                    Os dados fornecidos neste questionário serão usados para fins de pesquisa de forma
+                                <p>Esta pesquisa tem como objetivo auxiliar o planejamento de políticas cicloviárias
+                                    através da avaliação da <i>ciclabilidade</i> de algumas rotas na cidade de São
+                                    Paulo.</p>
+
+                                <p>Neste questionário você avaliará <b>5 rotas na região</b> de sua preferência.
+                                    A avaliação inclui características físicas (distância,
+                                    topografia) e a sua propensão a percorrer a rota com bicicleta. É possível avaliar
+                                    somente uma região por vez, mas se desejar avaliar também outras regiões, entre
+                                    novamente no link.</p>
+
+                                <p>As respostas servirão para calibrar o modelo de avaliação de rotas para determinar
+                                    quais
+                                    locais têm maior potencial de migração para a bicicleta. Com isso, o modelo visa
+                                    informar o poder público sobre onde os investimentos em construção de ciclovias ou
+                                    ciclofaixas teriam mais impacto para a mobilidade da cidade e ajudar na
+                                    transformação de
+                                    São Paulo em uma cidade cada vez melhor para a bicicleta.</p>
+
+                                <p>Os dados fornecidos neste questionário serão usados para fins de pesquisa de forma
                                     anônima, mantendo a sua privacidade e confidencialidade. Ao responder este
-                                    questionário, você concorda com o uso anônimo das informações fornecidas para fins
-                                    de pesquisa acadêmica.
-                                </p>
-                                <p>
-                                    Se estiver acessando pelo celular, utilize a orientação paisagem (posição
-                                    horizontal) para uma melhor experiência.
-                                </p>
+                                    questionário,
+                                    você concorda com o uso anônimo das informações fornecidas para fins de pesquisa
+                                    acadêmica.</p>
+
+                                <p>Se estiver acessando pelo celular, utilize a orientação paisagem (posição horizontal)
+                                    para uma melhor experiência.</p>
                             </div>
                         </div>
                         <hr />
@@ -100,8 +105,8 @@
                                 <div class="col-sm-10">
                                     <select class="form-select" id="select_genero" required>
                                         <option selected disabled value="">Selecione</option>
-                                        <option value="M">Masculino</option>
                                         <option value="F">Feminino</option>
+                                        <option value="M">Masculino</option>
                                         <option value="O">Outro</option>
                                         <option value="N">Prefiro não dizer</option>
                                     </select>
@@ -110,8 +115,7 @@
                             <div class="mb-3 row">
                                 <div class="col-sm-12">
                                     <label class="col-form-label" for="#select_frequencia"><b>Com que frequência você
-                                            usa
-                                            bicicleta?</b></label>
+                                            usa bicicleta? </b> &nbsp; (Considere antes da pandemia)</label>
                                 </div>
                                 <div class="col-sm-12">
                                     <select class="form-select" id="select_frequencia" required>
@@ -128,7 +132,7 @@
                             <div class="mb-3 row">
                                 <div class="col-sm-12">
                                     <label class="col-form-label" for="#select_tempo"><b>Há quanto tempo você usa a
-                                            bicicleta como meio de transporte?</b></label>
+                                            bicicleta como meio de transporte?</b> &nbsp; (Considere antes da pandemia)</label>
                                 </div>
                                 <div class="col-sm-12">
                                     <select class="form-control form-select" name="genero" id="select_tempo" required>
@@ -167,8 +171,8 @@
                             <div class="mb-3 row">
                                 <div class="col-sm-12">
                                     <label class="col-form-label" for="#txt_idade"><b>Deixe seu e-mail caso deseje
-                                            receber informação sobre os avanços da pesquisa. Essa informação não será
-                                            divulgada.</b></label>
+                                            receber informação sobre os avanços da pesquisa.</b>
+                                        <br>(Essa informação não será divulgada)</label>
                                 </div>
                                 <div class="col-sm-12"><input class="form-control" id="txt_email" type="text"
                                         placeholder="Preenchimento opcional"> </div>
@@ -177,15 +181,14 @@
                             <hr>
                             <br>
                             <div class="row">
-                                <div class="col-12"><b>Você deseja avaliar rotas de qual(is) região(ões) ?</b>
-                                    <br>Para cada região selecionada, serão avaliadas 5 rotas.
-                                    <br> <br>(selecione até duas)
+                                <div class="col-12"><b>Você deseja avaliar rotas de qual região?</b>
+                                    <br>(Serão avaliadas 5 rotas da região selecionada)
                                 </div>
                             </div>
                             <br />
                             <div class="row">
                                 <div class="col-6">
-                                    <br /> <input type="checkbox" id="cb_N1" name="regiao" value="norte1">
+                                    <br /> <input type="radio" id="cb_N1" name="regiao" value="norte1">
                                     <label for="cb_N1">Norte 1</label>
                                     &nbsp;
                                     <span class="more_info" help="Casa Verde, Brasilândia, Perus e Pirituba">
@@ -198,7 +201,7 @@
                                         </svg>
                                     </span>
                                     <br />
-                                    <input type="checkbox" id="cb_N2" name="regiao" value="norte2">
+                                    <input type="radio" id="cb_N2" name="regiao" value="norte2">
                                     <label for="cb_N2">Norte 2</label>
                                     &nbsp;
                                     <span class="more_info" help="Jaçanã, Santana e Vila Maria">
@@ -210,7 +213,7 @@
                                                 d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                         </svg>
                                     </span><br />
-                                    <input type="checkbox" id="cb_O" name="regiao" value="oeste">
+                                    <input type="radio" id="cb_O" name="regiao" value="oeste">
                                     <label for="cb_O">Oeste</label>
                                     &nbsp;
                                     <span class="more_info" help="Lapa, Butantã, Pinheiros">
@@ -222,7 +225,7 @@
                                                 d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                         </svg>
                                     </span><br />
-                                    <input type="checkbox" id="cb_C" name="regiao" value="centro">
+                                    <input type="radio" id="cb_C" name="regiao" value="centro">
                                     <label for="cb_C">Centro</label>
                                     &nbsp;
                                     <span class="more_info" help="Sé">
@@ -234,7 +237,7 @@
                                                 d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                         </svg>
                                     </span><br />
-                                    <input type="checkbox" id="cb_L1" name="regiao" value="leste1">
+                                    <input type="radio" id="cb_L1" name="regiao" value="leste1">
                                     <label for="cb_L1">Leste 1</label>
                                     &nbsp;
                                     <span class="more_info" help="Aricanduva, Mooca, Penha, Sapopemba e Vila Prudente">
@@ -246,7 +249,7 @@
                                                 d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                         </svg>
                                     </span><br />
-                                    <input type="checkbox" id="cb_L2" name="regiao" value="leste2">
+                                    <input type="radio" id="cb_L2" name="regiao" value="leste2">
                                     <label for="cb_L2">Leste 2</label>
                                     &nbsp;
                                     <span class="more_info"
@@ -259,7 +262,7 @@
                                                 d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                         </svg>
                                     </span><br />
-                                    <input type="checkbox" id="cb_S1" name="regiao" value="sul1">
+                                    <input type="radio" id="cb_S1" name="regiao" value="sul1">
                                     <label for="cb_S1">Sul 1</label>
                                     &nbsp;
                                     <span class="more_info" help="Vila Mariana, Ipiranga, Jabaquara">
@@ -271,7 +274,7 @@
                                                 d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                         </svg>
                                     </span><br />
-                                    <input type="checkbox" id="cb_S2" name="regiao" value="sul2">
+                                    <input type="radio" id="cb_S2" name="regiao" value="sul2">
                                     <label for="cb_S2">Sul 2</label>
                                     &nbsp;
                                     <span class="more_info"
@@ -286,8 +289,6 @@
                                     </span><br />
                                     <div id="validacao_regiao_0" class="invalid-feedback" style="font-size: medium;">
                                         Selecione pelo menos uma região</div>
-                                    <div id="validacao_regiao_2" class="invalid-feedback" style="font-size: medium;">
-                                        Selecione no máximo duas regiões</div>
                                 </div>
                                 <div class="col-6">
                                     <img src="../images/sp_regioes_v2.png" style="height: 20em;">
@@ -297,16 +298,19 @@
                     </div>
                     <div class="pagina" id="pagina_2">
                         <p><b>Por favor, avalie as rotas que aparecem no mapa clicando sobre elas.
-                                <br>Rotas Avaliadas: <span id="avaliadas"></span>
+                                <br>Rotas avaliadas: <span id="avaliadas"></span>
                             </b></p>
                         <br />
                         <div class="row">
                             <div class="col-12" style="padding: 0 0 0 0">
                                 <div id="mapa"></div>
                                 <div id="topografia">
-                                    <figure>
-                                        <img id="topografia_fig" title="Perfil Topográfico" onclick='zoom_topography()'>
-                                    </figure>
+                                    <span id="topografia_text" style="display: none; padding: 5px; cursor: pointer;"
+                                        onclick="show_topography()">
+                                        <b>Mostrar Perfil Topográfico</b></span>
+                                    <img id="topografia_fig" title="Perfil Topográfico" onclick='zoom_topography()'>
+                                    <span onclick="hide_topography()" id="topografia_x">X</span>
+
                                 </div>
                                 <div id="distancias" style="background-color: transparent;">
                                     <table class="table table-sm table-bordered"
@@ -397,7 +401,7 @@
                         <br>
                         <br>
                         <div id="avaliacao">
-                            <b>Avaliação de "Ciclabilidade"</b> <br /><br />
+                            <b>Avaliação da ciclabilidade da rota</b> <br /><br />
                             <p>Como você avalia a <b>distância</b> dessa rota?
                             </p>
                             <div class="row">
@@ -461,12 +465,12 @@
                             <div class="row">
                                 <div class="col-12">
                                     <form action="">
-                                        <p>Você faria esse trajeto de bicicleta se ele tivesse
-                                            ciclovias/ciclofaixas?</p>
+                                        <p>Se você precisasse fazer esse trajeto e ele tivesse ciclovia ou ciclofaixa,
+                                            qual a chance de fazê-lo com bicicleta?</p>
                                         <ul class='likert'>
                                             <li>
                                                 <input type="radio" name="final_eval" value="1">
-                                                <label style="color: rgb(185, 0, 0);">1<br>nunca</label>
+                                                <label style="color: rgb(185, 0, 0);">1<br>muito baixa</label>
                                             </li>
                                             <li>
                                                 <input type="radio" name="final_eval" value="2">
@@ -482,7 +486,7 @@
                                             </li>
                                             <li>
                                                 <input type="radio" name="final_eval" value="5">
-                                                <label style="color: rgb(0, 129, 39);">5<br>com certeza</label>
+                                                <label style="color: rgb(0, 129, 39);">5<br>muito alta</label>
                                             </li>
                                         </ul>
                                     </form>
@@ -491,7 +495,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <label for="comentarios">Comentários:</label>
+                                        <label for="comentarios">Se desejar, utilize o campo abaixo para justificar as respostas.</label>
                                         <textarea class="form-control" placeholder="preenchimento opcional"
                                             id="comentarios" rows="2"></textarea>
                                     </div>

@@ -1,6 +1,8 @@
 const checkbox_satelite = document.getElementById('check_satelite')
 const route_eval = document.getElementById('avaliacao')
 const img_topo = document.getElementById('topografia_fig')
+const text_topo = document.getElementById('topografia_text')
+const close_topo = document.getElementById('topografia_x')
 const table_dist = document.getElementById('distancias')
 const topografia = document.getElementById('topografia')
 const btn_save_trip = document.getElementById('btn_avaliar')
@@ -118,13 +120,8 @@ function get_checkbox_value(name) {
 
 function validate_regions() {
     document.getElementById('validacao_regiao_0').style.display = 'none'
-    document.getElementById('validacao_regiao_2').style.display = 'none'
     if (selected_regions.length == 0) {
         document.getElementById('validacao_regiao_0').style.display = 'block'
-        return false
-    }
-    if (selected_regions.length > 10) {
-        document.getElementById('validacao_regiao_2').style.display = 'block'
         return false
     }
     return true

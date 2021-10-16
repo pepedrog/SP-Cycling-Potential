@@ -1,6 +1,7 @@
-var mymap = L.map('mapa').setView([-23.63, -46.59], 11);
+var mymap = L.map('mapa').setView([-23.58, -46.59], 11);
 var routes = []
 var current_route = null
+var zoom_topo = false
 
 var routes_per_region = {
     "leste1": routes_leste1,
@@ -64,7 +65,7 @@ function configure_inclination_legend() {
 
     new_top = legend.offsetHeight - legend_img.offsetHeight - 20
     legend.style.height = legend_img.offsetHeight + 20 + "px"
-    legend.style.top = 340 + new_top + "px"
+    legend.style.top = 440 + new_top + "px"
     legend.style.display = "none"
 
     document.getElementById('help_inclinacao').onclick = function () {
@@ -154,7 +155,7 @@ function hide_route_details() {
     table_dist.style.display = 'none'
     mymap.removeLayer(start_flag)
     mymap.removeLayer(finish_flag)
-    mymap.flyTo([-23.63, -46.59], 11, {
+    mymap.flyTo([-23.58, -46.59], 11, {
         animate: true,
         duration: 1 // in seconds
     })
@@ -242,16 +243,31 @@ function load_routes(routes) {
 }
 
 function zoom_topography() {
-    if (img_topo.style.height == table_dist.offsetHeight - 20 + "px") {
-        img_topo.style.width = (mymap._container.offsetWidth - 4) + "px"
-        img_topo.style.height = "auto"
-        topografia.style.cursor = "zoom-out"
-    }
-    else {
+    if (zoom_topo) {
         img_topo.style.width = mymap._container.offsetWidth - 10 - table_dist.offsetWidth + "px"
         img_topo.style.height = table_dist.offsetHeight - 20 + "px"
         topografia.style.cursor = "zoom-in"
     }
+    else {
+        img_topo.style.width = (mymap._container.offsetWidth - 4) + "px"
+        img_topo.style.height = "auto"
+        topografia.style.cursor = "zoom-out"
+    }
+    zoom_topo = !zoom_topo
+}
+
+function show_topography() {
+    text_topo.style.display = 'none'
+    img_topo.style.display = 'block'
+    close_topo.style.display = 'block'
+}
+
+function hide_topography() {
+    zoom_topo = true
+    zoom_topography()
+    text_topo.style.display = 'block'
+    img_topo.style.display = 'none'
+    close_topo.style.display = 'none'
 }
 
 function mark_route() {

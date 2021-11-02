@@ -109,6 +109,7 @@ function is_already_evalued(trip_id) {
 }
 
 function show_route_details(e, trip) {
+    show_topography()
     id = trip.id
     current_route_id = id
     distance = trip.distance

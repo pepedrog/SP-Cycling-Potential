@@ -6,4 +6,5 @@
     fclose($myfile);
 
     chmod($filename, 0600);
+
 ?> 

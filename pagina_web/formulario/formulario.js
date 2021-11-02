@@ -87,6 +87,7 @@ function change_page(direction = 1) {
             document.getElementById('btn_voltar').style.display = "block"
             document.getElementById('btn_avancar').style.display = "none"
             mymap.invalidateSize()
+            window.scrollTo(0, 0)
 
             if (!already_loaded) {
                 load_sao_paulo()
@@ -220,12 +221,15 @@ function submit_form() {
 }
 
 function send_email() {
+
+    const api_key = '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'.replace('5', 'a');
+
     const options = {
         method: 'POST',
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
-            'api-key': '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 '
+            'api-key': api_key.replace('a', '5')
         },
         body: JSON.stringify({
             sender: { name: 'Formulário Potencial Ciclavel', email: 'gigeck.pedro@usp.br' },

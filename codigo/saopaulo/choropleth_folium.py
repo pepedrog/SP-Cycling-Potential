@@ -5,8 +5,10 @@ import folium
 def plot_zones(fmap, geodf_zones, value_column, color, plot_rmsp = False):
     style_zones = lambda x: {'color': 'black', 'weight': 1, 'opacity': 0.3, 'fillOpacity': 0.1}
     folium.Choropleth(
-                geo_data=geodf_zones.loc[geodf_zones['NumeroMuni']==36],
-                data=geodf_zones.loc[geodf_zones['NumeroMuni']==36],
+                #geo_data=geodf_zones.loc[geodf_zones['NumeroMuni']==36],
+                geo_data=geodf_zones,
+                #data=geodf_zones.loc[geodf_zones['NumeroMuni']==36],
+                data=geodf_zones,
                 columns=['NumeroZona', value_column],
                 key_on="feature.properties.NumeroZona",
                 fill_color = color,
@@ -32,7 +34,7 @@ def plot_zones_tooltip(fmap, geodf, fields, aliases):
     """
     tooltip_zona=folium.features.GeoJsonTooltip(
                         fields, aliases)
-    folium.GeoJson(geodf.loc[geodf['NumeroMuni'] == 36],
+    folium.GeoJson(geodf,
                    style_function = lambda x : {'opacity': 0, 'fillOpacity': 0},
                    name = 'Detalhes da zona', control = True,
                    tooltip = tooltip_zona).add_to(fmap)

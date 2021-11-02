@@ -5,3 +5,4 @@ data/sao-paulo/rotas-migracao/new_routes_cars.csv
 codigo/complete_csv.csv
 codigo/.ipynb_checkpoints
 __pycache__
+codigo/bases/*

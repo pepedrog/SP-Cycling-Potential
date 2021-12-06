@@ -4,11 +4,6 @@
     $last_answer = '2021_09_30';
 
     $origens = [ 'vazio' => 0];
-    for ($i = 100; $i <= 700; $i += 100) {
-        for ($j = 0; $j <= 15; $j++) {
-            $origens[$i + $j] = 0; 
-        }
-    }
 
     $idade20 = 0;
     $idade30 = 0;
@@ -112,6 +107,8 @@
         }
     }
 
+    echo '<title>Respostas - Avaliação de Ciclabilidade</title>';
+
     echo '<p><b>Total de respostas:</b> &nbsp;&nbsp;' . $total . '</p>';
     echo '<p><b>Rotas Avaliadas:</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' . $avaliacoes . '</p>';
     echo '<p><b>Última resposta:</b> &nbsp;&nbsp;' . substr($last_answer, 8, 2) . '/' . substr($last_answer, 5, 2) ;
@@ -143,8 +140,8 @@
     echo $leste2 . '</td></tr><tr><td>Sul 1: &nbsp;</td><td>' . $sul1 . '</td></tr><tr><td>Sul 2: &nbsp;</td><td>';
     echo $sul2 . '</td></tr></table></p> <hr>';
 
-    echo $origem;
     echo '<p><b>Origem das respostas:</b></p> <table>';
+    ksort($origens);
     foreach ($origens as $origem => $quant){
         if ($quant > 0)
             echo '<tr><td>' . $origem . ': &nbsp;&nbsp;</td><td>' . $quant . '</td></tr>';

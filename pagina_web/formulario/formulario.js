@@ -221,7 +221,7 @@ function submit_form() {
 }
 
 function send_email() {
-
+    /*
     const api_key = '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'.replace('5', 'a');
 
     const options = {
@@ -248,6 +248,8 @@ function send_email() {
         .then(response => console.log(response))
         .then(_ => redirect_final())
         .catch(err => console.error(err));
+        */
+    redirect_final()
 }
 
 function get_form() {

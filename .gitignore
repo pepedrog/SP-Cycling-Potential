@@ -6,3 +6,5 @@ codigo/complete_csv.csv
 codigo/.ipynb_checkpoints
 __pycache__
 codigo/bases/*
+pagina_web/formulario/respostas/*
+*~lock*

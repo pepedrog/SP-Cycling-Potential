@@ -1,6 +1,3 @@
-<?php
- echo '<input type="hidden" id="input_origem" value="' . $_GET['origem'] . '">'
-?>
 
 <!doctype html>
 <html lang="en">
@@ -34,6 +31,10 @@
 
 
 <body>
+<?php
+ echo '<input type="hidden" id="input_origem" value="' . $_GET['origem'] . '"/>';
+?>
+
     <div class="main">
         <br />
         <header class="row content">
@@ -325,16 +326,16 @@
                                     <table class="table table-sm table-bordered"
                                         style="width: auto; margin-bottom: 0; background-color: white;">
                                         <tbody>
-                                            <tr style="border-color: black; border-width: 2px;">
+                                            <tr style="border: solid black 2px;">
                                                 <td><b>Distância total</b></td>
                                                 <td style="text-align: right;" id="dist_total"></td>
                                             </tr>
-                                            <tr style="border-color: #94c280; border-width: 2px;">
+                                            <tr style="border: #94c280 2px solid;">
                                                 <td>Plano ou descidas &nbsp;&nbsp; </td>
                                                 <td style="text-align: right;" id="dist_0"></td>
                                             </tr>
                                             <tr
-                                                style="border-color: #D03F2E; border-width: 2px; border-bottom-width: 0px;">
+                                                style="border: 2px #D03F2E solid; border-bottom-width: 0px;">
                                                 <td>Subidas </td>
                                                 <td style="text-align: right;" id="dist_subidas"></td>
                                             </tr>

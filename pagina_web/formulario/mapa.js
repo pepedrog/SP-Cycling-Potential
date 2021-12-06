@@ -195,6 +195,18 @@ function on_each_feature(trip) {
     }
 }
 
+function load_regions() {
+    for (zone of sp_limits['features']) {
+        let myStyle = {
+            "color": 'gray',
+            "weight": 1,
+            "opacity": 0.8,
+            "fillOpacity": 0
+        };
+        L.geoJSON(zone, { style: myStyle }).addTo(mymap);
+    }
+}
+
 function load_sao_paulo() {
     zones:
     for (zone of sp_limits['features']) {

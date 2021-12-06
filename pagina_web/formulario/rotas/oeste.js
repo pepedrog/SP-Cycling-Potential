@@ -1,6 +1,10 @@
 var routes_oeste = [
     {
         "id": " 42535 ",
+        "dist_pot": " 0.207 ",
+        "age_pot": " 0.88 ",
+        "incl_pot": " 0.076 ",
+        "final_pot": " 0.388 ",
         "distance": " 6216 " ,  "distance_0" : " 3220 ",  "distance_1" : " 1380 ",  "distance_2" : " 700 ",  "distance_3" : " 310 ",  "distance_4" : " 610 ", 
         "route":
         [
@@ -982,6 +986,10 @@ var routes_oeste = [
  ] },
     {
         "id": " 46177 ",
+        "dist_pot": " 0.561 ",
+        "age_pot": " 0.396 ",
+        "incl_pot": " 0.381 ",
+        "final_pot": " 0.446 ",
         "distance": " 3503 " ,  "distance_0" : " 1820 ",  "distance_1" : " 880 ",  "distance_2" : " 510 ",  "distance_3" : " 110 ",  "distance_4" : " 190 ", 
         "route":
         [
@@ -1577,6 +1585,10 @@ var routes_oeste = [
  ] },
     {
         "id": " 121940 ",
+        "dist_pot": " 0.876 ",
+        "age_pot": " 0.822 ",
+        "incl_pot": " 0.272 ",
+        "final_pot": " 0.657 ",
         "distance": " 2270 " ,  "distance_0" : " 910 ",  "distance_1" : " 620 ",  "distance_2" : " 260 ",  "distance_3" : " 110 ",  "distance_4" : " 380 ", 
         "route":
         [
@@ -1951,6 +1963,10 @@ var routes_oeste = [
  ] },
     {
         "id": " 21904 ",
+        "dist_pot": " 0.483 ",
+        "age_pot": " 0.001 ",
+        "incl_pot": " 0.98 ",
+        "final_pot": " 0.488 ",
         "distance": " 2316 " ,  "distance_0" : " 2150 ",  "distance_1" : " 170 ",  "distance_2" : " 0 ",  "distance_3" : " 0 ",  "distance_4" : " 0 ", 
         "route":
         [
@@ -2307,6 +2323,10 @@ var routes_oeste = [
  ] },
     {
         "id": " 124281 ",
+        "dist_pot": " 0.193 ",
+        "age_pot": " 0.126 ",
+        "incl_pot": " 0.73 ",
+        "final_pot": " 0.35 ",
         "distance": " 4047 " ,  "distance_0" : " 3310 ",  "distance_1" : " 700 ",  "distance_2" : " 20 ",  "distance_3" : " 0 ",  "distance_4" : " 20 ", 
         "route":
         [

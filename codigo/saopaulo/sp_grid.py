@@ -1,7 +1,7 @@
 from bikescience import grid
 import folium
 
-SP_LAT = -23.5489
+SP_LAT = -23.5789
 SP_LON = -46.6388
 
 def create(n=40, west_offset=-.3, east_offset=.3, north_offset=.3, south_offset=-.3):

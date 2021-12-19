@@ -63,8 +63,8 @@
                                     Paulo.</p>
 
                                 <p>Neste questionário você avaliará <b>5 rotas na região</b> de sua preferência.
-                                    A avaliação inclui características físicas (distância,
-                                    topografia) e a sua propensão a percorrer a rota com bicicleta. É possível avaliar
+                                Você deverá avaliar a sua propensão a percorrer a rota com bicicleta baseado nas características físicas da rota (distância, topografia).
+                                 É possível avaliar
                                     somente uma região por vez, mas se desejar avaliar também outras regiões, entre
                                     novamente no link.</p>
 
@@ -411,7 +411,7 @@
                         <br>
                         <br>
                         <div id="avaliacao">
-                            <b>Avaliação da ciclabilidade da rota</b> <br /><br />
+                            <b>Avalie a facilidade de percorrer esta rota de bicicleta caso houvesse infraestrutura cicloviária adequada.</b> <br /><br />
                             <p>Como você avalia a <b>distância</b> dessa rota?
                             </p>
                             <div class="row">

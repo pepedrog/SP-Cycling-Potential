@@ -40,9 +40,11 @@ def scale_potential_to_1 (x, distribution, param):
     y = distribution.pdf(x, *param)
     return y / max_value
 
-def partial_cycling_potential (variable, gender, value):
+def partial_cycling_potential (variable, gender, value, density = False):
     global potential_distributions, genders
     d = potential_distributions[variable + '_' + genders[gender]]
+    if density:
+        return d[0].pdf(value, *d[1])
     return scale_potential_to_1 (value, d[0], d[1])
 
 # Return a dict with how many meters were traveled in each slope degree

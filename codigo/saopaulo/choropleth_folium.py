@@ -4,28 +4,30 @@ import folium
 
 def plot_zones(fmap, geodf_zones, value_column, color, plot_rmsp = False):
     style_zones = lambda x: {'color': 'black', 'weight': 1, 'opacity': 0.3, 'fillOpacity': 0.1}
+    folium.GeoJson(geodf_zones,
+                style_function = style_zones,
+                name='Zonas', control=False).add_to(fmap)
+    data = geodf_zones
+    if not plot_rmsp:
+        data = data.loc[data['NumeroMuni'] == 36]
+
     folium.Choropleth(
-                #geo_data=geodf_zones.loc[geodf_zones['NumeroMuni']==36],
-                geo_data=geodf_zones,
-                #data=geodf_zones.loc[geodf_zones['NumeroMuni']==36],
-                data=geodf_zones,
-                columns=['NumeroZona', value_column],
-                key_on="feature.properties.NumeroZona",
-                fill_color = color,
-                fill_opacity = 1,
-                line_opacity = 1,
-                Highlight= True,
-                line_color = "black",
-                show=True,
-                overlay=True,
-                control=False,
-                nan_fill_color = "Black"
-                ).add_to(fmap)
-    if plot_rmsp:
-        folium.GeoJson(geodf_zones.loc[geodf_zones['NumeroMuni'] != 36],
-                   style_function = style_zones,
-                   name='Zonas', control=False).add_to(fmap)
-    
+        geo_data=data,
+        data=data,
+        columns=['NumeroZona', value_column],
+        key_on="feature.properties.NumeroZona",
+        fill_color = color,
+        fill_opacity = 1,
+        line_opacity = 1,
+        Highlight= True,
+        line_color = "black",
+        show=True,
+        overlay=True,
+        control=False,
+        nan_fill_color = "Black",
+        zoom_control = False
+        ).add_to(fmap)
+
 def plot_zones_tooltip(fmap, geodf, fields, aliases):
     """
         Function to set the tooltip (text that appear when the cursor is over)
@@ -40,7 +42,7 @@ def plot_zones_tooltip(fmap, geodf, fields, aliases):
                    tooltip = tooltip_zona).add_to(fmap)
 
 def plot_choropleth(fmap, title, color, value_function, geodf_zones, 
-                      tooltip_columns, tooltip_aliases):
+                      tooltip_columns, tooltip_aliases, plot_rmsp = False):
     """
         Add a choropleth style element to fmap, calculating values for the geodf_zones.
         this geoDataFrame must be on the SaoPaulo zone DataFrames pattern,
@@ -48,7 +50,7 @@ def plot_choropleth(fmap, title, color, value_function, geodf_zones,
     """
     geodf_zones['choropleth_value'] = geodf_zones.apply(value_function, axis=1)
     
-    plot_zones(fmap, geodf_zones, 'choropleth_value', color)
+    plot_zones(fmap, geodf_zones, 'choropleth_value', color, plot_rmsp)
     plot_zones_tooltip(fmap, geodf_zones, tooltip_columns, tooltip_aliases)
     
     fmap.get_root().html.add_child(folium.Element(mpw.build_title(title)))

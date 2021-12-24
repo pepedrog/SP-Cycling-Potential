@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../mac0499.css" runat="server" type="text/css">
-    <title>Proposta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Proposal</title>
 </head>
 
 <body>
@@ -36,81 +37,105 @@
             <main class="content" role="main">
                 <hr />
                 <br />
-                <h2 class="subtitle text-center">Proposal</h2>
-                <h3 class="subtitle text-center">Page under construction</h3>
-                <!--
+                <h2 class="subtitle text-center">Proposal
+                    <span style="font-size: small; font-weight: normal;">
+                        <a target='_blank' href='proposta.pdf'
+                            download>
+                            &nbsp;&nbsp;pdf&nbsp;
+                            <i class="fa fa-file-pdf-o" style="font-size: 14px;color:red"></i></a>
+                    </span>
+                </h2>
+                <h3 class="subtitle text-center">Inicial elaboration of this work scope</h3>
                 <div>
                     <br />
-                    <h4> Motivação &nbsp; 🥇</h4>
+                    <h4> Motivation &nbsp; 🥇</h4>
                     <hr />
                     <p>
-                        Nas últimas décadas, as consequências negativas do uso do automóvel nas
-                        grandes cidades foram amplamente reconhecidas e estudadas.
+                        In the past decades, rechearches have widely recognized and studied
+                        the negative consequences of car use in
+                        large cities.
+                    </p>
+                    <p>Several cities worldwide have promoted alternatives to the use of private cars, aiming at
+                        benefits to public health, reduction of carbon emissions, lower noise pollution and
+                        traffic congestion. The adoption of cycling as a mode of transport is one of those alternatives.
+                        In são Paulo, according to the last mobility survey, bicycle trips
+                        represent only 1% of the total daily trips in São Paulo. Thus, effective investments to promote
+                        cycling are vital to improve the urban mobility panorama.
                     </p>
                     <p>
-                        Nesse contexto, as grandes cidades têm promovido alternativas ao uso dos
-                        carros particulares, visando benefı́cios em saúde pública, redução da emissão de
-                        carbono, diminuição da poluição sonora e dos congestionamentos nas vias. A adoção do ciclismo
-                        como modal de transporte é uma dessas alternativas.
-                    <p>Posto isso, a cidade de São Paulo tradicionalmente priorizou os investimentos
-                        em infraestrutura viária para veı́culos motorizados, causando uma baixa
-                        adesão ao uso de bicicletas, que representa apenas cerca de 1% das viagens,
-                        segundo a pesquisa Origem e Destino 2017 realizada pelo metrô.
+                        This work is part of an integration between the São Paulo Traffic
+                        Engineering Company (CET) ans the BikeScience
+                        (tool to analyze cycling mobility developed by the InterSCity project).
+                        We aim to provide data science models to study the current cycling environment
+                        and the potential for modal shift to bikes in the city.
                     </p>
-                    <p>
-                        Assim, este trabalho se insere em uma integração entre a Companhia de
-                        Engenharia de Tráfego de São Paulo (CET) e o BikeScience (ferramenta de
-                        análise de mobilidade ciclı́stica desenvolvida no projeto InterSCity), que visa
-                        estudar o potencial de migração de viagens de outro modais para a bicicleta.
+                    <p>This way, we aim to identify what are the trips that could be migrated to cycling and where the
+                        thwy are concentrated.
+                        Also, we discuss actions to stimulate this migration estimating the impacts that such a change
+                        in
+                        mobility would promote.
                     </p>
-                    <p>
-                        Desse modo, buscamos descobrir quais são e onde estão as viagens que pode-
-                        riam ser migradas para bicicleta, discutir ações para que essa migração aconteça
-                        e estimar os impactos que tal mudança de modal proporcionaria.
+                    <p>The relevance of this topic regards the broad benefits of adopting the bicycle and,
+                        above all, stimulating the scenario where public policies are planeed and implemented based on
+                        scientific evidence.
                     </p>
-                    <p>
-                        Em suma, a relevância deste tema se dá pelos amplos benefı́cios da adoção
-                        da bicicleta e, sobretudo, pela possibilidade de que as polı́ticas de mobilidade
-                        urbana sejam, cada vez mais, embasadas pelos dados.
-                    </p>
-                    <br/>
-                    <h4>Objetivos &nbsp; 🏁</h4>
+                    <br />
+                    <h4>Objectives &nbsp; 🏁</h4>
                     <hr />
                     <p>
-                        Neste trabalho, temos como objetivo principal a criação de um ı́ndice de
-                        potencial ciclável, isto é, um modelo que identifique quais viagens podem migrar
-                        de outros modais para a bicicleta.
+                        In this work, our principal objective is the development of a cycling potential index,
+                        i.e., a model which identifies trips that could be migrated from other modals to bicycles.
                     </p>
                     <p>
-                        Com foco em reduzir o trânsito congestionado das ruas e avenidas de São
-                        Paulo, priorizaremos as viagens feitas por veı́culos privados. Em geral, enquadram-
-                        se nessa categoria viagens de curta distância e duração, que percorrem rotas com
-                        pouca declividade.
-                    </p>
-                        Além disso, incluiremos em nosso estudo as viagens feitas a pé, de longa
-                        duração, que também poderiam migrar para a bicicleta, visando uma melhor
-                        qualidade de vida do cidadão e do ambiente da cidade.
+                        Focusing on reducing congested traffic on São Paulo's streets and avenues, we will
+                        prioritize trips made by private vehicles. In general, it corresponds to short trips in
+                        flat regions. We will also include walking paths,
+                        which could also migrate to cycling, aiming at a better life quality for
+                        citizens and the city's environment.
                     </p>
                     <p>
-                        Assim, poderemos simular os impactos de tal migração analisando o aumento
-                        da velocidade média das vias com a diminuição dos veı́culos, além do volume de
-                        gases poluentes que deixaria de ser emitido.
+
+                        The modal shift to bicycle generates impacts that we will be able to simulate
+                        and
+                        analyze, for example, the increase in the average speed of the roads with the reduction of
+                        vehicles,
+                        and the volume of polluting gases that would no longer be emitted.
                     </p>
                     <p>
-                        Na literatura, existem ı́ndices com o mesmo propósito, que tendem
-                        a priorizar perfis já predominantes nas viagens de bicicleta. Então, visamos
-                        criar um modelo abrangente, que leva em consideração um amplo conjunto
-                        de variáveis como dados socioeconômicos das regiões, infraestrutura cicloviária
-                        existente, dados das viagens (declividade das rotas, localização, duração, distância),
-                        caracterı́sticas dos indivı́duos (gênero, idade, renda), entre outros.
+                        In the literature, there are indices with the same purpose, which tend to prioritize profiles
+                        that
+                        are already predominant in bicycle trips. So, we aim to create a comprehensive model, which
+                        takes
+                        into account a wide range of variables such as socioeconomic data for the regions, existing
+                        cycling
+                        infrastructure, trips data (slope of routes, location, duration, distance), personal
+                        characteristics
+                        (gender, age, income), and others.
+
                     </p>
                     <p>
-                        Para analisar tais atributos, buscamos também gerar mapas da distribuição
-                        das viagens na cidade, mostrando a concentração delas nas regiões e principais
-                        fluxos, contando com filtros dinâmicos, com auxı́lio do BikeScience.
+                        To analyze these attributes, we also generate maps of the distribution of trips in the
+                        city, showing their concentration in the regions and main flows, using dynamic filters, with the
+                        help of BikeScience functionalities.
+                    </p>
+                    <br />
+                    <h4>Metodology &nbsp; 🖥️</h4>
+                    <hr />
+                    <p>During this work, we will use the Python programming language, in 'jupyter notebooks' format,
+                        along with independent python modules. We will use auxiliary libraries and frameworks
+                        for the data processing, generation of maps, diagrams,
+                        tables, and the results analyses, including geoprocessing tools.
+                    </p>
+                    <p>
+                        We retrieve the data used in the model from the Origin and Destination survey carried out by the
+                        São Paulo subway company,
+                        which cantains data of about 42 million daily trips. We will also use other sources to obtaing information about topography,
+                        road network, demographic and socioeconomic data.
+                    </p>
+                    <p>
+                        The planned activities are available in the <a href="plan.html"><u>Work Plan</u></a> page.
                     </p>
                 </div>
-                -->
             </main>
         </div>
     </div>

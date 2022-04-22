@@ -228,58 +228,81 @@ function plot_heatmap(values, colors, title, div) {
 }
 
 var regions = ['norte1', 'norte2', 'oeste', 'centro', 'leste1', 'leste2', 'sul1', 'sul2']
-var ids_regions = [[],[],[],[],[]]
-var dist_pontentials = [[],[],[],[],[]]
-var incl_pontentials = [[],[],[],[],[]]
-var final_pontentials = [[],[],[],[],[]]
-function get_potentials () {
-    let i = 0
+var ids_regions = []
+var dist_potentials = []
+var incl_potentials = []
+var final_pontentials = []
+function get_potentials() {
     for (const key of regions) {
         for (const route of routes_per_region[key]) {
-            ids_regions[i].push(route.id)
-            dist_pontentials[i].push(route.dist_pot)
-            incl_pontentials[i].push(route.incl_pot)
-            final_pontentials[i].push((parseFloat(route.dist_pot) + parseFloat(route.incl_pot)) / 2)
-            i++
+            ids_regions.push(Number(route.id))
+            dist_potentials.push(Number(route.dist_pot))
+            incl_potentials.push(Number(route.incl_pot))
+            final_pontentials.push((parseFloat(route.dist_pot) + parseFloat(route.incl_pot)) / 2)
         }
-        i = 0
     }
-    console.log(ids_regions)
 }
 
-var dist_mean_ans = [[],[],[],[],[]]
-var incl_mean_ans = [[],[],[],[],[]]
-var final_mean_ans = [[],[],[],[],[]]
-function get_mean_answers () {
-    let i = 0
+var dist_mean_ans = []
+var incl_mean_ans = []
+var final_mean_ans = []
+var answers_count = []
+
+var answers_dist = []
+var answers_incl = []
+var answers_incl_pot = []
+var answers_dist_pot = []
+function reset_filters() {
+    dist_mean_ans = []
+    incl_mean_ans = []
+    final_mean_ans = []
+    answers_count = []
+    
+    answers_dist = []
+    answers_incl = []
+    answers_incl_pot = []
+    answers_dist_pot = []
+}
+
+function get_answers(frequency = 'Geral') {
+    reset_filters()
     for (const key of regions) {
         for (const route of routes_per_region[key]) {
-            means = get_means(route.id)
-            dist_mean_ans[i].push(means[0])
-            incl_mean_ans[i].push(means[1])
-            final_mean_ans[i].push(means[2])
-            i++
+            means = iter_answers(route.id, frequency)
+            dist_mean_ans.push(means[0])
+            incl_mean_ans.push(means[1])
+            final_mean_ans.push(means[2])
+            answers_count.push(means[3])
         }
-        i = 0
-    } 
+    }
 }
 
-function get_means (id) {
+function iter_answers(id, frequency) {
     let sum_dist = 0
     let sum_incl = 0
     let sum_final = 0
     let count = 0
+    let index = 0
     for (const answer of answers) {
-        for (const a of answer.avaliacoes) {
-            if (a.id == id) {
-                count++
-                sum_dist += parseInt(a.dist);
-                sum_incl += parseInt(a.incl);
-                sum_final += parseInt(a.final);
+        if (frequency == 'Geral' || answer.frequencia == frequency) {
+            for (const a of answer.avaliacoes) {
+                if (a.id == id) {
+                    if (id == 121940) console.log(answer)
+                    count++
+                    sum_dist += parseInt(a.dist);
+                    sum_incl += parseInt(a.incl);
+                    sum_final += parseInt(a.final);
+
+                    answers_dist.push(parseInt(a.dist))
+                    answers_incl.push(parseInt(a.incl))
+                    index = ids_regions.indexOf(parseInt(a.id))
+                    answers_dist_pot.push(dist_potentials[index])
+                    answers_incl_pot.push(incl_potentials[index])
+                }
             }
         }
     }
-    return [sum_dist / count, sum_incl / count, sum_final / count]
+    return [sum_dist / count, sum_incl / count, sum_final / count, count]
 }
 /*
 plot_distance_potential([[1, null, 30, 50, 1, 1, 3, 4],
@@ -288,19 +311,228 @@ plot_distance_potential([[1, null, 30, 50, 1, 1, 3, 4],
     [20, 1, 60, 80, 30, 50, 40, 8],
     [7, 9, 50, 30, 60, 1, -10, 20]], 'Potencial - Distância', 'dist_potential_chart')*/
 
-function plot_heatmaps () {
-
-    get_potentials()
-    get_mean_answers()
-
-    plot_heatmap(dist_pontentials, 'Portland', 'Potencial', 'dist_potential_chart')
-    plot_heatmap(dist_mean_ans, 'Portland', 'Média das Respostas', 'dist_answers_chart')
-
-    plot_heatmap(incl_pontentials, 'Portland', 'Potencial', 'incl_potential_chart')
-    plot_heatmap(incl_mean_ans, 'Portland', 'Média das Respostas', 'incl_answers_chart')
-
-    plot_heatmap(final_pontentials, 'Portland', 'Potencial', 'final_potential_chart')
-    plot_heatmap(final_mean_ans, 'Portland', 'Média das Respostas', 'final_answers_chart')
+function get_endpoints(m, f_0) {
+    let p0 = [0, f_0]
+    let p1 = [5, 5 * m + f_0]
+    return [p0, p1]
 }
 
+function plot_scatter(x, y, weights, title, element,
+    range_x = [0, 1.1], title_x = 'potencial',
+    range_y = [0, 6], title_y = 'respostas') {
+    let max_answers = Math.max.apply(Math, weights)
+    let trace1 = {
+        x: x,
+        y: y,
+        text: weights,
+        mode: 'markers',
+        type: 'scatter',
+        name: 'Outras',
+        marker: { 
+            size: weights.map(x => x/max_answers * 20)
+        }
+    };
+    let trace2 = {
+        x: [x[10], x[11], x[12], x[13], x[14]],
+        y: [y[10], y[11], y[12], y[13], y[14]],
+        text: [weights[10],weights[11],weights[12],weights[13],weights[14]],
+        mode: 'markers',
+        type: 'scatter',
+        name: 'Oeste',
+        marker: { 
+            size: weights[10] / max_answers * 20,
+        }
+    };
+
+    let line = linear_approx(x, y, weights, x.length)
+    let point = get_endpoints(line[0], line[1])
+    let trace3 = {
+        x: [point[0][0], point[1][0]],
+        y: [point[0][1], point[1][1]],
+        mode: 'lines',
+        type: 'scatter',
+        name: 'LSM: ' + (Math.round(line[0] * 100) / 100)
+    };
+    let data = [trace1, trace2, trace3];
+
+
+    let layout = {
+        xaxis: {
+            range: range_x,
+            title: title_x
+        },
+        yaxis: {
+            range: range_y,
+            title: title_y
+        },
+        title: title
+    };
+
+
+    Plotly.newPlot(element, data, layout);
+}
+
+function linear_approx(x, y, weights, n) {
+    let x_bar = 0, y_bar = 0, count = 0
+    for (let i = 0; i < n; i++) {
+        if (isNaN(x[i]) || isNaN(y[i])) continue
+        for (let w = 0 ; w < weights[i]; w++) {
+            x_bar += x[i]
+            y_bar += y[i]
+            count++
+        }
+    }
+    x_bar = x_bar / count
+    y_bar = y_bar / count
+
+    let numerator = 0, denumerator = 0
+    for (let i = 0; i < n; i++) {
+        if (isNaN(x[i]) || isNaN(y[i])) continue
+        for (let w = 0 ; w < weights[i]; w++) {
+            numerator += (x[i] - x_bar) * (y[i] - y_bar)
+            denumerator += (x[i] - x_bar) * (x[i] - x_bar)
+        }
+    }
+    let slope = numerator / denumerator
+    let f_0 = y_bar - slope * x_bar
+    return [slope, f_0]
+}
+
+function csv_headers(only_users) {
+    let headers = 
+    "ordem_resposta;" +
+    "data_hora;" +
+    "cod_origem;" +
+    "idade;" +
+    "genero;" +
+    "frequencia;" +
+    "anos_exp;" +
+    "motivos;" +
+    "regiao;"
+
+    if (!only_users)
+        headers += 
+        "id_rota;" +
+        "nota_distancia;" +
+        "nota_inclinacao;" +
+        "nota_chance_bici;" +
+        "comentario;"
+    
+    return headers + "\n"
+}
+
+
+function csv_content(only_users) {
+    let content = ""
+    
+    for (let i = 0; i < answers.length; i++) {
+        let content_user = i + 1 + ";" +
+        answers[i]['data_hora'] + ";" +
+        answers[i]['origem'] + ";" + 
+        answers[i]['idade'] + ";" + 
+        answers[i]['genero'] + ";" +
+        answers[i]['frequencia'] + ";" +
+        answers[i]['tempo'] + ";"
+        for (let m = answers[i]['motivos'].length - 1, n = m; n >= 0; n--)
+        {
+            content_user += answers[i]['motivos'][m - n]
+            if (n) content_user += " - "
+        }
+        content_user += ";" +
+        answers[i]['regioes'][0] + ";";
+
+        if (!only_users) {
+            let content_routes = ""
+            for (const a of answers[i]['avaliacoes']) {
+                content_routes += content_user
+                content_routes += a['id'] + ";"
+                content_routes += a['dist'] + ";"
+                content_routes += a['incl'] + ";"
+                content_routes += a['final'] + ";"
+                content_routes += a['coment'].replaceAll(";", ".").replaceAll("\n", " - ")
+                content_routes += "\n"
+            }
+            content += content_routes
+        }
+        else content += content_user + "\n"
+    }
+    return content
+}
+
+function answers_to_csv (only_users) {
+    let csv = csv_headers(only_users)
+    csv += csv_content(only_users)
+    csv = encodeURIComponent("\uFEFF" + csv)
+    csv = "data:text/csv;charset=utf-8," + csv
+
+    let a = window.document.createElement('a');
+    a.setAttribute('href', csv);
+    a.setAttribute('download', only_users ? "usuarios.csv" : "respostas.csv");
+    window.document.body.appendChild(a);
+    a.click();
+}
+
+function plot_heatmaps(frequency) {
+    get_potentials()
+    get_answers(frequency)
+    
+    plot_scatter(dist_potentials, dist_mean_ans, answers_count, 'distância', 'dist_mean_answers_chart')
+    plot_scatter(incl_potentials, incl_mean_ans, answers_count, 'inclinação', 'incl_mean_answers_chart')
+    //plot_scatter(answers_dist_pot, answers_dist, 'geral', 'dist_answers_chart')
+    //plot_scatter(answers_incl_pot, answers_incl, 'geral', 'incl_answers_chart')
+    //plot_scatter(final_mean_ans, dist_mean_ans, answers_count, 'distância', 'dist_answers_chart',
+    //    range_x = [0, 5.2], title_x = 'Propensão de usar a bicicleta',
+    //    range_y = [0, 5.2], title_y = 'Resposta Distância')
+    //plot_scatter(final_mean_ans, incl_mean_ans, answers_count, 'inclinação', 'incl_answers_chart',
+    //    range_x = [0, 5.2], title_x = 'Propensão de usar a bicicleta',
+    //    range_y = [0, 5.2], title_y = 'Resposta Inclinação')
+    //plot_scatter(final_pontentials, final_mean_ans, 'geral', 'final_answers_chart')
+}
+
+function plot_comparison_scatter() {
+    let traces_dist = []
+    let traces_incl = []
+    for (f of ['Diariamente', 'Frequentemente', 'Eventualmente', 'Raramente', 'Nunca'])
+    {
+        get_answers(f)
+
+        let line_d = linear_approx(dist_potentials, dist_mean_ans, answers_count, answers_count.length)
+        let point_d = get_endpoints(line_d[0], line_d[1])
+        let trace_d = {
+            x: [point_d[0][0], point_d[1][0]],
+            y: [point_d[0][1], point_d[1][1]],
+            mode: 'lines',
+            type: 'scatter',
+            name: f + ' - LSM: ' + (Math.round(line_d[0] * 100) / 100)
+        };
+
+        let line_i = linear_approx(incl_potentials, incl_mean_ans, answers_count, answers_count.length)
+        let point_i = get_endpoints(line_i[0], line_i[1])
+        let trace_i = {
+            x: [point_i[0][0], point_i[1][0]],
+            y: [point_i[0][1], point_i[1][1]],
+            mode: 'lines',
+            type: 'scatter',
+            name: f + ' - LSM: ' + (Math.round(line_i[0] * 100) / 100)
+        };
+        traces_dist.push(trace_d)
+        traces_incl.push(trace_i)
+    }
+    console.log(traces_dist)
+    console.log(traces_incl)
+    let layout = {
+        xaxis: {
+            range: [0, 1.1],
+            title: 'potencial'
+        },
+        yaxis: {
+            range: [0,6],
+            title: 'respostas'
+        },
+        title: ''
+    };
+    Plotly.newPlot('dist_answers_chart', traces_dist, layout);
+    Plotly.newPlot('incl_answers_chart', traces_incl, layout);
+}
+plot_comparison_scatter()
 

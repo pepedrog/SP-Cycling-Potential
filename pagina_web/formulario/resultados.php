@@ -11,6 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../mac0499.css" runat="server" type="text/css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Leaflet-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -55,10 +56,18 @@
                 <div>
                     <div class="row text-center">
                         <div class="col-12">
-                            <button id="btn_show_route" style="width:33%;" class="btn"
-                                onclick="show_results_div(1)">Rotas</button>
-                            <button id="btn_show_user" style="width:33%;" class="btn"
-                                onclick="show_results_div(0)">Usuários</button>
+                            <button id="btn_show_route" style="width:28%;" class="btn"
+                                onclick="show_results_div(1)">Rotas 
+                                <button style="width:5%;" class="btn" onclick="answers_to_csv(false)">
+                                <i class="fa fa-download"></i>
+                                </button> 
+                            </button>
+                            <button id="btn_show_user" style="width:28%;" class="btn"
+                                onclick="show_results_div(0)">Usuários
+                                <button style="width:5%;" class="btn" onclick="answers_to_csv(true)">
+                                <i class="fa fa-download"></i>
+                                </button> 
+                            </button>
                             <button id="btn_show_final" style="width:33%;" class="btn"
                                 onclick="show_results_div(2)">Validação
                                 do Modelo</button>
@@ -353,23 +362,53 @@
                             <span id="btn_avaliar">
                         </div>
                         <div class="pagina" id="results_final">
-                            <hr>
-                            <p><b>Distância</b><p>
                             <div class="row">
-                                <span id="dist_answers_chart"></span>
-                                <span id="dist_potential_chart"></span>
+                                <select class="form-control form-select" value="Geral" name="frequencia" id="select_frequencia" onchange="plot_heatmaps(this.value)">
+                                    <option selected value="Geral">Geral</option>
+                                    <option value="Diariamente">Diariamente</option>
+                                    <option value="Frequentemente">Frequentemente</option>
+                                    <option value="Eventualmente">Eventualmente</option>
+                                    <option value="Raramente">Raramente</option>
+                                    <option value="Nunca">Nunca</option>
+                                </select>
                             </div>
                             <hr>
-                            <p><b>Inclinação</b><p>
+                            <p><b>Distância</b> - média<p>
                             <div class="row">
-                                <span id="incl_answers_chart"></span>
-                                <span id="incl_potential_chart"></span>
+                                <span id="dist_mean_answers_chart"></span>
                             </div>
+                            <hr>
+                            <div class="row">
+                                <select class="form-control form-select" value="Geral" name="frequencia" id="select_frequencia" onchange="plot_heatmaps(this.value)">
+                                    <option selected value="Geral">Geral</option>
+                                    <option value="Diariamente">Diariamente</option>
+                                    <option value="Frequentemente">Frequentemente</option>
+                                    <option value="Eventualmente">Eventualmente</option>
+                                    <option value="Raramente">Raramente</option>
+                                    <option value="Nunca">Nunca</option>
+                                </select>
+                            </div>
+                            <p><b>Inclinação</b> - média<p>
+                            <div class="row">
+                                <span id="incl_mean_answers_chart"></span>
+                            </div>
+                            <!--
                             <hr>
                             <p><b>Geral</b><p>
                             <div class="row">
                                 <span id="final_answers_chart"></span>
                                 <span id="final_potential_chart"></span>
+                            </div>-->
+                            <hr>
+                            <p><b>Comparação Geral</b><p>
+                            <p><b>Distância</b><p>
+                            <div class="row">
+                                <span id="dist_answers_chart"></span>
+                            </div>
+                            <hr>
+                            <p><b>Inclinação</b><p>
+                            <div class="row">
+                                <span id="incl_answers_chart"></span>
                             </div>
                             <hr>
                         </div>
@@ -407,42 +446,52 @@ $hash_time =
 
 $dir = './respostas';
 $filter_frequency = $_GET['filtro'];
+$filter_age_max = $_GET['idade_max'];
+$filter_age_min = $_GET['idade_min'];
 if (is_dir($dir)) {
-    if ($dh = opendir($dir)) {
-        while (($file = readdir($dh)) !== false) {
-            if($file != '.' && $file != '..') {
+    $newFiles = scandir($dir, 0); 
+    foreach($newFiles as $file)
+    {
+        if($file != '.' && $file != '..') {
+            
+            $json =  file_get_contents($dir . '/' . $file);
+            $answer = json_decode($json, true);
+            $answer['data_hora'] = $file;
+            unset($answer['email']); // privacy
 
-                $json =  file_get_contents($dir . '/' . $file);
-                $answer = json_decode($json, true);
-                unset($answer['email']); // privacy
+            if ($filter_frequency != '' && 
+                $answer['frequencia'] != $filter_frequency)
+                continue;
 
-                if ($filter_frequency != '' && 
-                    $answer['frequencia'] != $filter_frequency)
-                    continue;
+            if ($filter_age_max != '' && 
+            $answer['idade'] >= $filter_age_max)
+            continue;
+            if ($filter_age_min != '' && 
+            $answer['idade'] <= $filter_age_min)
+            continue;
 
-                $total++;
-                $total_trips += count($answer['avaliacoes']);
-                
-                array_push($answers, $answer);
+            $total++;
+            $total_trips += count($answer['avaliacoes']);
+            
+            array_push($answers, $answer);
 
-                if ($answer['genero'] == 'M')
-                    array_push($age_m, $answer['idade']);
-                else if ($answer['genero'] == 'F')
-                    array_push($age_f, $answer['idade']);
-                else 
-                    array_push($age_o, $answer['idade']);
+            if ($answer['genero'] == 'M')
+                array_push($age_m, $answer['idade']);
+            else if ($answer['genero'] == 'F')
+                array_push($age_f, $answer['idade']);
+            else 
+                array_push($age_o, $answer['idade']);
 
-                array_push($frequency, $answer['frequencia']);
-                array_push($time, $hash_time[$answer['tempo']]);
+            array_push($frequency, $answer['frequencia']);
+            array_push($time, $hash_time[$answer['tempo']]);
 
-                foreach ($answer['motivos'] as $motivo) 
-                    array_push($reason, $motivo);
+            foreach ($answer['motivos'] as $motivo) 
+                array_push($reason, $motivo);
 
-                foreach ($answer['regioes'] as $motivo) 
-                    array_push($region, $motivo);
+            foreach ($answer['regioes'] as $motivo) 
+                array_push($region, $motivo);
 
-                $gender[$answer['genero']]++;
-            }
+            $gender[$answer['genero']]++;
         }
     }
 }

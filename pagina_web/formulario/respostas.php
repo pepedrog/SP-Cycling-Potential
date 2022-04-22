@@ -43,6 +43,8 @@
     $sul2 = 0;
 
     $dir = './respostas';
+    $newFiles = scandir($dh, 0); 
+    echo $newFiles;
     if (is_dir($dir)) {
         if ($dh = opendir($dir)) {
             while (($file = readdir($dh)) !== false) {

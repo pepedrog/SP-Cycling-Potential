@@ -304,8 +304,9 @@
                     </div>
                     <div class="pagina" id="pagina_2">
                         <p>
-                            Por favor, clique nas rotas para ver mais informações e avalie respondendo as perguntas
-                            abaixo do mapa.
+                            Por favor, avalie 5 rotas em relação à facilidade de percorrê-las de bicicleta. <br />
+                            Para cada uma das  rotas, gostaríamos de saber sua avaliação em relação à distância e inclinação. <br />
+                            Clique nas rotas, uma por vez, para avaliá-las respondendo as questões abaixo do mapa.
                             <br />
                             <b>Rotas avaliadas: <span id="avaliadas"></span>
                             </b>

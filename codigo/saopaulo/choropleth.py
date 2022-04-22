@@ -13,7 +13,7 @@ def plot_zones(fmap, geodf_zones, opacity_function, color, plot_rmsp = True, wei
     """ 
     style_zones = lambda x: {'color': 'black', 'weight': 0.5, 'opacity': 0.3, 'fillOpacity': 0.1}
     folium.GeoJson(geodf_zones.loc[geodf_zones['NumeroMuni'] == 36],
-                   style_function = lambda x : {'color': 'black', 'weight': 1, 'opacity': 1, 
+                   style_function = lambda x : {'color': 'black', 'weight': weight, 'opacity': 1, 
                                                 'fillOpacity': opacity_function(x), 'fillColor': color},
                    name='Zonas', control=False).add_to(fmap)
     if plot_rmsp:

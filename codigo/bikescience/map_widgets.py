@@ -100,3 +100,23 @@ def build_legend_colors(html_id, colors):
         """
     legend += """</div>"""
     return legend
+
+def build_legend_lines(html_id, colors):
+    legend = f"""
+    <div id = " {html_id} " 
+        style="position:absolute;
+        top: 40px; 
+        left: 50px; 
+        padding: 10px 10px 10px 10px;
+        border:2px solid gray; 
+        background-color: white;
+        z-index: 9999;
+        font-size:12px;">
+        """
+    for c in colors:
+      legend += f"""
+        <svg width="30px" height="5px">
+        <rect width="100%" height="100%" style="fill:{c[0]};" /></svg>&nbsp;{c[1]}<br>
+        """
+    legend += """</div>"""
+    return legend

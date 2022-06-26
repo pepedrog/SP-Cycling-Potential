@@ -2,6 +2,19 @@ import bikescience.map_widgets as mpw
 import saopaulo.cycling_infrastructure as cinfra
 import folium
 
+def plot_zones_border(fmap, geodf_zones, color, plot_rmsp = True, weight = 1):
+    style_zones = lambda x: {'color': color, 'weight': weight, 'fillOpacity': 0}
+    folium.GeoJson(geodf_zones.loc[geodf_zones['NumeroMuni'] == 36],
+                   style_function = style_zones,
+                   name='Zonas', control=False).add_to(fmap)
+    if plot_rmsp:
+        folium.GeoJson(geodf_zones.loc[geodf_zones['NumeroMuni'] != 36],
+                       style_function = style_zones,
+                       name='Zonas', control=False).add_to(fmap)
+    
+
+
+
 def plot_zones(fmap, geodf_zones, opacity_function, color, plot_rmsp = True, weight = 1):
     """
         Function to plot the the choropleth zones (polygons)

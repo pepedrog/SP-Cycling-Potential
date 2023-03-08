@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../mac0499.css" runat="server" type="text/css">
+
+    <!--Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <link rel="stylesheet" href="mapas.css" runat="server" type="text/css">
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+
+    <title>Avaliação de Ciclabilidade de Rotas</title>
+</head>
+
+
+<body>
+    <div class='language float-right'>
+        <a target="blank" href="plano.html">🇧🇷</a>
+        <a target="blank" href="en/plan.html">🇬🇧</a>
+    </div>
+    <div class="main">
+        <header class="row justify-content-center">
+            <nav class="navbar navbar-expand-lg text links">
+                🚴
+                <a class="nav-link" href="../index.html">Início</a>
+                🚴
+                <a class="nav-link" href="../proposta.html">Proposta</a>
+                🚴
+                <a class="nav-link" href="../plano.html">Plano de Trabalho</a>
+                🚴
+                <a class="nav-link" href="../material.html">Material</a>
+                🚴
+            </nav>
+        </header>
+        <div>
+            <main role="main" class="content">
+                <hr />
+                <br />
+                <h2 class="subtitle text-center">Resultados da Pesquisa</h2>
+                <h3 class="subtitle text-center">Respostas e Comparação com o Modelo</h3>
+                <div>
+            </main>
+            <div class="row"></div>
+
+            <div id="results_user">
+                <div class="row" style="height: 300px;">
+                        <span id="total_answers" style="width: 100%"></span>
+                </div>
+                <div class="row" style="height: 400px; margin-top: -60px;">
+                    <span id="gender_chart" style="width:45%;"></span>
+                    <span style="width:10%;"></span>
+                    <span id="age_chart" style="width:40%;"></span>
+                </div>
+                <div class="row" style="height: 400px; margin-top: -60px;">
+                    <span id="frequency_chart" style="width:45%;"></span>
+                    <span style="width:10%;"></span>
+                    <span id="time_chart" style="width:40%;"></span>
+                </div>
+                <div class="row" style="height: 400px; margin-top: -60px;">
+                    <span id="reason_chart" style="width:45%;"></span>
+                    <span style="width:10%;"></span>
+                    <span id="region_chart" style="width:40%;"></span>
+                </div>
+            </div>
+            <div id="results_route">
+
+            </div>
+            <div id="results_final">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+<script src="resultados.js"></script>
+
+<?php
+
+$answers = [];
+$total = 0;
+$total_trips = 0;
+$age_m = [];
+$age_f = [];
+$age_o = [];
+$gender = [];
+$frequency = [];
+$time = [];
+$reason = [];
+$region = [];
+
+$hash_time = 
+[ 
+    'N' => 'Não utiliza',
+    '0' => 'Menos de 1 ano',
+    '1' => 'Entre 1 e 2 anos',
+    '3' => 'Entre 3 e 4 anos',
+    '5' => '5 anos ou mais',
+];
+
+$dir = './respostas';
+if (is_dir($dir)) {
+    if ($dh = opendir($dir)) {
+        while (($file = readdir($dh)) !== false) {
+            if($file != '.' && $file != '..') {
+                $json =  file_get_contents($dir . '/' . $file);
+                $answer = json_decode($json, true);
+                unset($answer['email']); // privacy
+
+                $total++;
+                $total_trips += count($answer['avaliacoes']);
+                
+                array_push($answers, $answer);
+
+                if ($answer['genero'] == 'M')
+                    array_push($age_m, $answer['idade']);
+                else if ($answer['genero'] == 'F')
+                    array_push($age_f, $answer['idade']);
+                else 
+                    array_push($age_o, $answer['idade']);
+
+                array_push($frequency, $answer['frequencia']);
+                array_push($time, $hash_time[$answer['tempo']]);
+
+                foreach ($answer['motivos'] as $motivo) 
+                    array_push($reason, $motivo);
+
+                foreach ($answer['regioes'] as $motivo) 
+                    array_push($region, $motivo);
+
+                $gender[$answer['genero']]++;
+            }
+        }
+    }
+}
+
+?>
+
+<script type="text/javascript">
+    var answers = <?php echo(json_encode($answers)); ?>;
+    console.log(answers);
+    plot_big_numbers (<?php echo($total . ',' . $total_trips); ?>);
+    plot_age (<?php echo(json_encode($age_m) . ',' . json_encode($age_f) . ',' . json_encode($age_o)); ?>);
+    plot_gender ([<?php echo($gender['F'] . ',' . $gender['M'] . ',' . ($gender['O'] + $gender['N']))?>]);
+    plot_histogram (<?php echo(json_encode($frequency));?>, 'Frequência', 'frequency_chart');
+    plot_histogram (<?php echo(json_encode($time));?>, 'Tempo de uso', 'time_chart');
+    plot_histogram (<?php echo(json_encode($region));?>, 'Região', 'region_chart');
+    plot_histogram (<?php echo(json_encode($reason));?>, 'Motivo', 'reason_chart');
+</script>

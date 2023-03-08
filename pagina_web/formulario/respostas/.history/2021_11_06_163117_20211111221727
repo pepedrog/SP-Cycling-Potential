@@ -1,0 +1,52 @@
+{
+    "origem": "001",
+    "email": "eduardo.falbel@usp.br",
+    "idade": "20",
+    "genero": "M",
+    "frequencia": "Diariamente",
+    "tempo": "5",
+    "motivos": [
+        "Estudo",
+        "Lazer"
+    ],
+    "regioes": [
+        "oeste"
+    ],
+    "avaliacoes": [
+        {
+            "id": " 124281 ",
+            "dist": "5",
+            "incl": "5",
+            "final": "5",
+            "coment": ""
+        },
+        {
+            "id": " 46177 ",
+            "dist": "5",
+            "incl": "2",
+            "final": "4",
+            "coment": ""
+        },
+        {
+            "id": " 42535 ",
+            "dist": "3",
+            "incl": "2",
+            "final": "3",
+            "coment": ""
+        },
+        {
+            "id": " 21904 ",
+            "dist": "5",
+            "incl": "5",
+            "final": "5",
+            "coment": ""
+        },
+        {
+            "id": " 121940 ",
+            "dist": "5",
+            "incl": "3",
+            "final": "4",
+            "coment": ""
+        }
+    ]
+}

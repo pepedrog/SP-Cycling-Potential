@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="mac0499.css" runat="server" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <link rel="stylesheet" href="mapas.css" runat="server" type="text/css">
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+
+    <title>Potencial Ciclável - Rotas</title>
+</head>
+
+<body>
+    <div class="main">
+        <br />
+        <header class="row content">
+            <div class="col-12">
+                <a href="https://interscity.org/" target="_blank_inter">
+                    <img src="images/logo_interscity.svg" class="float-left" style="height: 50px;">
+                </a>
+                <a href="https://www.ime.usp.br/" target="_blank_ime">
+                    <img src="images/logo_ime.png" class="float-right" style="height: 50px;"></a>
+            </div>
+        </header>
+        <div class="main">
+            <main role="main" class="content">
+                <br />
+                <h2 class="subtitle text-center">Potencial Ciclável</h2>
+                <h3 class="subtitle text-center">Avaliação de Ciclabilidade de Rotas</h3>
+                <br />
+                <hr />
+                <div class="paginas">
+                    <div class="pagina" id="pagina_1">
+                        <div class="row">
+                            <div class="col-12">
+                                <span style="font-size: large;" class="subtitle"><b>Sobre</b>
+                                </span>
+                                <p>Essa pesquisa visa auxiliar o planejamento de políticas públicas para investimentos
+                                    em infraestrutura cicloviária. Queremos estudar quais são os locais da cidade que
+                                    mais se
+                                    beneficiariam da construção de ciclovias ou ciclofaixas, por terem características
+                                    físicas
+                                    (distância, topografia) apropriadas para o uso de bicicleta.
+                                </p>
+                                <p>
+                                    Disponibilizamos rotas espalhadas pela cidade para que as pessoas
+                                    avaliem o quanto esses trajetos poderiam ser percorridos de bicicleta
+                                    caso recebessem vias segregadas.
+                                    As respostas auxiliarão na calibração de um modelo automático de avaliação de rotas.
+                                </p>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col">
+
+                                <span style="font-size: large;" class="subtitle"><b>Dados Pessoais</b>
+                                </span>
+                                <br />
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="#txt_idade"><b>Idade</b></label>
+                            </div>
+                            <div class="col-10"><input id="txt_idade" type="number"> </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="#select_genero"><b>Gênero</b></label>
+                            </div>
+                            <div class="col-10">
+                                <select name="genero" id="select_genero">
+                                    <option value="N">Selecione</option>
+                                    <option value="M">Volvo</option>
+                                    <option value="F">Saab</option>
+                                    <option value="O">Mercedes</option>
+                                    <option value="N">Audi</option>
+                                </select>
+                            </div>
+
+                            <!--
+                            <div class="col-10">
+                                <input type="radio" id="rd_M" name="genero" value="M">
+                                <label for="rd_M">Masculino</label>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-10">
+                                <input type="radio" id="rd_F" name="genero" value="F">
+                                <label for="rd_F">Feminino</label>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-10">
+                                <input type="radio" id="rd_O" name="genero" value="O">
+                                <label for="rd_O">Outro</label>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-10">
+                                <input type="radio" id="rd_N" name="genero" value="N">
+                                <label for="rd_N">Prefiro não dizer</label>
+                            </div>
+                            -->
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="row">
+                            <div class="col-12"><b>Você deseja avaliar rotas de qual(is) região(ões) ?</b>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-3">
+                                <br /><br />
+                                <input type="checkbox" id="cb_N1" name="regiao" value="F">
+                                <label for="cb_N1">Norte 1</label> <br />
+                                <input type="checkbox" id="cb_N2" name="regiao" value="O">
+                                <label for="cb_N2">Norte 2</label><br />
+                                <input type="checkbox" id="cb_O" name="regiao" value="N">
+                                <label for="cb_O">Oeste</label><br />
+                                <input type="checkbox" id="cb_C" name="regiao" value="N">
+                                <label for="cb_C">Centro</label><br />
+                                <input type="checkbox" id="cb_L1" name="regiao" value="N">
+                                <label for="cb_L1">Leste 1</label><br />
+                                <input type="checkbox" id="cb_L2" name="regiao" value="N">
+                                <label for="cb_L2">Leste 2</label><br />
+                                <input type="checkbox" id="cb_S1" name="regiao" value="N">
+                                <label for="cb_S1">Sul 1</label><br />
+                                <input type="checkbox" id="cb_S2" name="regiao" value="N">
+                                <label for="cb_S2">Sul 2</label><br />
+                            </div>
+                            <div class="col-8">
+                                <img src="images/sp_subpref_full.png" style="height: 400px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="botoes">
+                    <button class="btn btn-danger float-left" id="btn_voltar" onclick="change_page(-1)">voltar</button>
+                    <button class="btn btn-danger float-right" id="btn_avancar" onclick="change_page()">avançar</button>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="modal fade" id="modal_imagens" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+
+                <b>Topografia:</b>
+                <figure style="width: 100%">
+                    <img style="width: 100%" id="topografia_fig_modal">
+                </figure>
+                <br />
+                <b>Metros percorridos em subidas:</b>
+
+                <figure>
+                    <img style="width: 100%" id="inclinacao_fig_modal">
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <script src="validacao.js"></script>
+    <script src="js/zooming.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    </div>
+</body>
+
+</html>

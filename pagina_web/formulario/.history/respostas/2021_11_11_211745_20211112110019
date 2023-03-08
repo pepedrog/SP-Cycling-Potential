@@ -1,0 +1,51 @@
+{
+    "origem": "102",
+    "email": "",
+    "idade": "55",
+    "genero": "N",
+    "frequencia": "Diariamente",
+    "tempo": "5",
+    "motivos": [
+        "Trabalho"
+    ],
+    "regioes": [
+        "norte1"
+    ],
+    "avaliacoes": [
+        {
+            "id": " 51269 ",
+            "dist": "3",
+            "incl": "4",
+            "final": "4",
+            "coment": ""
+        },
+        {
+            "id": " 49994 ",
+            "dist": "3",
+            "incl": "3",
+            "final": "3",
+            "coment": "o ponto inicial da rota, no alto da estrada turistica, parece q 1/2 irreal.[ para o mesmo ponto de partida e de chegada, existem alternativas de rotas por dentro do bairro do jaraguá, q tb são alternativas. "
+        },
+        {
+            "id": " 53065 ",
+            "dist": "3",
+            "incl": "3",
+            "final": "3",
+            "coment": ""
+        },
+        {
+            "id": " 56684 ",
+            "dist": "3",
+            "incl": "3",
+            "final": "3",
+            "coment": ""
+        },
+        {
+            "id": " 56572 ",
+            "dist": "3",
+            "incl": "3",
+            "final": "3",
+            "coment": ""
+        }
+    ]
+}

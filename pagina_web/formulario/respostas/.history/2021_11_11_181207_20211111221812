@@ -1,0 +1,55 @@
+{
+    "origem": "102",
+    "email": "bikemessengerateu@gmail.com",
+    "idade": "35",
+    "genero": "M",
+    "frequencia": "Diariamente",
+    "tempo": "5",
+    "motivos": [
+        "Estudo",
+        "Trabalho",
+        "Ferramenta",
+        "Lazer",
+        "Outros"
+    ],
+    "regioes": [
+        "oeste"
+    ],
+    "avaliacoes": [
+        {
+            "id": " 121940 ",
+            "dist": "4",
+            "incl": "2",
+            "final": "3",
+            "coment": "Existe uma rota paralela a essa que é extremamente plana e altamente ciclavel"
+        },
+        {
+            "id": " 124281 ",
+            "dist": "5",
+            "incl": "5",
+            "final": "5",
+            "coment": ""
+        },
+        {
+            "id": " 42535 ",
+            "dist": "5",
+            "incl": "2",
+            "final": "3",
+            "coment": "Existe rota mais plana nessa origem e destino"
+        },
+        {
+            "id": " 21904 ",
+            "dist": "5",
+            "incl": "4",
+            "final": "5",
+            "coment": ""
+        },
+        {
+            "id": " 46177 ",
+            "dist": "5",
+            "incl": "3",
+            "final": "5",
+            "coment": ""
+        }
+    ]
+}

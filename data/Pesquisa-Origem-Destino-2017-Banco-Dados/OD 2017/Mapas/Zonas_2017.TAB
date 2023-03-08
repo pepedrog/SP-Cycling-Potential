@@ -1,0 +1,19 @@
+!table
+!version 300
+!charset WindowsLatin1
+
+Definition Table
+  Type NATIVE Charset "WindowsLatin1"
+  Fields 7
+    NumeroZona Integer Index 1 ;
+    NomeZona Char (60) ;
+    NumeroMunicipio Integer ;
+    NomeMunicipio Char (60) ;
+    NumDistrito_Municipio Integer ;
+    NomeDistrito_Municipio Char (60) ;
+    Area_ha_2 Decimal (8, 2) ;
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\MapInfo" = ""
+"\MapInfo\TableID" = "fddfe2fd-11c0-44d6-8699-4470bf07180d"
+end_metadata

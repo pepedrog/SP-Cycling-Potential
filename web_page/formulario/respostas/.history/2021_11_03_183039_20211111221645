@@ -1,0 +1,51 @@
+{
+    "origem": "001",
+    "email": "igornietto@yahoo.com.br",
+    "idade": "21",
+    "genero": "M",
+    "frequencia": "Raramente",
+    "tempo": "N",
+    "motivos": [
+        "Lazer"
+    ],
+    "regioes": [
+        "sul1"
+    ],
+    "avaliacoes": [
+        {
+            "id": " 94705 ",
+            "dist": "5",
+            "incl": "3",
+            "final": "3",
+            "coment": ""
+        },
+        {
+            "id": " 89158 ",
+            "dist": "4",
+            "incl": "5",
+            "final": "5",
+            "coment": ""
+        },
+        {
+            "id": " 19346 ",
+            "dist": "4",
+            "incl": "4",
+            "final": "4",
+            "coment": ""
+        },
+        {
+            "id": " 8562 ",
+            "dist": "5",
+            "incl": "5",
+            "final": "5",
+            "coment": ""
+        },
+        {
+            "id": " 86579 ",
+            "dist": "5",
+            "incl": "3",
+            "final": "3",
+            "coment": ""
+        }
+    ]
+}

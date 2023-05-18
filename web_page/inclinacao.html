@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="mac0499.css" runat="server" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Inclinação</title>
+</head>
+
+<body>
+    <div class="main">
+        <header class="row justify-content-center">
+            <nav class="navbar navbar-expand-lg text links">
+                🚴
+                <a class="nav-link" href="index.html">Início</a>
+                🚴
+                <a class="nav-link" href="proposta.html">Proposta</a>
+                🚴
+                <a class="nav-link" href="plano.html">Plano de Trabalho</a>
+                🚴
+                <a class="nav-link" href="material.html">Material</a>
+                🚴
+            </nav>
+        </header>
+        <div>
+            <main role="main" class="content">
+                <hr />
+                <br />
+                <h2 class="subtitle text-center">Inclinação</h2>
+                <h3 class="subtitle text-center">como consider a influência da inclinação no uso da bicicleta?</h3>
+                <div>
+
+                    <br />
+                    
+                    <h4>Referências</h4>
+                    <hr />
+                    
+                    <div class="topicos">
+                        <ul>
+                            <li>
+                                Steer Cycling Potential Index (2015)
+                                <br />
+                                <span class="autor">Utiliza o desvio padrão das altitudes em cada região administrativa</span>
+                            </li>
+                            <li>
+                                Propensity to Cycle Tool (PCT) (2017)
+                                <br />
+                                <span class="autor">Utiliza a inclinação média de cada rota</span>
+                            </li>
+                            <li>
+                                Cycling Potential Tool (CPT) (2017)
+                                <br />
+                                <span class="autor">Considera a inclinação em células de 1 metro quadrado, e então classifica as células em 10 níveis sendo 1 o mais irregular e 10 o mais plano</span>
+                            </li>
+                            <li>
+                                World Bank (2021)
+                                <br />
+                                <span class="autor">Considera o limite de trechos de uma rota em cada nível de inclinação (e.g. 200 metros a 4%)</span>
+                            </li>
+                            <li>
+                                Parkin et al (2012)
+                                <br />
+                                <span class="autor">Considera a inclinação média por km&sup2; (com um calculo matricial um pouco complicado)</span>
+
+                            </li>
+                            <li>
+                                Tyndall et al (2020)
+                                <br />
+                                <span class="autor">Considera a soma das elevações em uma rota</span>
+                                
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <br />                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="modais">
+        <div class="modal fade" id="modal_prioritization" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>Build it. But Where? The use of Geographic Information Systems in Identifying locations
+                                for new cycling infrastructure</b>
+
+                            <div class="autor">Jacob Larsen, Zachary Patterson e Ahmed M. El Geneidy, 2013.
+                                <br /><br />
+                                <a href="https://www.researchgate.net/publication/263448580_Build_It_But_Where_The_Use_of_Geographic_Information_Systems_in_Identifying_Locations_for_New_Cycling_Infrastructure"
+                                    target="_blank">
+                                    <u>página research gate</u></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b> Faz uma revisão da literatura sobre bicicleta e classifica em 4 grandes fluxos
+                            de pesquisa. Aponta que não existe pesquisa sobre
+                            quais os melhores locais para construir infraestrutura ciclovária. Propõe um <b>índice de
+                                priorização</b> para as regiões da cidade de Montreal (Canadá)
+                            que devem receber esse tipo de investimento.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Quantidade atual de viagens de bicicleta (pesquisa OD)</li>
+                            <li>Quantidade viagens curtas de carro (viagens potenciais) (pesquisa OD)</li>
+                            <ul>
+                                <li>Aquelas com distância menor que 75% das viagens de bicicleta (2km)</li>
+                            </ul>
+                            <li>Opinião dos ciclistas sobre quais vias deveriam ser priorizadas (pesquisa online com
+                                3000 ciclistas)</li>
+                            <li>Quantidade de colisões com veículos (dados da seguradora pública)
+                            </li>
+                            <li>Conectividade das ciclovias: onde ficam os "pontos finais"</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Grid quadrado de 300m (comprimento escolhido com testes empíricos)</li>
+                            <li>Para cada grid, soma o percentual de cada atributo que está em uma dada célula do grid
+                            </li>
+                            <ul>
+                                <li>% de viagens de bicicleta na célula +</li>
+                                <li>% de viagens potenciais na célula + </li>
+                                <li>% de preferência dos ciclistas na célula + </li>
+                                <li>% de colisões na grid + </li>
+                                <li>% de "pontos finais"</li>
+                            </ul>
+                            <li>Em cada célula do grid, atribui-se esse valor de 0 a 5</li>
+                            <li>Esse valor é dividido pela soma do valor todas as células (o percentual nessa célula),
+                                gerando um índice final entre 0 e 1</li>
+                            <li>Os pesos de cada atributo podem ser parametrizados
+                            </li>
+                            <li>As viagens em cada grid são calculadas pelas rotas dessas viagens (calculado com o
+                                algoritmo de caminho mais curto, autores citam que esse método pode ser melhorado)</li>
+                            <li>Autores citam que o ideal é considerar muitas outras variáveis, além da distância, para
+                                decidir quais são as viagens potenciais</li>
+                        </ul>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_bh" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Prioritizing bicycle paths in Belo Horizonte City, Brazil: Analysis based on user
+                                preferences and willingness considering individual heterogeneity.
+                            </b>
+                            <div class="autor">Dapeng Zhang, David Magalhães e Xiaokun Wang, 2014.
+                                <br /><br />
+                                <a href="https://www.sciencedirect.com/science/article/pii/S096585641400175X"
+                                    target="_blank">
+                                    página science direct</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b> No contexto da expansão cicloviária em Belo Horizonte para a Copa do Mundo de
+                            2014,
+                            propuseram um método para identificar as regiões com maior disposição (willingness) para
+                            usar bicicleta.
+                            Os dados utilizados foram extraídos de uma pesquisa com 3421 habitantes (2008 respostas
+                            completas), em que perguntavam
+                            a disposição do entrevistado para usar a bicicleta caso o trajeto tivesse ciclovias, junto
+                            dos seguintes
+                            "fatores influentes":
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Nível Educacional</li>
+                            <li>Tempo de viagem diária (comutação)</li>
+                            <li>Renda</li>
+                            <li>Moradia (vive em casa ou outro tipo?)</li>
+                            <li>Possui carro?</li>
+                            <li>Modal atual</li>
+                            <li>Possui crianças na casa?</li>
+                            <li>Existe rede cicloviária no trajeto?</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Desenvolvido um modelo de regressão (ordered outcome discrete model) para
+                                quantificar a influência de cada fator na disposição para usar a bicicleta
+                            </li>
+                            <li>Com esse modelo, para cada fator foi gerado um coeficiente - quanto maior o coeficiente,
+                                mais
+                                influente esse fator é para o uso da bicicleta; quanto menor (negativo) maior a
+                                influência para não usar
+                                a bicicleta.
+                            </li>
+                            <li>Para cada zona administrativa da cidade, foi obtida a média ponderada pelos
+                                coeficientes obtidos, usando dados do censo 2010 e da pesquisa OD de BH de 2012.
+                            </li>
+                            <li>Esses coeficientes são específicos para a realidade de cada cidade, se essa metodologia
+                                for
+                                aplicada em outro local, uma pesquisa semelhante teria que ser conduzida para obter os
+                                coeficiente
+                            </li>
+                            <li>Os entrevisgtados foram perguntados quais ruas deveriam receber ciclovias, e o resultado
+                                obtido
+                                por esse método foi semelhante à opinião dos entrevistados (modelo aderente à
+                                realidade).
+                            </li>
+                            <li>Na aplicação do modelo, os fatores com relação mais forte (à disposição para usar
+                                bicicleta) foram:
+                                <ul>
+                                    <li>Tempo da comutação - influência negativa</li>
+                                    <li>Renda - faixa de renda média se relaciona positivamente</li>
+                                    <li>Modal atual - modo "a pé" tem maior influência</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_steer" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Cycling Potential Index.
+                            </b>
+                            <div class="autor">Steer Davies Gleave, 2015.
+                                <br /><br />
+                                <a href="https://www.yumpu.com/en/document/read/41572043/1-cycling-potential-index-steer-davies-gleave"
+                                    target="_blank"> <u>artigo</u>
+                                </a> &nbsp; | &nbsp;
+                                <a href="https://www.steergroup.com/insights/news/cycling-potential-index"
+                                    target="_blank"> <u>página da steer</u>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Steer Davies Gleave é uma empresa de consultoria que desenvolve ferramentas
+                            para
+                            problemas urbanos complexos. O Cycling Potential Index é uma ferramenta para classificar as
+                            regiões administrativas
+                            da Inglaterra e País de Gales com base no potencial ciclável, isto é, em quais regiões os
+                            investimentos
+                            para estimular o uso da bicicleta são mais efetivos.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados</b> ("dimensões")<b>:</b>
+                        <ul>
+                            <li>Inclinação (hilliness)</li>
+                            <li>Dados sociodemográficos</li>
+                            <li>Distância das viagens</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>Para cada uma das três dimensões, as regiões foram ordenadas (ranked)
+                            </li>
+                            <li>A inclinação foi calculada como o desvio padrão das altitudes da região,
+                                discretizando em uma grade com células de lado 90m. Quanto maior o desvio padrão,
+                                pior.
+                            </li>
+                            <li>
+                                Os dados sociodemográficos foram usados classificando os estilos de vida
+                                de cada região (classificação MOSAIC). Para cada estilo de vida, um potencial
+                                ciclável foi pré determinado.
+                            </li>
+                            <li>Uma viagem é considerada ciclável se a distância é menor que 8km, que corresponde a 88%
+                                das viagens feitas atualmente de bicicleta.
+                                A classificação foi feita pelo percentual de viagens cicláveis em cada região.
+                            </li>
+                            <li>A classificação final é a média das três classificações, com o tempo das viagens
+                                tendo metade do peso das outras duas (pois usaram apenas dados de viagens a trabalho,
+                                e querem englobar outras viagens, que podem ser mais longas).
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_acp" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Analysis of Cycling Potential (ACP)
+                            </b>
+                            <div class="autor">Transport for London, 2016.
+                                <br /><br />
+                                <a href="http://content.tfl.gov.uk/analysis-of-cycling-potential-2016.pdf"
+                                    target="_blank"> <u>relatório TfL</u>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Análise conduzida pela Transport for London (companhia de transportes da
+                            prefeitura de Londres) para identificar quais são e onde estão as viagens cicláveis em
+                            Londres.
+                            Foi feito um primeiro critério em 2010 com base em pesquisas de demanda de transporte, e
+                            atualizado em 2016.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Sobrecarga</li>
+                            <li>Distância das viagens</li>
+                            <li>Idade do indivíduo</li>
+                            <li>Modal Atual</li>
+                            <li>Encadeamento (viagem faz parte de uma viagem maior?)</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>O potencial ciclável de uma região é medido pela quantidade de viagens cicláveis.
+                            </li>
+                            <li>Uma viagem é considerada ciclável quando satisfaz os seguintes critérios:
+                                <ul>
+                                    <li>
+                                        A pessoa que faz a viagem não carrega nenhuma sobrecarga (encumbrance)
+                                    </li>
+                                    <li>
+                                        A distância da viagem é menor que:
+                                        <ul>
+                                            <li>10km (para comutação) ou 8km (outros propósitos), caso geral</li>
+                                            <li>5km, se a pessoa tem entre 65 e 79 anos (todos os propósitos)</li>
+                                            <li>3km, se a pessoa tem mais que 80 anos (todos os propósitos)</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        O modal atual não é van, "dial-a-ride", barco ou avião
+                                    </li>
+                                    <li>
+                                        A viagem não faz parte de uma viagem maior não-ciclável
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal_pct" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="modal-text">
+                            <b>
+                                Propensity to Cycle Tool (PCT)
+                            </b>
+                            <div class="autor">Robin Lovelace, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali Abbas e
+                                James Woodcock, 2017.
+                                <br /><br />
+                                <a href="https://www.jtlu.org/index.php/jtlu/article/view/862" target="_blank"></a>
+                                <u>artigo</u>
+                                </a> &nbsp; | &nbsp;
+                                <a href="https://www.pct.bike/" target="_blank"> <u>ferramenta pct</u>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-text">
+                        <p><b>Resumo:</b>: Ferramenta (que se encaixa na categoria de PSS - planning support systems)
+                            para analisar a propensão para usar a bicicleta de uma dada região.
+                            Aplicaram a ferramenta em todas as regiões da Inglaterra e País de Gales. Os dados vieram do
+                            censo de 2011, que
+                            faz perguntas sobre as viagens de comutação dos britânicos.
+                        </p>
+                        <hr />
+                        <p><b>Dados Utilizados:</b>
+                        <ul>
+                            <li>Proporção atual de ciclistas</li>
+                            <li>Distância das rotas</li>
+                            <li>Inclinação das rotas</li>
+                            <li>Densidade populacional (apenas para separar as regiões)</li>
+                        </ul>
+                        </p>
+                        <hr />
+                        <p><b>Metodologia:</b>
+                        <ul>
+                            <li>As rotas foram calculadas usando a ferramenta <a
+                                    href="https://www.cyclestreets.net/">cyclestreets.net</a></li>
+                            <li>A área total (Inglaterra e País de Gales) foi dividada em zonas MSOAs,
+                                que são regiões desenhadas de modo que cada MSOA tenha cerca de 7500 indivíduos.
+                            </li>
+                            <li>Foi calculado uma rota entre cada par de MSOAs, usando o centro de massa populacional
+                                como ponto de referência (apenas pares com distância euclidiana menor que 30km)</li>
+                            <li>A inclinação de uma rota foi tomada como a inclinação média do percurso</li>
+                            <li>Foi então feito uma regressão logística onde a variável de interesse (dependente)
+                                é a proporsão de ciclistas, e os fatores influentes são a distância e inclinação da
+                                rota.
+                            </li>
+                            <li>Para a distância, foram incluídos três fatores: a distância em si, a raíz quadrada da
+                                distância e a distancia ao quadrado, pois a relação entre a distância e o uso da
+                                bicicleta não é linear</li>
+                            <li>O valor final de cada região é quantidade atual de ciclistas + quantidade de
+                                "comutadores" * propensão calculada pelo modelo</li>
+                            <li>A ferramenta faz simulações com 4 cenários, onde alguns outros parâmetros independentes são
+                                considerados na regressão</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    </div>
+</body>
+
+</html>

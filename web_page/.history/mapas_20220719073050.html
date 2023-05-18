@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="mac0499.css" runat="server" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mapas</title>
+</head>
+
+<body>
+    <div class="main">
+        <header class="row justify-content-center">
+            <nav class="navbar navbar-expand-lg text links">
+                🚴
+                <a class="nav-link" href="index.html">Início</a>
+                🚴
+                <a class="nav-link" href="proposta.html">Proposta</a>
+                🚴
+                <a class="nav-link" href="plano.html">Plano de Trabalho</a>
+                🚴
+                <a class="nav-link" href="material.html">Material</a>
+                🚴
+            </nav>
+        </header>
+        <div>
+            <main class="content" role="main" class="pb-3">
+                <hr />
+                <br />
+                <h2 class="subtitle text-center">Mapas</h2>
+                <h3 class="subtitle text-center">O uso da bicicleta em São Paulo</h3>
+                <div>
+                    <br />
+                    <h4>Estrutura Cicloviária</h4>
+                    <hr />
+                    <p> Mapas choropleth que mostram a distribuição da estrutura cicloviária (ciclovias, ciclofaixas e
+                        ciclorrotas)
+                        pelas zonas de São Paulo, segundo dados fornecidos pela CET.
+                    <ul>
+                        <li><a href='maps/rede_cicloviaria_por_zona.html' target='blank' download>km de estrutura por
+                                zona</a></li>
+                        <li><a href='maps/rede_cicloviaria_por_km_quadrado.html' target='blank' download>km de estrutura
+                                por km&sup2;</a></li>
+                        <li><a href='maps/rede_cicloviaria_por_ruas.html' target='blank' download>km de estrutura por km
+                                de vias (porcentagem das vias com estrutura)</a></li>
+                        <li><a href='maps/rede_cicloviaria_por_ruas_lim100.html' target='blank' download>km de estrutura
+                                por km de vias (limitando em 100%)</a></li>
+                        <li><a href='maps/rede_cicloviaria_por_ruas_outlier.html' target='blank' download>km de
+                                estrutura por km de vias (retirando outlier USP Leste II)</a></li>
+                    </ul>
+                    <br />
+                    <br />
+                    <h4>Inclinação</h4>
+                    <hr />
+                    <p> Mapas que mostram a inclinação (ou declividade) das rotas feitas de bicicleta em São Paulo (OD 2017).
+                    </p>
+                    <p>A inclinação é a proporção entre o deslocamento da altitude pelo comprimento
+                        do segmento, por exemplo, um trecho de 100 metros com elevação de 10 metros tem
+                        inclinação de 10% (<a href='https://pt.wikipedia.org/wiki/Declividade'><u>wikipedia</u></a>).
+                    </p>
+                    <p>Cada mapa abaixo divide as rotas em trechos de tamanhos distintos.
+                        Quanto menor o valor, mais detalhado (e pesado) é o mapa.
+                        O valor "segmentos retos" representa o maior detalhamento,
+                        dividindo a rota em segmentos de retas, geralmente representando cada rua, 
+                        independente do comprimento em metros do trecho.
+                    </p>
+                    <ul>
+                        <li><a href='maps/slopes_5000.html' target='blank' download>5000 metros</a></li>
+                        <li><a href='maps/slopes_1000.html' target='blank' download>1000 metros</a></li>
+                        <li><a href='maps/slopes_500.html' target='blank' download>500 metros</a></li>
+                        <li><a href='maps/slopes_200.html' target='blank' download>200 metros</a></li>
+                        <li><a href='maps/slopes_100.html' target='blank' download>100 metros</a></a></li>
+                        <li><a href='maps/slopes_line.html' target='blank' download>segmentos retos</a></a></li>
+                        <li><a href='maps/declividade_rotas.html' target='blank' download>comparação com topografia</a></a></li>
+                    </ul>
+                    <br />
+                    <br />
+
+                    <h4>Potencial Ciclável</h4>
+                    <hr />
+                    <p> Mapas que mostram a distribuição geográfica das viágens cicláveis em São Paulo e na região metropolitana.
+                        Correspondem a exemplos de análises feitas com o modelo nos cadernos Jupyter.
+                    </p>
+                    <ul>
+                        <li><a href='maps/potential_SP_08.html' target='blank' download>São Paulo - número absoluto de viagens</a></li>
+                        <li><a href='maps/potential_SP_08_density.html' target='blank' download>São Paulo - % de viagens</a></li>
+                        <li><a href='maps/potential_RMSP_08.html' target='blank' download>RMSP - número absoluto de viagens</a></li>
+                        <li><a href='maps/potential_RMSP_08_density.html' target='blank' download>RMSP - % de viagens</a></li>
+                        <li><a href='maps/potential_train.html' target='blank' download>Viagens de trem (com rotas)</a></li>
+                    </ul>
+
+                    <h4>Vias</h4>
+                    <hr />
+                    <p> Mapas com análises referentes a agrupamentos por vias (ruas, avenidas) da cidade.
+                    </p>
+                    <ul>
+                        <li><a href='maps/vias/bicicletas_azul.html' target='blank' download>Viagens de bicicleta</a></li>
+                        <li><a href='maps/vias/geral.html' target='blank' download>Viagens potenciais (geral)</a></li>
+                        <li><a href='maps/vias/car.html' target='blank' download>Viagens potenciais (carro)</a></li>
+                        <li><a href='maps/vias/pedestrian.html' target='blank' download>Viagens potenciais (pedestre)</a></li>
+                        <li><a href='maps/vias/bus_sp.html' target='blank' download>Viagens potenciais (ônibus)</a></li>
+                        <li><a href='maps/vias/train.html' target='blank' download>Viagens potenciais (trem)</a></li>
+                        <li><a href='maps/vias/subway.html' target='blank' download>Viagens potenciais (metrô)</a></li>
+                        <li><a href='maps/vias/carro_sem_infra.html' target='blank' download>Viagens potenciais (longe de ciclovias)</a></li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+        <div></div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

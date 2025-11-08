@@ -93,7 +93,7 @@
                                                 </tr>
                                                 <tr
                                                     style="border: 2px solid #D03F2E; border-top: 2px dotted black; line-height: 1.2; ">
-                                                    <td style="padding-left: 2%;">- steeper than 7% </td>
+                                                    <td style="padding-left: 5%; width: 170px;">- steeper than 7% </td>
                                                     <td style="text-align: right;" id="dist_8"></td>
                                                 </tr>
                                             </tbody>
@@ -104,17 +104,19 @@
                                             for="check_satelite">Satellite View</label>
                                     </div>
                                     <div id="legend">
-                                        <span>Slope
+                                        <span><b>Slope</b>
                                             <span hidden id="help_inclinacao" style="cursor: pointer;">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-question-circle"
                                                     viewBox="0 0 16 16">
                                                     <path
                                                         d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                                     <path
                                                         d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
-                                                </svg>
-                                            </span><br /></span>
+                                            
+                                                </svg>-->
+                                            </span>
+                                            <br /></span>
                                         <svg width="10px" height="10px">
                                             <rect width="100%" height="100%" style="fill:#025189;" />
                                         </svg>&nbsp;&lt; -5%<br>
@@ -140,52 +142,49 @@
                                             <rect width="100%" height="100%" style="fill:black;" />
                                         </svg>&nbsp;> 7%<br>
                                     </div>
-                                    <div id="legend_inclinacao">
-                                        <img id="legend_img" src="../images/legenda.png"
-                                            style="width: 100%; height: auto;">
+                                    <div id="avaliacao">
+                                        <div class="row" style="padding-top: 0px; padding-bottom: 2px;">
+                                            <div class="col-3 text-center"
+                                                style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
+                                                <label style="margin: 5px 0 4px 0;">Criteria</label>
+                                            </div>
+                                            <div class="col-3 text-center"
+                                                style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
+                                                <label style="margin: 5px 0 4px 0;"><b>Distance</b></label>
+                                            </div>
+                                            <div class="col-3 text-center"
+                                                style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
+                                                <label style="margin: 5px 0 4px 0;"><b>Slope</b></label>
+                                            </div>
+                                            <div class="col-3 text-center"
+                                                style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
+                                                <label style="margin: 5px 0 4px 0;"><b>Final</b></label>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding-top: 0px; padding-bottom: 2px;">
+                                            <div class="col-3 text-center"
+                                                style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
+                                                <span><b>Potential</b></span>
+                                            </div>
+                                            <div class="col-3 text-center"
+                                                style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
+                                                <label id="pot_dist">0</label>
+                                            </div>
+                                            <div class="col-3 text-center"
+                                                style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
+                                                <label id="pot_incl">0</label>
+                                            </div>
+                                            <div class="col-3 text-center"
+                                                style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
+                                                <label id="pot_final">0</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <br>
                             <br>
-                            <div id="avaliacao">
-                                <div class="row" style="padding-top: 2px; padding-bottom: 2px;">
-                                    <div class="col-2 text-center"
-                                        style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
-                                        <label>Criteria</label>
-                                    </div>
-                                    <div class="col-2 text-center"
-                                        style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
-                                        <label><b>Distance</b></label>
-                                    </div>
-                                    <div class="col-2 text-center"
-                                        style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
-                                        <label><b>Slope</b></label>
-                                    </div>
-                                    <div class="col-2 text-center"
-                                        style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
-                                        <label><b>Final</b></label>
-                                    </div>
-                                </div>
-                                <div class="row" style="padding-top: 2px; padding-bottom: 2px;">
-                                    <div class="col-2 text-center"
-                                        style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
-                                        <label><b>Potential</b></label>
-                                    </div>
-                                    <div class="col-2 text-center"
-                                        style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
-                                        <label id="pot_dist">0</label>
-                                    </div>
-                                    <div class="col-2 text-center"
-                                        style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
-                                        <label id="pot_incl">0</label>
-                                    </div>
-                                    <div class="col-2 text-center"
-                                        style="border-bottom: solid lightgray 1px; border-right: solid lightgray 1px;">
-                                        <label id="pot_final">0</label>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
             </main>

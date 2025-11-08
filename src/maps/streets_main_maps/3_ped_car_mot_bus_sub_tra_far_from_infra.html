@@ -8,6 +8,10 @@
         </script>
     
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>.leaflet-right {left: 50px!important; top: 65px!important; right: auto!important; z-index:9999!important; }</style>
+    <style>.leaflet-control-scale {left: 745px!important; bottom: 34px!important; }</style>
+    <style>.leaflet-control-attribution {display:none!important; }</style>
+    <style>.tick {background-color:white!important; }</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -33,28 +37,29 @@
             </style>
         
 </head>
-<body>    
+<body>  
     <div
      style="position:absolute;
-     up: 50px; 
-     left: 50px;
+     top: 375px; 
+     left: 585px;
      border:1px solid black; 
+     padding: 5px;
      z-index: 9999;
      background-color: white;
-     font-size:16px;">
-     &nbsp;<b>&nbsp;&nbsp;Cyclable Trips&nbsp;&nbsp;</b>
+     font-size:18px;">
+     <b>&nbsp;&nbsp;Cyclable Trips&nbsp;&nbsp;</b><br>
+     &nbsp;&nbsp;(far from current cycling infrastructure)&nbsp;&nbsp;
      </div>
     
     <div id = " Trips " 
         style="position:absolute;
-        top: 40px; 
-        left: 50px; 
+        top: 455px; 
+        left: 585px; 
         padding: 10px 10px 10px 10px;
         border:2px solid gray; 
         background-color: white;
         z-index: 9999;
-        font-size:12px;">
-        
+        font-size:16px;">
         <svg width="30px" height="5px">
         <rect width="100%" height="100%" style="fill:#F00505;" /></svg>&nbsp;34300<br>
         
@@ -72,6 +77,20 @@
         
         <svg width="30px" height="5px">
         <rect width="100%" height="100%" style="fill:#FEF001;" /></svg>&nbsp;4300<br>
+        </div>
+
+    
+        <div id = " Trips " 
+        style="position:absolute;
+        top: 455px; 
+        left: 710px; 
+        padding: 10px 10px 10px 10px;
+        border:2px solid gray; 
+        background-color: white;
+        z-index: 9999;
+        font-size:16px;">
+        <svg width="30px" height="5px">
+        <rect width="100%" height="100%" style="fill:blue;" /></svg>&nbsp;bicycle lanes<br>
         </div>
     
     <script>

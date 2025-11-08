@@ -1,4 +1,5 @@
 var mymap = L.map('mapa').setView([-23.58, -46.59], 11);
+L.control.scale().addTo(mymap);
 var routes = []
 var current_route = null
 var zoom_topo = false
@@ -32,7 +33,7 @@ function configure_map() {
     map_style =
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
             {
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
                 maxZoom: 18,
                 id: 'pepedrog/cktnitzoe0bxd17swrndlt2gx',
                 tileSize: 512,
@@ -52,7 +53,7 @@ function configure_map() {
     })
 }
 
-function configure_inclination_legend() {
+/*function configure_inclination_legend() {
     const legend = document.getElementById('legend_inclinacao')
     const legend_img = document.getElementById('legend_img')
 
@@ -73,7 +74,7 @@ function configure_inclination_legend() {
         else
             legend.style.display = "none"
     }
-}
+}*/
 
 function add_flag_markers(trip) {
     if (start_flag != null) {

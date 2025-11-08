@@ -19,7 +19,7 @@ const english = document.title == 'Cycling Potential - Generic Route'
 // document.ready
 document.addEventListener("DOMContentLoaded", function () {
     configure_map()
-    configure_inclination_legend()
+    //configure_inclination_legend()
 
     var zoom_out = document.getElementsByClassName("leaflet-control-zoom-out")[0];
     var zoom_in = document.getElementsByClassName("leaflet-control-zoom-in")[0];

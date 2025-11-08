@@ -6,16 +6,25 @@
     border-style: groove;
 }
 
+.leaflet-control-scale {
+  color: 'green';
+  bottom: 550px;
+  left: 0px;
+}
+.leaflet-control-scale-line {
+  font-size: 13px!important;
+}
+
 #legend { 
-    width: 110px;
-    height: 160px;
-    padding: 10px 10px 10px 10px;
+    width: 130px;
+    height: 220px;
+    padding: 5px 10px 10px 10px;
     border:2px groove rgb(255, 45, 45);
     background-color: white;
     z-index: 9999;
-    font-size:10px; 
+    font-size:15px; 
     position: absolute; 
-    top: 440px; 
+    top: 380px; 
     right: 0px;
 }
 
@@ -34,6 +43,22 @@
 }
 
 
+#avaliacao { 
+  width: 500px;
+  height: 70px;
+  padding: 0px 15px 50px 15px;
+  border:2px groove rgb(255, 45, 45);
+  background-color: white;
+  margin-bottom: 0px;
+  z-index: 10000;
+  font-size:15px; 
+  position: absolute; 
+  top: 530px; 
+  left: 0px;
+  cursor: zoom-out;
+}
+
+
 #satelite {
   padding: 5px 10px 2px 10px;
   height: 32px;
@@ -49,7 +74,7 @@
 
 #distancias {
   background-color: white;
-  font-size:13px; 
+  font-size:15px; 
   position: absolute; 
   top: 2px; 
   right: 2px;
